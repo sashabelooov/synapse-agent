@@ -1,0 +1,346 @@
+- generic [active] [ref=e1]:
+  - button "Accessibility - Enable blind mode" [ref=e3] [cursor=pointer]
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link " lichess.org" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: 
+        - generic [ref=e8]: lichess.org
+      - navigation [ref=e9]:
+        - link "Play" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Puzzles" [ref=e13] [cursor=pointer]:
+          - /url: /training
+        - link "Learn" [ref=e15] [cursor=pointer]:
+          - /url: /learn
+        - link "Watch" [ref=e17] [cursor=pointer]:
+          - /url: /broadcast
+        - link "Community" [ref=e19] [cursor=pointer]:
+          - /url: /player
+        - link "Tools" [ref=e21] [cursor=pointer]:
+          - /url: /analysis
+      - link "Donate" [ref=e22] [cursor=pointer]:
+        - /url: /patron
+    - generic [ref=e23]:
+      - text: 
+      - generic [ref=e24]:
+        - generic [ref=e25] [cursor=pointer]: 
+        - textbox "Search"
+      - generic [ref=e26]:
+        - link "Sign in" [ref=e27] [cursor=pointer]:
+          - /url: /login?referrer=/
+        - link "Register" [ref=e28] [cursor=pointer]:
+          - /url: /signup
+      - button "Preferences" [ref=e30] [cursor=pointer]: 
+  - main [ref=e32]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - link "Lebannen PLAYING VIEWERS 5+0 CASUAL ONLY!!!!! on !lichess.org !coaching !discord" [ref=e35] [cursor=pointer]:
+          - /url: /streamer/lebannen?redirect=true
+          - strong [ref=e36]: Lebannen
+          - text: PLAYING VIEWERS 5+0 CASUAL ONLY!!!!! on !lichess.org !coaching !discord
+        - link "Streamers »" [ref=e37] [cursor=pointer]:
+          - /url: /streamer
+      - generic [ref=e38]:
+        - link " UzChess Cup 2026 Round 4 • Playing now" [ref=e39] [cursor=pointer]:
+          - /url: /broadcast/3rd-uzchess-cup-2026--masters/round-4/r1Wcmavc
+          - generic [ref=e40]: 
+          - generic [ref=e41]:
+            - generic [ref=e42]: UzChess Cup 2026
+            - text: Round 4 • Playing now
+        - link " Blitz Shield Arena Battle for the Blitz Shield 94 players • in 4 hours" [ref=e43] [cursor=pointer]:
+          - /url: /tournament/sF6bPl9q
+          - generic [ref=e44]: 
+          - generic [ref=e45]:
+            - generic [ref=e46]: Blitz Shield Arena
+            - generic [ref=e47]: Battle for the Blitz Shield
+            - generic [ref=e48]:
+              - text: 94 players •
+              - time [ref=e49]: in 4 hours
+        - link "Coach LM Lance5500 simul 1 player • Join" [ref=e50] [cursor=pointer]:
+          - /url: /simul/JWOTWcNX
+          - img [ref=e51]
+          - generic [ref=e52]:
+            - generic [ref=e53]: Coach LM Lance5500 simul
+            - text: 1 player • Join
+      - generic [ref=e54]:
+        - text: Lichess is a free (
+        - link "really" [ref=e55] [cursor=pointer]:
+          - /url: /features
+        - text: ), libre, no-ads, open source chess server.
+        - link "About Lichess..." [ref=e56] [cursor=pointer]:
+          - /url: /about
+    - generic [ref=e57]:
+      - tablist [ref=e58]:
+        - tab "Quick pairing" [ref=e59] [cursor=pointer]
+        - tab "Lobby" [ref=e60] [cursor=pointer]
+        - tab "Correspondence" [ref=e61] [cursor=pointer]
+      - generic [ref=e62]:
+        - button "" [ref=e63] [cursor=pointer]
+        - button "" [ref=e64] [cursor=pointer]
+        - table [ref=e65]:
+          - rowgroup [ref=e66]:
+            - row "Time Mode" [ref=e67]:
+              - columnheader [ref=e68]
+              - columnheader "Time" [ref=e69]: Time
+              - columnheader "Mode" [ref=e70]: Mode
+          - rowgroup
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - button " Create lobby game" [ref=e73] [cursor=pointer]
+        - button " Challenge a friend" [ref=e74] [cursor=pointer]
+        - button " Play against computer" [ref=e75] [cursor=pointer]
+      - generic [ref=e76]:
+        - link "86,517 players" [ref=e77] [cursor=pointer]:
+          - /url: /player
+          - strong [ref=e78]: 86,517
+          - text: players
+        - link "36,599 games in play" [ref=e79] [cursor=pointer]:
+          - /url: /games
+          - strong [ref=e80]: 36,599
+          - text: games in play
+    - link "IM KAPUTVSEMU 2819 2:01 GM athena-pallada 2972 2:11" [ref=e82] [cursor=pointer]:
+      - /url: /tv
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - generic "International Master" [ref=e85]: IM
+          - text: KAPUTVSEMU
+          - generic [ref=e86]: "2819"
+        - generic [ref=e87]: 2:01
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - generic "Grandmaster" [ref=e93]: GM
+          - text: athena-pallada
+          - img [ref=e94]
+          - generic [ref=e95]: "2972"
+        - generic [ref=e96]: 2:11
+    - link "Puzzle of the day Black to play" [ref=e97] [cursor=pointer]:
+      - /url: /training/daily
+      - generic [ref=e98]: Puzzle of the day
+      - generic [ref=e102]: Black to play
+    - generic [ref=e104]:
+      - generic [ref=e106]:
+        - link "20 hours ago" [ref=e107] [cursor=pointer]:
+          - /url: /feed#8w2kRY
+          - time [ref=e108]: 20 hours ago
+        - paragraph [ref=e109]:
+          - text: Our
+          - link "Game of the Month May Contest" [ref=e110] [cursor=pointer]:
+            - /url: https://lichess.org/forum/general-chess-discussion/lichess-game-of-the-month-may-2026-contest
+          - text: "is still underway: Share your best Lichess standard game played in May 2026 until"
+          - time [ref=e111]: 13 June 2026 at 05:00
+          - text: "! The winner will be announced on"
+          - time [ref=e112]: 24 June 2026
+          - text: ", followed by a"
+          - link "blog post" [ref=e113] [cursor=pointer]:
+            - /url: https://lichess.org/@/Lichess/blog/lichess-game-of-the-month-april-26/quyYWuyT
+          - text: with
+          - link "commentary" [ref=e114] [cursor=pointer]:
+            - /url: https://lichess.org/study/H9L6kgcH/CXHfwdq8#0
+          - text: on the game.
+      - generic [ref=e116]:
+        - link "46 hours ago" [ref=e117] [cursor=pointer]:
+          - /url: /feed#3CqVff
+          - time [ref=e118]: 46 hours ago
+        - paragraph [ref=e119]:
+          - text: GM
+          - link "Felix Blohberger" [ref=e120] [cursor=pointer]:
+            - /url: https://lichess.org/fide/1632051/Blohberger_Felix
+          - text: and GM
+          - link "David Navara" [ref=e121] [cursor=pointer]:
+            - /url: https://lichess.org/fide/309095/Navara_David
+          - text: play a classical OTB match from June 8 to 13, starting every day at
+          - time [ref=e122]: 18:00
+          - text: "! Tune in now for"
+          - link "live commentary by GM Alex Colovic and IM Kostya Kavutskiy" [ref=e123] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=c3Q-YN3Mj0s
+          - text: and follow the games in our
+          - link "broadcast" [ref=e124] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/gm-felix-blohberger-vs-gm-david-navara/QDXcTfNo
+          - text: .
+      - generic [ref=e126]:
+        - link "2 days ago" [ref=e127] [cursor=pointer]:
+          - /url: /feed#gRaUFQ
+          - time [ref=e128]: 2 days ago
+        - paragraph [ref=e129]:
+          - text: Congratulations to IM
+          - link "Renato Alfredo Terry Luján" [ref=e130] [cursor=pointer]:
+            - /url: https://lichess.org/@/AngelitoRT
+          - text: for winning our
+          - link "Chess960 Titled Arena June 2026" [ref=e131] [cursor=pointer]:
+            - /url: https://lichess.org/tournament/960jun26
+          - text: ", ahead of IM"
+          - link "Yoseph Theolifus Taher" [ref=e132] [cursor=pointer]:
+            - /url: https://lichess.org/@/yoseph2013
+          - text: ", FM"
+          - link "Dmitry Goltsev" [ref=e133] [cursor=pointer]:
+            - /url: https://lichess.org/@/goltsev2000
+          - text: ", GM"
+          - link "@handofprince" [ref=e134] [cursor=pointer]:
+            - /url: /@/handofprince
+          - text: ", and FM"
+          - link "Cristian Arrieta Hernández" [ref=e135] [cursor=pointer]:
+            - /url: https://lichess.org/@/Guary1
+          - text: "!"
+      - generic [ref=e137]:
+        - link "3 days ago" [ref=e138] [cursor=pointer]:
+          - /url: /feed#UVTFJx
+          - time [ref=e139]: 3 days ago
+        - paragraph [ref=e140]:
+          - text: Our Chess960 3+2
+          - link "Warm-up Arena" [ref=e141] [cursor=pointer]:
+            - /url: https://lichess.org/tournament/96wjun26
+          - text: starts today,
+          - time [ref=e142]: 6 June 2026 at 23:00
+          - text: "! Play against some of the titled players before they enter our"
+          - link "Chess960 Titled Arena" [ref=e143] [cursor=pointer]:
+            - /url: https://lichess.org/tournament/960jun26
+          - text: at
+          - time [ref=e144]: 00:00
+          - text: .
+      - generic [ref=e146]:
+        - link "4 days ago" [ref=e147] [cursor=pointer]:
+          - /url: /feed#JwpLVw
+          - time [ref=e148]: 4 days ago
+        - paragraph [ref=e149]:
+          - link "Kong Xiangrui" [ref=e150] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--open/round-1/pHXOBgRi#players/8632200
+          - text: won the
+          - link "2026 Asian Individual Chess Championship" [ref=e151] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--open/ZyJ9pks5
+          - text: ", becoming the first IM to ever win the tournament and gaining the GM title directly! In the"
+          - link "women's section" [ref=e152] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--women/BIKzR7Yl
+          - text: ","
+          - link "Savitha Shri B" [ref=e153] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--women/round-1/IWQDPWaX#players/35061887
+          - text: won on tiebreaks with a score of 7.5/9.
+      - generic [ref=e155]:
+        - link "4 days ago" [ref=e156] [cursor=pointer]:
+          - /url: /feed#5lvr2y
+          - time [ref=e157]: 4 days ago
+        - paragraph [ref=e158]:
+          - link "Praggnanandhaa R" [ref=e159] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/norway-chess-2026--open/round-10--armageddon/JRUqqpsa#players/25059530
+          - text: won
+          - link "Norway Chess 2026" [ref=e160] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/norway-chess-2026--open/kDQUxYbE
+          - text: after 4 classical wins in a row to score 18 points, while
+          - link "Bibisara Assaubayeva" [ref=e161] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/norway-chess-2026--women/round-1/tsYUmD9p#players/13708694
+          - text: secured victory in the women's section a round in advance with a score of 16.5.
+      - generic [ref=e163]:
+        - link "4 days ago" [ref=e164] [cursor=pointer]:
+          - /url: /feed#vFBQOT
+          - time [ref=e165]: 4 days ago
+        - paragraph [ref=e166]:
+          - text: 15-year-old Anastasiia Hnatyshyn won the
+          - link "2026 European Women's Chess Championship" [ref=e167] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/25th-european-womens-chess-championship-2026/round-11/yUnCXILA
+          - text: "! Entering the tournament as the 76th seed with a 2207 rating, she finished with a 2580 performance to gain 214 Elo from the event and become the women's world No. 18."
+      - link "All updates »" [ref=e170] [cursor=pointer]:
+        - /url: /feed
+    - generic [ref=e171]:
+      - generic [ref=e172]:
+        - link "Open tournaments More »" [ref=e173] [cursor=pointer]:
+          - /url: /tournament
+          - heading "Open tournaments" [level=2] [ref=e174]
+          - generic [ref=e175]: More »
+        - table [ref=e177]:
+          - rowgroup [ref=e178]:
+            - row "≤2000 Bullet 17 minutes remaining 27m 146" [ref=e179]:
+              - cell "≤2000 Bullet" [ref=e180]:
+                - link "≤2000 Bullet" [ref=e181] [cursor=pointer]:
+                  - /url: /tournament/YIQY9R4W
+              - cell "17 minutes remaining" [ref=e182]:
+                - time [ref=e184]: 17 minutes remaining
+              - cell "27m" [ref=e186]
+              - cell "146" [ref=e187]
+            - row "Hourly Atomic 17 minutes remaining 27m 40" [ref=e188]:
+              - cell "Hourly Atomic" [ref=e189]:
+                - link "Hourly Atomic" [ref=e190] [cursor=pointer]:
+                  - /url: /tournament/lt7Nr3fo
+              - cell "17 minutes remaining" [ref=e191]:
+                - time [ref=e193]: 17 minutes remaining
+              - cell "27m" [ref=e195]
+              - cell "40" [ref=e196]
+            - row "Hourly Bullet 17 minutes remaining 27m 224" [ref=e197]:
+              - cell "Hourly Bullet" [ref=e198]:
+                - link "Hourly Bullet" [ref=e199] [cursor=pointer]:
+                  - /url: /tournament/O81dAIFo
+              - cell "17 minutes remaining" [ref=e200]:
+                - time [ref=e202]: 17 minutes remaining
+              - cell "27m" [ref=e204]
+              - cell "224" [ref=e205]
+            - row "Hourly Chess960 17 minutes remaining 27m 27" [ref=e206]:
+              - cell "Hourly Chess960" [ref=e207]:
+                - link "Hourly Chess960" [ref=e208] [cursor=pointer]:
+                  - /url: /tournament/wUyyzEjp
+              - cell "17 minutes remaining" [ref=e209]:
+                - time [ref=e211]: 17 minutes remaining
+              - cell "27m" [ref=e213]
+              - cell "27" [ref=e214]
+            - row "Hourly UltraBullet 17 minutes remaining 27m 63" [ref=e215]:
+              - cell "Hourly UltraBullet" [ref=e216]:
+                - link "Hourly UltraBullet" [ref=e217] [cursor=pointer]:
+                  - /url: /tournament/xUJFHPSP
+              - cell "17 minutes remaining" [ref=e218]:
+                - time [ref=e220]: 17 minutes remaining
+              - cell "27m" [ref=e222]
+              - cell "63" [ref=e223]
+            - row "Blitz Shield in 4 hours 6h 94" [ref=e224]:
+              - cell "Blitz Shield" [ref=e225]:
+                - link "Blitz Shield" [ref=e226] [cursor=pointer]:
+                  - /url: /tournament/sF6bPl9q
+              - cell "in 4 hours" [ref=e227]:
+                - time [ref=e229]: in 4 hours
+              - cell "6h" [ref=e230]
+              - cell "94" [ref=e231]
+      - generic [ref=e232]:
+        - link "Simultaneous exhibitions More »" [ref=e233] [cursor=pointer]:
+          - /url: /simul
+          - heading "Simultaneous exhibitions" [level=2] [ref=e234]
+          - generic [ref=e235]: More »
+        - table [ref=e237]:
+          - rowgroup [ref=e238]:
+            - row " LM Lance5500 5+5 1" [ref=e239]:
+              - cell " LM Lance5500" [ref=e240]:
+                - link " LM Lance5500" [ref=e241] [cursor=pointer]:
+                  - /url: /simul/JWOTWcNX
+                  - generic [ref=e242]:
+                    - generic "Lichess Patron (5 years)" [ref=e243]: 
+                    - text: LM Lance5500
+              - cell "5+5" [ref=e244]
+              - cell "1" [ref=e245]
+    - generic [ref=e246]:
+      - link "About Lichess" [ref=e247] [cursor=pointer]:
+        - /url: /about
+      - link "FAQ" [ref=e248] [cursor=pointer]:
+        - /url: /faq
+      - link "Contact" [ref=e249] [cursor=pointer]:
+        - /url: /contact
+      - link "Mobile App" [ref=e250] [cursor=pointer]:
+        - /url: /app
+      - link "Terms of Service" [ref=e251] [cursor=pointer]:
+        - /url: /terms-of-service
+      - link "Privacy" [ref=e252] [cursor=pointer]:
+        - /url: /privacy
+      - link "Source Code" [ref=e253] [cursor=pointer]:
+        - /url: /source
+      - link "Ads" [ref=e254] [cursor=pointer]:
+        - /url: /ads
+      - generic [ref=e255]:
+        - link "Mastodon" [ref=e256] [cursor=pointer]:
+          - /url: https://mastodon.online/@lichess
+        - link "GitHub" [ref=e257] [cursor=pointer]:
+          - /url: https://github.com/lichess-org
+        - link "Discord" [ref=e258] [cursor=pointer]:
+          - /url: https://discord.gg/lichess
+        - link "Bluesky" [ref=e259] [cursor=pointer]:
+          - /url: https://bsky.app/profile/lichess.org
+        - link "YouTube" [ref=e260] [cursor=pointer]:
+          - /url: https://youtube.com/@LichessDotOrg
+        - link "Twitch" [ref=e261] [cursor=pointer]:
+          - /url: https://www.twitch.tv/lichessdotorg
+  - generic [ref=e262] [cursor=pointer]: 
+  - img

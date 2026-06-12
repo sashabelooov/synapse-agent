@@ -1,0 +1,60 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Gmail" [ref=e8] [cursor=pointer]:
+          - /url: https://mail.google.com/mail/&ogbl
+        - link "Rasm qidirish" [ref=e10] [cursor=pointer]:
+          - /url: https://www.google.com/imghp?hl=uz&ogbl
+          - text: Rasmlar
+      - button "Google ilovalari" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+      - link "Kirish" [ref=e18] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?hl=uz&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+  - img "Google" [ref=e21]
+  - search [ref=e29]:
+    - generic [ref=e31]:
+      - generic [ref=e33]:
+        - button "Fayl yoki rasmlarni yuklash" [ref=e36] [cursor=pointer]:
+          - img [ref=e38]
+        - combobox "Qidiruv" [active] [ref=e41]
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - button "Ekran klaviaturasi" [ref=e44] [cursor=pointer]:
+              - img [ref=e46]
+            - button "Ovozli qidiruv" [ref=e48] [cursor=pointer]:
+              - img [ref=e49]
+            - button "Rasm asosida qidirish" [ref=e51] [cursor=pointer]:
+              - img [ref=e52]
+          - link "AI rejimi" [ref=e54] [cursor=pointer]:
+            - generic [ref=e56]:
+              - img [ref=e58]
+              - generic [ref=e65]: AI rejimi
+      - generic [ref=e67]:
+        - button "Google qidiruvi" [ref=e68] [cursor=pointer]
+        - button "Omadingizni sinang" [ref=e69] [cursor=pointer]
+  - generic [ref=e72]:
+    - text: "Google ushbu tilni taklif qiladi:"
+    - link "русский" [ref=e73] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_hlKygkA_dQ-aKVNMGJr1FTIdixw%3D&hl=ru&source=homepage&sa=X&ved=0ahUKEwjy6aPKk_2UAxUVR_EDHU_GOw8Q2ZgBCCE
+    - link "English" [ref=e74] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_hlKygkA_dQ-aKVNMGJr1FTIdixw%3D&hl=en&source=homepage&sa=X&ved=0ahUKEwjy6aPKk_2UAxUVR_EDHU_GOw8Q2ZgBCCI
+  - contentinfo [ref=e76]:
+    - generic [ref=e77]: Oʻzbekiston
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - link "Google haqida" [ref=e80] [cursor=pointer]:
+          - /url: https://about.google/?utm_source=google-UZ&utm_medium=referral&utm_campaign=hp-footer&fg=1
+        - link "Reklama" [ref=e81] [cursor=pointer]:
+          - /url: https://www.google.com/intl/uz_uz/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+        - link "Biznes" [ref=e82] [cursor=pointer]:
+          - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+        - link "Qidiruv qanday ishlaydi" [ref=e83] [cursor=pointer]:
+          - /url: https://google.com/search/howsearchworks/?fg=1
+      - generic [ref=e84]:
+        - link "Maxfiylik" [ref=e85] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy?hl=uz&fg=1
+        - link "Shartlar" [ref=e86] [cursor=pointer]:
+          - /url: https://policies.google.com/terms?hl=uz&fg=1
+        - button "Sozlamalar" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]: Sozlamalar

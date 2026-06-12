@@ -1,0 +1,571 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Guide" [active] [ref=e9] [cursor=pointer]:
+          - generic [ref=e12]:
+            - img
+        - link "YouTube Home" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e19]:
+            - img
+        - button "Skip navigation" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: Skip navigation
+      - generic [ref=e28]:
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - combobox "Search" [expanded] [ref=e33]: brocode
+              - button "Clear search query" [ref=e115] [cursor=pointer]:
+                - generic [ref=e118]:
+                  - img
+            - button "Search" [ref=e34] [cursor=pointer]:
+              - generic [ref=e37]:
+                - img
+        - generic [ref=e39]:
+          - button "Search with your voice" [ref=e41] [cursor=pointer]:
+            - generic [ref=e122]:
+              - img
+          - tooltip "tooltip"
+      - generic [ref=e50]:
+        - button "Settings" [ref=e55] [cursor=pointer]:
+          - generic [ref=e58]:
+            - img
+        - link "Sign in" [ref=e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fresults%253Fsearch_query%253Dbrocode&hl=en&ec=65620
+          - generic [ref=e123]:
+            - img
+          - generic [ref=e66]: Sign in
+  - navigation [ref=e70]:
+    - generic [ref=e71]:
+      - link "Home" [ref=e73] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e124]:
+          - img
+        - generic [ref=e77]: Home
+      - link "Shorts" [ref=e79] [cursor=pointer]:
+        - /url: /shorts/
+        - generic [ref=e82]:
+          - img
+        - generic [ref=e83]: Shorts
+      - link "Subscriptions" [ref=e85] [cursor=pointer]:
+        - /url: /feed/subscriptions
+        - generic [ref=e88]:
+          - img
+        - generic [ref=e89]: Subscriptions
+      - link "You" [ref=e91] [cursor=pointer]:
+        - /url: /feed/you
+        - generic [ref=e94]:
+          - img
+        - generic [ref=e95]: You
+  - generic [ref=e96]:
+    - text: •
+    - main [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e128]:
+          - tablist [ref=e133]:
+            - tab "All" [selected] [ref=e137] [cursor=pointer]:
+              - generic [ref=e139]: All
+            - tab "Shorts" [ref=e146] [cursor=pointer]:
+              - generic [ref=e148]: Shorts
+            - tab "Unwatched" [ref=e155] [cursor=pointer]:
+              - generic [ref=e157]: Unwatched
+            - tab "Watched" [ref=e164] [cursor=pointer]:
+              - generic [ref=e166]: Watched
+            - tab "Videos" [ref=e173] [cursor=pointer]:
+              - generic [ref=e175]: Videos
+            - tab "Recently uploaded" [ref=e182] [cursor=pointer]:
+              - generic [ref=e184]: Recently uploaded
+            - tab "Live" [ref=e191] [cursor=pointer]:
+              - generic [ref=e193]: Live
+          - generic [ref=e198]:
+            - button "Search filters" [ref=e200] [cursor=pointer]:
+              - generic [ref=e201]: Filters
+            - tooltip "tooltip"
+        - generic [ref=e212]:
+          - generic [ref=e214]:
+            - link [ref=e216] [cursor=pointer]:
+              - /url: /@BroCodez
+            - generic [ref=e219]:
+              - link "Bro Code Verified @BroCodez•3.26M subscribers Coding bootcamps HATE HIM!" [ref=e220] [cursor=pointer]:
+                - /url: /@BroCodez
+                - generic [ref=e221]:
+                  - generic [ref=e222]:
+                    - generic [ref=e225]: Bro Code
+                    - img "Verified" [ref=e230]
+                  - generic [ref=e232]: "@BroCodez•3.26M subscribers"
+                  - generic [ref=e233]: Coding bootcamps HATE HIM!
+              - link "Subscribe" [ref=e238] [cursor=pointer]:
+                - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fresults%253Fsearch_query%253Dbrocode%26continue_action%3DQUFFLUhqbEVuMUMzREQ5Uk9MMlpwcnJIYnE4ZEtpN1Rpd3xBQ3Jtc0treW9EbmdabHBGRTZJVnoxeVg3X2NRWk5nTEZjVHJNeTZNZm45T29VY1RRN0JYWUIxZUF3ZVFhY05ueUsyMjQ5ejF3Vl9rUXRNdENUMjA2Q2ViQ1hESy1vazJGNnRUeXZkSFZpc3NhR2stdlM3aFRlOWR0YU1Walhjd0w3NnhVVGZuVWZzZkpvcG1SOTFrTUpBRmc0dEtGWEQyNXlMNV9uQ1pCRGl2QjV1Xy1sZXY4RGZ4ZmVxZFpVUkpJSmthMXBFRC1ZNDM&hl=en
+                - generic [ref=e239]: Subscribe
+          - generic [ref=e244]:
+            - link [ref=e246] [cursor=pointer]:
+              - /url: /watch?v=ix9cRaBkVe0&pp=ygUHYnJvY29kZQ%3D%3D
+              - img [ref=e248]
+              - img [ref=e251]:
+                - generic [ref=e252]: 12:00:00
+              - generic:
+                - generic: Now playing
+                - generic:
+                  - img
+            - generic [ref=e253] [cursor=pointer]:
+              - generic [ref=e254]:
+                - heading "Python Full Course for free 🐍 12 hours" [level=3] [ref=e256]:
+                  - link "Python Full Course for free 🐍 12 hours" [ref=e257]:
+                    - /url: /watch?v=ix9cRaBkVe0&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: Python Full Course for free 🐍
+                - generic [ref=e260]:
+                  - generic [ref=e261]: 10M views
+                  - generic [ref=e262]: •1 year ago
+              - generic [ref=e263]:
+                - link "Go to channel Bro Code" [ref=e264]:
+                  - /url: /@BroCodez
+                - generic [ref=e266]:
+                  - link "Bro Code" [ref=e270]:
+                    - /url: /@BroCodez
+                  - img "Verified" [ref=e275]
+              - generic [ref=e277]:
+                - text: "python #tutorial #beginners Python tutorial for beginners' full course 2024 *Learn Python in 1 HOUR* ..."
+                - tooltip "tooltip"
+              - img "Fundraiser" [ref=e282]:
+                - generic [ref=e283]: Fundraiser
+              - generic [ref=e286]:
+                - generic [ref=e287]:
+                  - generic [ref=e291]: 77 chapters
+                  - button [ref=e292]
+                - button "More" [ref=e297]:
+                  - generic [ref=e301]:
+                    - img
+          - generic [ref=e305]:
+            - generic [ref=e308]:
+              - img [ref=e310]
+              - heading "Shorts" [level=2] [ref=e313]
+            - generic [ref=e315]:
+              - generic [ref=e318]:
+                - link [ref=e319] [cursor=pointer]:
+                  - /url: /shorts/0Zy7Me7_qVE
+                - generic [ref=e323] [cursor=pointer]:
+                  - 'link "He finally BROKE Bro Code 💔💀#futbol #soccer #football #footballvideo #footballmemes" [ref=e324]':
+                    - /url: /shorts/0Zy7Me7_qVE
+                  - generic [ref=e325]: 2.2M views
+                - button "More actions" [ref=e327] [cursor=pointer]:
+                  - generic [ref=e331]:
+                    - img
+              - generic [ref=e337]:
+                - link [ref=e338] [cursor=pointer]:
+                  - /url: /shorts/KBs27wZHdHg
+                - generic [ref=e342] [cursor=pointer]:
+                  - 'link "Bro Code went too far 💀 #futbol #soccer #football #footballvideo #footballmemes #funny" [ref=e343]':
+                    - /url: /shorts/KBs27wZHdHg
+                  - generic [ref=e344]: 941K views
+                - button "More actions" [ref=e346] [cursor=pointer]:
+                  - generic [ref=e350]:
+                    - img
+              - generic [ref=e356]:
+                - link [ref=e357] [cursor=pointer]:
+                  - /url: /shorts/lY592sFPxn0
+                  - img [ref=e362]:
+                    - generic [ref=e363]: New
+                - generic [ref=e364] [cursor=pointer]:
+                  - 'link "Did his teammates follow Bro Code? 🤷‍♂️ Who got him the best gift? 🎁 #football #futbol #soccer" [ref=e365]':
+                    - /url: /shorts/lY592sFPxn0
+                  - generic [ref=e366]: 5.6M views
+                - button "More actions" [ref=e368] [cursor=pointer]:
+                  - generic [ref=e372]:
+                    - img
+              - generic [ref=e378]:
+                - link [ref=e379] [cursor=pointer]:
+                  - /url: /shorts/f_IuAy3rOY0
+                - generic [ref=e383] [cursor=pointer]:
+                  - 'link "squeak made this video #brawlstars" [ref=e384]':
+                    - /url: /shorts/f_IuAy3rOY0
+                  - generic [ref=e385]: 605K views
+                - button "More actions" [ref=e387] [cursor=pointer]:
+                  - generic [ref=e391]:
+                    - img
+              - generic [ref=e397]:
+                - link [ref=e398] [cursor=pointer]:
+                  - /url: /shorts/Zf_R2NundjM
+                - generic [ref=e402] [cursor=pointer]:
+                  - 'link "Griff SUCKS #brawlstars" [ref=e403]':
+                    - /url: /shorts/Zf_R2NundjM
+                  - generic [ref=e404]: 420K views
+                - button "More actions" [ref=e406] [cursor=pointer]:
+                  - generic [ref=e410]:
+                    - img
+          - generic [ref=e415]:
+            - link [ref=e417] [cursor=pointer]:
+              - /url: /@brocodepodcastofficial
+            - generic [ref=e420]:
+              - link "The Bro Code Podcast @brocodepodcastofficial•160K subscribers After years of growing up in the music and entertainment industry, artist Gavin Magnus, his brother Jakob and best friend Cole are ..." [ref=e421] [cursor=pointer]:
+                - /url: /@brocodepodcastofficial
+                - generic [ref=e422]:
+                  - generic [ref=e426]: The Bro Code Podcast
+                  - generic [ref=e427]: "@brocodepodcastofficial•160K subscribers"
+                  - generic [ref=e428]: After years of growing up in the music and entertainment industry, artist Gavin Magnus, his brother Jakob and best friend Cole are ...
+              - link "Subscribe" [ref=e433] [cursor=pointer]:
+                - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fresults%253Fsearch_query%253Dbrocode%26continue_action%3DQUFFLUhqa0g1RUlLUlhkQnB6VVB3V29zRWVBUzlKWEREd3xBQ3Jtc0trVUZLMV9Xemxrdnl1dzRCckRhSEIwME5yZ0dNYl9zOFFKNHM2ajR1YTlmX2V3QXdVbUQwOXlrcUhwZDJ4QVJjTnluRVZQSmdFS3hIekdGdTBFYk9MYkFFdGp4UHRJdWhjLVBKOXhOMXl2UVFTODhQdkZOb1RhSkZZNFdVX0lfVzltUTlMYnhEZUMtNHUyUDdNbWp1bFZpQUJaTWlETmt1ZHZwelRtYzVBdVZ6SU1OdTNSbjVxc054UndKcThLa0NMbFhweEY&hl=en
+                - generic [ref=e434]: Subscribe
+          - generic [ref=e439]:
+            - link [ref=e441] [cursor=pointer]:
+              - /url: /watch?v=lfmg-EJ8gm4&pp=ygUHYnJvY29kZQ%3D%3D
+            - generic [ref=e443] [cursor=pointer]:
+              - generic [ref=e444]:
+                - heading "JavaScript Full Course for free 🌐 12 hours" [level=3] [ref=e446]:
+                  - link "JavaScript Full Course for free 🌐 12 hours" [ref=e447]:
+                    - /url: /watch?v=lfmg-EJ8gm4&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: JavaScript Full Course for free 🌐
+                - generic [ref=e450]:
+                  - generic [ref=e451]: 5.2M views
+                  - generic [ref=e452]: •2 years ago
+              - generic [ref=e453]:
+                - link "Go to channel Bro Code" [ref=e454]:
+                  - /url: /@BroCodez
+                - generic [ref=e455]:
+                  - link "Bro Code" [ref=e459]:
+                    - /url: /@BroCodez
+                  - img "Verified" [ref=e464]
+              - generic [ref=e466]:
+                - text: "javascript #tutorial #course ⭐Time Stamps⭐ #1 00:00:00 JavaScript tutorial for beginners #2 00:12:32 Variables #3 ..."
+                - tooltip "tooltip"
+              - img "Fundraiser" [ref=e471]:
+                - generic [ref=e472]: Fundraiser
+              - generic [ref=e475]:
+                - generic [ref=e476]:
+                  - generic [ref=e480]: 75 chapters
+                  - button [ref=e481]
+                - button "More" [ref=e486]:
+                  - generic [ref=e490]:
+                    - img
+          - generic [ref=e495]:
+            - link [ref=e497] [cursor=pointer]:
+              - /url: /watch?v=xND0t1pr3KY&pp=ygUHYnJvY29kZQ%3D%3D
+            - generic [ref=e499] [cursor=pointer]:
+              - generic [ref=e500]:
+                - heading "C Programming Full Course for free ⚙️ 6 hours, 53 minutes" [level=3] [ref=e502]:
+                  - link "C Programming Full Course for free ⚙️ 6 hours, 53 minutes" [ref=e503]:
+                    - /url: /watch?v=xND0t1pr3KY&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: C Programming Full Course for free ⚙️
+                - generic [ref=e506]:
+                  - generic [ref=e507]: 1.9M views
+                  - generic [ref=e508]: •1 year ago
+              - generic [ref=e509]:
+                - link "Go to channel Bro Code" [ref=e510]:
+                  - /url: /@BroCodez
+                - generic [ref=e511]:
+                  - link "Bro Code" [ref=e515]:
+                    - /url: /@BroCodez
+                  - img "Verified" [ref=e520]
+              - generic [ref=e522]:
+                - text: "coding #programming #cprogramming (00:00:00) introduction to C programming ⚙ (00:00:41) VSCode download (00:01:52) new ..."
+                - tooltip "tooltip"
+              - img "Fundraiser" [ref=e527]:
+                - generic [ref=e528]: Fundraiser
+              - generic [ref=e531]:
+                - generic [ref=e532]:
+                  - generic [ref=e536]: 57 chapters
+                  - button [ref=e537]
+                - button "More" [ref=e542]:
+                  - generic [ref=e546]:
+                    - img
+          - generic [ref=e550]:
+            - generic [ref=e553]:
+              - img [ref=e555]
+              - heading "Shorts" [level=2] [ref=e558]
+            - generic [ref=e559]:
+              - generic [ref=e560]:
+                - generic [ref=e563]:
+                  - link [ref=e564] [cursor=pointer]:
+                    - /url: /shorts/pm9H9IMQWdM
+                  - generic [ref=e568] [cursor=pointer]:
+                    - link "Bro Code | Part 1" [ref=e569]:
+                      - /url: /shorts/pm9H9IMQWdM
+                    - generic [ref=e570]: 11M views
+                  - button "More actions" [ref=e572] [cursor=pointer]:
+                    - generic [ref=e576]:
+                      - img
+                - generic [ref=e582]:
+                  - link [ref=e583] [cursor=pointer]:
+                    - /url: /shorts/vBBRdUyzVD0
+                  - generic [ref=e587] [cursor=pointer]:
+                    - 'link "Bro Code 😎#brocode #ravimohan #marriage #single #whatsappstatus #fyp" [ref=e588]':
+                      - /url: /shorts/vBBRdUyzVD0
+                    - generic [ref=e589]: 21K views
+                  - button "More actions" [ref=e591] [cursor=pointer]:
+                    - generic [ref=e595]:
+                      - img
+                - generic [ref=e601]:
+                  - link [ref=e602] [cursor=pointer]:
+                    - /url: /shorts/w80CyUxZhvo
+                  - generic [ref=e606] [cursor=pointer]:
+                    - 'link "#bro code #beer" [ref=e607]':
+                      - /url: /shorts/w80CyUxZhvo
+                    - generic [ref=e608]: 93K views
+                  - button "More actions" [ref=e610] [cursor=pointer]:
+                    - generic [ref=e614]:
+                      - img
+                - generic [ref=e620]:
+                  - link [ref=e621] [cursor=pointer]:
+                    - /url: /shorts/LzxAivO-QPw
+                    - img [ref=e626]:
+                      - generic [ref=e627]: New
+                  - generic [ref=e628] [cursor=pointer]:
+                    - 'link "POV: Bro Cancels the Plans for Her 😭😂 | Relatable Edit" [ref=e629]':
+                      - /url: /shorts/LzxAivO-QPw
+                    - generic [ref=e630]: 28K views
+                  - button "More actions" [ref=e632] [cursor=pointer]:
+                    - generic [ref=e636]:
+                      - img
+                - generic [ref=e642]:
+                  - link [ref=e643] [cursor=pointer]:
+                    - /url: /shorts/Q4ESaUiPxk4
+                  - generic [ref=e647] [cursor=pointer]:
+                    - 'link "The Ultimate Bro Code: Beer Drinking Tips" [ref=e648]':
+                      - /url: /shorts/Q4ESaUiPxk4
+                    - generic [ref=e649]: 53K views
+                  - button "More actions" [ref=e651] [cursor=pointer]:
+                    - generic [ref=e655]:
+                      - img
+              - generic [ref=e659]:
+                - generic [ref=e662]:
+                  - link [ref=e663] [cursor=pointer]:
+                    - /url: /shorts/ExeUmxVWMm0
+                  - generic [ref=e667] [cursor=pointer]:
+                    - 'link "The biggest FRAUD in brawl stars #brawlstars" [ref=e668]':
+                      - /url: /shorts/ExeUmxVWMm0
+                    - generic [ref=e669]: 1.4M views
+                  - button "More actions" [ref=e671] [cursor=pointer]:
+                    - generic [ref=e675]:
+                      - img
+                - generic [ref=e681]:
+                  - link [ref=e682] [cursor=pointer]:
+                    - /url: /shorts/TsBMOSDqEfQ
+                  - generic [ref=e686] [cursor=pointer]:
+                    - 'link "Bro Code ASMR Shorts 🥂 | #shorts #trending" [ref=e687]':
+                      - /url: /shorts/TsBMOSDqEfQ
+                    - generic [ref=e688]: 17K views
+                  - button "More actions" [ref=e690] [cursor=pointer]:
+                    - generic [ref=e694]:
+                      - img
+                - generic [ref=e700]:
+                  - link [ref=e701] [cursor=pointer]:
+                    - /url: /shorts/2p24vYyS5_U
+                  - generic [ref=e705] [cursor=pointer]:
+                    - 'link "Bro code 🔥🔥 #shorts #whisky" [ref=e706]':
+                      - /url: /shorts/2p24vYyS5_U
+                    - generic [ref=e707]: 293K views
+                  - button "More actions" [ref=e709] [cursor=pointer]:
+                    - generic [ref=e713]:
+                      - img
+                - generic [ref=e719]:
+                  - link [ref=e720] [cursor=pointer]:
+                    - /url: /shorts/fshLYcNKW1s
+                  - generic [ref=e724] [cursor=pointer]:
+                    - 'link "Bro code activated 😂😂#brocode #funny #pranks #prankster #funnypranks#lovelife#savedmylife#remixsong" [ref=e725]':
+                      - /url: /shorts/fshLYcNKW1s
+                    - generic [ref=e726]: 3.9K views
+                  - button "More actions" [ref=e728] [cursor=pointer]:
+                    - generic [ref=e732]:
+                      - img
+                - generic [ref=e738]:
+                  - link [ref=e739] [cursor=pointer]:
+                    - /url: /shorts/UYaRxEw88Rk
+                  - generic [ref=e743] [cursor=pointer]:
+                    - link "Bro code the 15% ABV king" [ref=e744]:
+                      - /url: /shorts/UYaRxEw88Rk
+                    - generic [ref=e745]: 2M views
+                  - button "More actions" [ref=e747] [cursor=pointer]:
+                    - generic [ref=e751]:
+                      - img
+            - button "Show more" [ref=e758] [cursor=pointer]:
+              - generic [ref=e759]: Show more
+              - generic [ref=e763]:
+                - img
+          - generic [ref=e768]:
+            - link [ref=e770] [cursor=pointer]:
+              - /url: /watch?v=xTtL8E4LzTQ&pp=ygUHYnJvY29kZQ%3D%3D
+            - generic [ref=e772] [cursor=pointer]:
+              - generic [ref=e773]:
+                - heading "Java Full Course for free ☕ 12 hours" [level=3] [ref=e775]:
+                  - link "Java Full Course for free ☕ 12 hours" [ref=e776]:
+                    - /url: /watch?v=xTtL8E4LzTQ&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: Java Full Course for free ☕
+                - generic [ref=e779]:
+                  - generic [ref=e780]: 3.9M views
+                  - generic [ref=e781]: •1 year ago
+              - generic [ref=e782]:
+                - link "Go to channel Bro Code" [ref=e783]:
+                  - /url: /@BroCodez
+                - generic [ref=e784]:
+                  - link "Bro Code" [ref=e788]:
+                    - /url: /@BroCodez
+                  - img "Verified" [ref=e793]
+              - generic [ref=e795]:
+                - text: "java #javatutorial #javacourse Java tutorial for beginners full course 2025 *My original Java 12 Hour course* ..."
+                - tooltip "tooltip"
+              - img "Fundraiser" [ref=e800]:
+                - generic [ref=e801]: Fundraiser
+              - generic [ref=e804]:
+                - generic [ref=e805]:
+                  - generic [ref=e809]: 71 chapters
+                  - button [ref=e810]
+                - button "More" [ref=e815]:
+                  - generic [ref=e819]:
+                    - img
+          - generic [ref=e824]:
+            - link [ref=e826] [cursor=pointer]:
+              - /url: /watch?v=HGTJBPNC-Gw&pp=ygUHYnJvY29kZQ%3D%3D
+            - generic [ref=e828] [cursor=pointer]:
+              - generic [ref=e829]:
+                - heading "HTML & CSS Full Course for free 🌎 4 hours, 2 minutes" [level=3] [ref=e831]:
+                  - link "HTML & CSS Full Course for free 🌎 4 hours, 2 minutes" [ref=e832]:
+                    - /url: /watch?v=HGTJBPNC-Gw&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: HTML & CSS Full Course for free 🌎
+                - generic [ref=e835]:
+                  - generic [ref=e836]: 5.6M views
+                  - generic [ref=e837]: •3 years ago
+              - generic [ref=e838]:
+                - link "Go to channel Bro Code" [ref=e839]:
+                  - /url: /@BroCodez
+                - generic [ref=e840]:
+                  - link "Bro Code" [ref=e844]:
+                    - /url: /@BroCodez
+                  - img "Verified" [ref=e849]
+              - generic [ref=e851]:
+                - text: "HTML #CSS #course ⭐ TIME STAMPS ⭐ #1 00:00:00 Introduction to HTML 00:01:56 VSCode download 00:02:38 project ..."
+                - tooltip "tooltip"
+              - img "Fundraiser" [ref=e856]:
+                - generic [ref=e857]: Fundraiser
+              - generic [ref=e860]:
+                - generic [ref=e861]:
+                  - generic [ref=e865]: 42 chapters
+                  - button "1.Introduction to HTML | VSCode download | project folder setup | index.html | live server extension | html basics | 2.hyperlinks | 3.images 🖼️ | 4.audio | 5.video | 6.favicons | 7.text formatting | 8.span & div | 9.lists | 10.tables | 11.buttons | 12.forms | 13.headers & footers | 14.Introduction to CSS | 15.colors 🖌️ | 16.fonts | 17.borders | 18.shadows | 19.margins ↔️ | 20.float | 21.overflow | 22.display property | 23.height and width | 24.positions | 25.background images 🏙️ | 26.combinators | 27.pseudo-classes | 28.pseudo-elements | 29.pagination | 30.dropdown menus | 31.navigation bar | 32.website layout 🗺️ | 33.image gallery | 34.icons | 35.flexbox | 36.transformations | 37.animations" [ref=e866]
+                - button "More" [ref=e871]:
+                  - generic [ref=e875]:
+                    - img
+          - generic [ref=e880]:
+            - link [ref=e882] [cursor=pointer]:
+              - /url: /@BroCodeBrawlStars
+            - generic [ref=e885]:
+              - link "BroCode - Brawl Stars Verified @BroCodeBrawlStars•168K subscribers Larry and Lawrie = seeo and nbn business inquiries - brocodebrawl@gmail.com AMAZING youtube banner by cloversthebest on ..." [ref=e886] [cursor=pointer]:
+                - /url: /@BroCodeBrawlStars
+                - generic [ref=e887]:
+                  - generic [ref=e888]:
+                    - generic [ref=e891]: BroCode - Brawl Stars
+                    - img "Verified" [ref=e896]
+                  - generic [ref=e898]: "@BroCodeBrawlStars•168K subscribers"
+                  - generic [ref=e899]: Larry and Lawrie = seeo and nbn business inquiries - brocodebrawl@gmail.com AMAZING youtube banner by cloversthebest on ...
+              - link "Subscribe" [ref=e904] [cursor=pointer]:
+                - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fresults%253Fsearch_query%253Dbrocode%26continue_action%3DQUFFLUhqbWJJXzZVT0haV2VQZEEzUnFiak0tYllkd3hyQXxBQ3Jtc0tuc3RHNjFkOW9iTlJJYk04bERzN3JfN21pSnNtNzc4ZDBONDNpZ3F1Z1NtVzFGdmNLeXJLQ3UtYzJnenp6SzlLTUxBenJsVnhtZTlLTWRqeWZTeVk2VjNIVmVVeUMxLVlMTDBHRHhhMEpBZTMxNlFHTmxnRFFsRHlRT2hFMldUeEZNdGR4NUdKNnFQY1lrQkJ1aGgtQ3RvSEFLcXFxZG1YaFNpSXBSUzYxWHBsVzNnbWc5bHJmTWVKaHhpVVBlbGNQMmhHVnM&hl=en
+                - generic [ref=e905]: Subscribe
+          - generic [ref=e910]:
+            - link [ref=e912] [cursor=pointer]:
+              - /url: /watch?v=h4Z_XTSBs4s&list=RDh4Z_XTSBs4s&start_radio=1&pp=ygUHYnJvY29kZaAHAQ%3D%3D
+            - generic [ref=e914] [cursor=pointer]:
+              - generic [ref=e915]:
+                - heading "BROCODE - Ish Kevin & Og2Tone & Ririmba & Kenny K Shot 2 minutes, 15 seconds" [level=3] [ref=e917]:
+                  - link "BROCODE - Ish Kevin & Og2Tone & Ririmba & Kenny K Shot 2 minutes, 15 seconds" [ref=e918]:
+                    - /url: /watch?v=h4Z_XTSBs4s&list=RDh4Z_XTSBs4s&start_radio=1&pp=ygUHYnJvY29kZaAHAQ%3D%3D
+                    - text: BROCODE - Ish Kevin & Og2Tone & Ririmba & Kenny K Shot
+                - generic [ref=e921]:
+                  - generic [ref=e922]: 873K views
+                  - generic [ref=e923]: •4 years ago
+              - generic [ref=e924]:
+                - link "Go to channel Ish Kevin" [ref=e925]:
+                  - /url: /channel/UC0VSkPxfrVuPx7HvdBAc3rw
+                - generic [ref=e926]:
+                  - link "Ish Kevin" [ref=e930]:
+                    - /url: /channel/UC0VSkPxfrVuPx7HvdBAc3rw
+                  - img "Official Artist Channel" [ref=e935]
+              - generic [ref=e937]:
+                - generic [ref=e938]: "brocode #loudsound #music Song: Brocode Artists: Ish Kevin & Og2Tone & Ririmba & Kenny K Shot Director: Wacka Rocka ..."
+                - tooltip "tooltip"
+          - generic [ref=e940]:
+            - link [ref=e942] [cursor=pointer]:
+              - /url: /watch?v=-TkoO8Z07hI&pp=ygUHYnJvY29kZQ%3D%3D
+            - generic [ref=e944] [cursor=pointer]:
+              - generic [ref=e945]:
+                - heading "C++ Full Course for free ⚡️ 6 hours" [level=3] [ref=e947]:
+                  - link "C++ Full Course for free ⚡️ 6 hours" [ref=e948]:
+                    - /url: /watch?v=-TkoO8Z07hI&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: C++ Full Course for free ⚡️
+                - generic [ref=e951]:
+                  - generic [ref=e952]: 7.7M views
+                  - generic [ref=e953]: •3 years ago
+              - generic [ref=e954]:
+                - link "Go to channel Bro Code" [ref=e955]:
+                  - /url: /@BroCodez
+                - generic [ref=e956]:
+                  - link "Bro Code" [ref=e960]:
+                    - /url: /@BroCodez
+                  - img "Verified" [ref=e965]
+              - generic [ref=e967]:
+                - text: This video is a beginner's introduction to C++ that assumes you have no coding experience. This 6-hour video covers just enough ...
+                - tooltip "tooltip"
+              - img "Fundraiser" [ref=e972]:
+                - generic [ref=e973]: Fundraiser
+              - generic [ref=e976]:
+                - generic [ref=e977]:
+                  - generic [ref=e981]: 60 chapters
+                  - button [ref=e982]
+                - button "More" [ref=e987]:
+                  - generic [ref=e991]:
+                    - img
+          - generic [ref=e996]:
+            - link [ref=e998] [cursor=pointer]:
+              - /url: /watch?v=CgkZ7MvWUAA&pp=ygUHYnJvY29kZQ%3D%3D
+            - generic [ref=e1000] [cursor=pointer]:
+              - generic [ref=e1001]:
+                - heading "React Full Course for free ⚛️ 4 hours, 43 minutes" [level=3] [ref=e1003]:
+                  - link "React Full Course for free ⚛️ 4 hours, 43 minutes" [ref=e1004]:
+                    - /url: /watch?v=CgkZ7MvWUAA&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: React Full Course for free ⚛️
+                - generic [ref=e1007]:
+                  - generic [ref=e1008]: 3.7M views
+                  - generic [ref=e1009]: •2 years ago
+              - generic [ref=e1010]:
+                - link "Go to channel Bro Code" [ref=e1011]:
+                  - /url: /@BroCodez
+                - generic [ref=e1012]:
+                  - link "Bro Code" [ref=e1016]:
+                    - /url: /@BroCodez
+                  - img "Verified" [ref=e1021]
+              - generic [ref=e1023]:
+                - text: "reactjs #course #tutorial This is a beginners React JS course that should be enough to get you started using the React Library."
+                - tooltip "tooltip"
+              - img "Fundraiser" [ref=e1028]:
+                - generic [ref=e1029]: Fundraiser
+              - generic [ref=e1032]:
+                - generic [ref=e1033]:
+                  - generic [ref=e1037]: 20 chapters
+                  - button "1..React tutorial for beginners ⚛️ | 2..card components | 3..add CSS styles | 4..props📧 *(defaultProps are now deprecated in React 19+ ) | 5..conditional rendering | 6..render lists | 7..click events | 8..useState() hook | 9..onChange event handler | 10..color picker app | 11..updater functions | 12..update OBJECTS in state | 13..update ARRAYS in state | 14..update ARRAY of OBJECTS in state | 15..to-do list app | 16..useEffect() hook | 17..digital clock app | 18..useContext() hook 🧗‍♂️ | 19..useRef() hook 🗳️ | 20..stopwatch app" [ref=e1038]
+                - button "More" [ref=e1043]:
+                  - generic [ref=e1047]:
+                    - img
+          - generic [ref=e1052]:
+            - link [ref=e1054] [cursor=pointer]:
+              - /url: /watch?v=S7KmEuTmxBc&pp=ygUHYnJvY29kZQ%3D%3D
+            - generic [ref=e1056] [cursor=pointer]:
+              - generic [ref=e1057]:
+                - heading "Bro Code (Part 1) | Anwar Jibawi 4 minutes, 32 seconds" [level=3] [ref=e1059]:
+                  - link "Bro Code (Part 1) | Anwar Jibawi 4 minutes, 32 seconds" [ref=e1060]:
+                    - /url: /watch?v=S7KmEuTmxBc&pp=ygUHYnJvY29kZQ%3D%3D
+                    - text: Bro Code (Part 1) | Anwar Jibawi
+                - generic [ref=e1063]:
+                  - generic [ref=e1064]: 22M views
+                  - generic [ref=e1065]: •8 years ago
+              - generic [ref=e1066]:
+                - link "Go to channel Anwar Jibawi" [ref=e1067]:
+                  - /url: /@Anwar
+                - generic [ref=e1068]:
+                  - link "Anwar Jibawi" [ref=e1072]:
+                    - /url: /@Anwar
+                  - img "Verified" [ref=e1077]
+              - generic [ref=e1079]:
+                - text: WATCH MORE ▻ https://youtube.com/playlist?list=PLbNDd5uPifopbYqGU2CX7_DNdQFutazzb SUBSCRIBE ...
+                - tooltip "tooltip"
+              - generic [ref=e1081]:
+                - img "4K" [ref=e1084]:
+                  - generic [ref=e1085]: 4K
+                - img "Closed captions" [ref=e1088]:
+                  - generic [ref=e1089]: CC

@@ -1,0 +1,324 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Asosiy kontentga oʻtish" [ref=e2] [cursor=pointer]
+      - link "Qulayliklar boʻyicha yordam" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=uz
+  - generic [ref=e8]:
+    - search [ref=e9]:
+      - generic [ref=e11]:
+        - link "Google bosh sahifasiga oʻtish" [ref=e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=uz&sa=X&ved=0ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44QPAgI
+          - img [ref=e14]
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - combobox "Qidiruv" [ref=e25]: lichees.com lichees.com
+            - generic [ref=e26]:
+              - button "Tozalash" [ref=e28] [cursor=pointer]:
+                - img [ref=e30]
+              - generic [ref=e33]:
+                - button "Ekran klaviaturasi" [ref=e34] [cursor=pointer]:
+                  - img [ref=e36]
+                - button "Ovozli qidiruv" [ref=e38] [cursor=pointer]:
+                  - img [ref=e39]
+                - button "Rasm asosida qidirish" [ref=e41] [cursor=pointer]:
+                  - img [ref=e42]
+          - button "Qidirish" [ref=e44] [cursor=pointer]:
+            - img [ref=e47]
+    - generic [ref=e49]:
+      - button "Sozlamalar" [ref=e51] [cursor=pointer]:
+        - img [ref=e54]
+      - generic [ref=e57]:
+        - button "Google ilovalari" [ref=e59] [cursor=pointer]:
+          - img [ref=e60]
+        - link "Kirish" [ref=e64] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=uz&passive=true&continue=https://www.google.com/search%3Fq%3Dlichees.com%26sca_esv%3Dc2bd79d217e3461f%26source%3Dhp%26ei%3D5ZgparLjMpWOxc8Pz4zveQ%26iflsig%3DAFdpzrgAAAAAaimm9YhqBS2sloH8hwUjEdQG5-dVRpZe%26ved%3D0ahUKEwjy6aPKk_2UAxUVR_EDHU_GOw8Q4dUDCBY%26uact%3D5%26oq%3Dlichees.com%26gs_lp%3DEgdnd3Mtd2l6IgtsaWNoZWVzLmNvbUgxUABYAHAAeACQAQCYAQCgAQCqAQC4AQPIAQD4AQGYAgCgAgCYAwCSBwCgBwCyBwC4BwDCBwDIBwCACAE%26sclient%3Dgws-wiz&ec=futura_srp_og_si_72236_p
+  - generic [ref=e66]:
+    - navigation [ref=e72]:
+      - generic [ref=e78]:
+        - list [ref=e79]:
+          - listitem [ref=e80]:
+            - link "AI rejimi" [ref=e83] [cursor=pointer]:
+              - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&udm=50&source=hp&fbs=ADc_l-YJJecv38tKRMUyjVQZ6iA-OOmhAvbEFoYm23uY9s6ikLcnCrcNdqfSVmOMh4tMOFqHxoFrtEwYtBy0hwp-VIShx_Cz3wFShePEBS1_ueiMaxaYrsomlr1D2gD4xoXBwjmKYtfO1iHQXtPls6ntEpJv_3MW4-VIsQQ0Xu98rBrnza72dtI&aep=1&ntc=1&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q2J8OegQIGhAD
+              - generic [ref=e86]: AI rejimi
+          - listitem [ref=e87]:
+            - link "Hammasi" [disabled] [ref=e88]:
+              - generic [ref=e90]: Hammasi
+          - listitem [ref=e91]:
+            - link "Rasmlar" [ref=e92] [cursor=pointer]:
+              - /url: /search?sca_esv=c2bd79d217e3461f&udm=2&fbs=ADc_l-YJJecv38tKRMUyjVQZ6iA-OOmhAvbEFoYm23uY9s6ikLcnCrcNdqfSVmOMh4tMOFqHxoFrtEwYtBy0hwp-VIShx_Cz3wFShePEBS1_ueiMaxaYrsomlr1D2gD4xoXBwjmKYtfO1iHQXtPls6ntEpJv_3MW4-VIsQQ0Xu98rBrnza72dtI&q=lichees.com&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44QtKgLegQIHxAB
+              - generic [ref=e94]: Rasmlar
+          - listitem [ref=e95]:
+            - link "Videolar" [ref=e96] [cursor=pointer]:
+              - /url: /search?sca_esv=c2bd79d217e3461f&udm=7&fbs=ADc_l-YJJecv38tKRMUyjVQZ6iA-OOmhAvbEFoYm23uY9s6ikLcnCrcNdqfSVmOMh4tMOFqHxoFrtEwYtBy0hwp-VIShx_Cz3wFShePEBS1_ueiMaxaYrsomlr1D2gD4xoXBwjmKYtfO1iHQXtPls6ntEpJv_3MW4-VIsQQ0Xu98rBrnza72dtI&q=lichees.com&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44QtKgLegQIHhAB
+              - generic [ref=e98]: Videolar
+          - listitem [ref=e99]:
+            - link "Qisqa videolar" [ref=e100] [cursor=pointer]:
+              - /url: /search?sca_esv=c2bd79d217e3461f&udm=39&fbs=ADc_l-YJJecv38tKRMUyjVQZ6iA-OOmhAvbEFoYm23uY9s6ikLcnCrcNdqfSVmOMh4tMOFqHxoFrtEwYtBy0hwp-VIShx_Cz3wFShePEBS1_ueiMaxaYrsomlr1D2gD4xoXBwjmKYtfO1iHQXtPls6ntEpJv_3MW4-VIsQQ0Xu98rBrnza72dtI&q=lichees.com&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Qs6gLegQIHRAB
+              - generic [ref=e102]: Qisqa videolar
+          - listitem [ref=e103]:
+            - link "Veb" [ref=e104] [cursor=pointer]:
+              - /url: /search?sca_esv=c2bd79d217e3461f&udm=web&fbs=ADc_l-YJJecv38tKRMUyjVQZ6iA-OOmhAvbEFoYm23uY9s6ikLcnCrcNdqfSVmOMh4tMOFqHxoFrtEwYtBy0hwp-VIShx_Cz3wFShePEBS1_ueiMaxaYrsomlr1D2gD4xoXBwjmKYtfO1iHQXtPls6ntEpJv_3MW4-VIsQQ0Xu98rBrnza72dtI&q=lichees.com&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Qs6gLegQIIBAB
+              - generic [ref=e106]: Veb
+          - listitem [ref=e107]:
+            - link "Kitoblar" [ref=e108] [cursor=pointer]:
+              - /url: /search?sca_esv=c2bd79d217e3461f&q=lichees.com&udm=36&source=lnms&fbs=ADc_l-YJJecv38tKRMUyjVQZ6iA-OOmhAvbEFoYm23uY9s6ikLcnCrcNdqfSVmOMh4tMOFqHxoFrtEwYtBy0hwp-VIShx_Cz3wFShePEBS1_ueiMaxaYrsomlr1D2gD4xoXBwjmKYtfO1iHQXtPls6ntEpJv_3MW4-VIsQQ0Xu98rBrnza72dtI&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q0pQJegQIHBAB
+              - generic [ref=e110]: Kitoblar
+          - listitem [ref=e111]:
+            - button "Boshqa filtrlar" [ref=e112] [cursor=pointer]:
+              - generic "Boshqa filtrlar" [ref=e113]:
+                - generic [ref=e114]:
+                  - generic [ref=e115]: Yana
+                  - img [ref=e117]
+        - button "Vositalar" [ref=e120] [cursor=pointer]:
+          - generic [ref=e122]:
+            - generic [ref=e123]: Vositalar
+            - img [ref=e125]
+    - heading "Qidiruv natijalari" [level=1] [ref=e128]
+    - generic [ref=e134]:
+      - generic [ref=e135]: Looking for results in English?
+      - link [ref=e136] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e138]
+      - link "Change to English" [ref=e140] [cursor=pointer]:
+        - /url: /setprefs?sig=0_hlKygkA_dQ-aKVNMGJr1FTIdixw%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dlichees.com%26sca_esv%3Dc2bd79d217e3461f%26source%3Dhp%26ei%3D5ZgparLjMpWOxc8Pz4zveQ%26iflsig%3DAFdpzrgAAAAAaimm9YhqBS2sloH8hwUjEdQG5-dVRpZe%26ved%3D0ahUKEwjy6aPKk_2UAxUVR_EDHU_GOw8Q4dUDCBY%26uact%3D5%26oq%3Dlichees.com%26gs_lp%3DEgdnd3Mtd2l6IgtsaWNoZWVzLmNvbUgxUABYAHAAeACQAQCYAQCgAQCqAQC4AQPIAQD4AQGYAgCgAgCYAwCSBwCgBwCyBwC4BwDCBwDIBwCACAE%26sclient%3Dgws-wiz&hl=en&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44QhoQCKAF6BAgLEAQ
+      - link "O‘zbekda qoldirish" [ref=e141] [cursor=pointer]:
+        - /url: "#"
+      - link "Til sozlamalari" [ref=e143] [cursor=pointer]:
+        - /url: /preferences?lang=1&hl=uz&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44QiIQCKAN6BAgLEAY#languages
+    - main [ref=e145]:
+      - generic [ref=e149]:
+        - generic [ref=e152]:
+          - heading "Sayt havolasi mavjud veb natijalar" [level=2] [ref=e153]
+          - generic [ref=e154]:
+            - generic [ref=e158]:
+              - generic [ref=e160]:
+                - link "lichess.org • Free Online Chess Lichess.org · https://lichess.org" [ref=e162] [cursor=pointer]:
+                  - /url: https://lichess.org/
+                  - heading "lichess.org • Free Online Chess" [level=3] [ref=e163]
+                  - generic [ref=e168]:
+                    - generic [ref=e170]: Lichess.org
+                    - generic [ref=e171]: ·
+                    - generic [ref=e173]: https://lichess.org
+                - button "Bu natija haqida" [ref=e174] [cursor=pointer]:
+                  - img [ref=e177]
+              - generic [ref=e180]: Free online chess server. Play chess in a clean interface. No registration, no ads, no plugin required. Play chess with the computer, friends or random ...
+            - group "Tarix asosida moslangan tavsiyalar" [ref=e181]:
+              - rowgroup [ref=e182]:
+                - row "Sign in Free online chess server. Play chess in a clean interface. No ..." [ref=e183]:
+                  - cell "Sign in Free online chess server. Play chess in a clean interface. No ..." [ref=e184]:
+                    - generic [ref=e190]:
+                      - heading "Sign in" [level=3] [ref=e191]:
+                        - link "Sign in" [ref=e192] [cursor=pointer]:
+                          - /url: https://lichess.org/login
+                          - text: Sign in
+                      - generic [ref=e195]: Free online chess server. Play chess in a clean interface. No ...
+                - row "Jeu d'échecs gratuit en ligne Lichess est un serveur d'échecs gratuit (pour de vrai), libre, sans ..." [ref=e196]:
+                  - cell "Jeu d'échecs gratuit en ligne Lichess est un serveur d'échecs gratuit (pour de vrai), libre, sans ..." [ref=e197]:
+                    - generic [ref=e203]:
+                      - heading "Jeu d'échecs gratuit en ligne" [level=3] [ref=e204]:
+                        - link "Jeu d'échecs gratuit en ligne" [ref=e205] [cursor=pointer]:
+                          - /url: https://lichess.org/fr
+                          - text: Jeu d'échecs gratuit en ligne
+                      - generic [ref=e208]: Lichess est un serveur d'échecs gratuit (pour de vrai), libre, sans ...
+                - row "Бесплатные шахматы онлайн Бесплатный шахматный сервер. Сыграйте в шахматы прямо ..." [ref=e209]:
+                  - cell "Бесплатные шахматы онлайн Бесплатный шахматный сервер. Сыграйте в шахматы прямо ..." [ref=e210]:
+                    - generic [ref=e216]:
+                      - heading "Бесплатные шахматы онлайн" [level=3] [ref=e217]:
+                        - link "Бесплатные шахматы онлайн" [ref=e218] [cursor=pointer]:
+                          - /url: https://lichess.org/ru
+                          - text: Бесплатные шахматы онлайн
+                      - generic [ref=e221]: Бесплатный шахматный сервер. Сыграйте в шахматы прямо ...
+                - row "Ajedrez en línea gratis Lichess es un servidor de ajedrez libre y gratuito (realmente) de ..." [ref=e222]:
+                  - cell "Ajedrez en línea gratis Lichess es un servidor de ajedrez libre y gratuito (realmente) de ..." [ref=e223]:
+                    - generic [ref=e229]:
+                      - heading "Ajedrez en línea gratis" [level=3] [ref=e230]:
+                        - link "Ajedrez en línea gratis" [ref=e231] [cursor=pointer]:
+                          - /url: https://lichess.org/es
+                          - text: Ajedrez en línea gratis
+                      - generic [ref=e234]: Lichess es un servidor de ajedrez libre y gratuito (realmente) de ...
+                - row "Lichees Tools · Analysis boardOpeningsBoard ..." [ref=e235]:
+                  - cell "Lichees Tools · Analysis boardOpeningsBoard ..." [ref=e236]:
+                    - generic [ref=e242]:
+                      - heading "Lichees" [level=3] [ref=e243]:
+                        - link "Lichees" [ref=e244] [cursor=pointer]:
+                          - /url: https://lichess.org/team/-lichees-
+                          - text: Lichees
+                      - generic [ref=e247]: Tools · Analysis boardOpeningsBoard ...
+                - row "lichess.org saytidan boshqa natijalar »" [ref=e249]:
+                  - cell "lichess.org saytidan boshqa natijalar »" [ref=e250]:
+                    - link "lichess.org saytidan boshqa natijalar »" [ref=e252] [cursor=pointer]:
+                      - /url: /search?q=lichees.com+site:lichess.org&sca_esv=c2bd79d217e3461f&sa=X&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44QrAN6BAgMEAE
+        - generic [ref=e253]:
+          - generic [ref=e257]:
+            - generic [ref=e260]:
+              - link "Lichess - Apps on Google Play Google Play · https://play.google.com › details" [ref=e262] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=org.lichess.mobileV2
+                - heading "Lichess - Apps on Google Play" [level=3] [ref=e263]
+                - generic [ref=e268]:
+                  - generic [ref=e270]: Google Play
+                  - generic [ref=e271]: ·
+                  - generic [ref=e273]: https://play.google.com › details
+              - generic [ref=e274]:
+                - generic [ref=e275]: ·
+                - link "Shu sahifani tarjima qilish" [ref=e276] [cursor=pointer]:
+                  - /url: https://translate.google.com/translate?u=https://play.google.com/store/apps/details?id%3Dorg.lichess.mobileV2&hl=uz&sl=en&tl=uz&client=search
+              - button "Bu natija haqida" [ref=e277] [cursor=pointer]:
+                - img [ref=e280]
+            - generic [ref=e284]:
+              - emphasis [ref=e285]: Lichess
+              - text: is a free/libre, open-source chess application powered by volunteers and donations. Today, Lichess users play more than five million games every day.
+          - generic [ref=e289]:
+            - generic [ref=e292]:
+              - link "Lichess Wikipedia · https://en.wikipedia.org › wiki" [ref=e294] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Lichess
+                - heading "Lichess" [level=3] [ref=e295]
+                - generic [ref=e300]:
+                  - generic [ref=e302]: Wikipedia
+                  - generic [ref=e303]: ·
+                  - generic [ref=e305]: https://en.wikipedia.org › wiki
+              - generic [ref=e306]:
+                - generic [ref=e307]: ·
+                - link "Shu sahifani tarjima qilish" [ref=e308] [cursor=pointer]:
+                  - /url: https://translate.google.com/translate?u=https://en.wikipedia.org/wiki/Lichess&hl=uz&sl=en&tl=uz&client=search
+              - button "Bu natija haqida" [ref=e309] [cursor=pointer]:
+                - img [ref=e312]
+            - generic [ref=e316]:
+              - emphasis [ref=e317]: Lichess
+              - text: is an internet chess server that is free and open-source, run by a non-profit organization of the same name. Users of the site can play online chess ...
+          - generic [ref=e321]:
+            - generic [ref=e324]:
+              - link "Lichess – Google Play ilovalari Google Play · https://play.google.com › store › apps › details › Lichess" [ref=e326] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details/Lichess?id=org.lichess.mobileV2&hl=uz
+                - heading "Lichess – Google Play ilovalari" [level=3] [ref=e327]
+                - generic [ref=e332]:
+                  - generic [ref=e334]: Google Play
+                  - generic [ref=e335]: ·
+                  - generic [ref=e337]: https://play.google.com › store › apps › details › Lichess
+              - button "Bu natija haqida" [ref=e338] [cursor=pointer]:
+                - img [ref=e341]
+            - generic [ref=e345]:
+              - emphasis [ref=e346]: Lichess
+              - text: is a free/libre, open-source chess application powered by volunteers and donations. Today, Lichess users play more than five million games every day ...
+          - generic [ref=e350]:
+            - generic [ref=e353]:
+              - link "Chess.com vs Lichess.org - The ultimate comparison Reddit · r/chess · 20+ fikr · 3 yil oldin" [ref=e355] [cursor=pointer]:
+                - /url: https://www.reddit.com/r/chess/comments/12uahzv/chesscom_vs_lichessorg_the_ultimate_comparison/
+                - heading "Chess.com vs Lichess.org - The ultimate comparison" [level=3] [ref=e356]
+                - generic [ref=e361]:
+                  - generic [ref=e363]: Reddit · r/chess
+                  - generic [ref=e364]: ·
+                  - generic [ref=e366]: 20+ fikr · 3 yil oldin
+              - button "Bu natija haqida" [ref=e367] [cursor=pointer]:
+                - img [ref=e370]
+            - generic [ref=e374]:
+              - text: "-"
+              - emphasis [ref=e375]: Lichess.org provides most of the core features found on Chess.com
+              - text: ", but the content is not as extensive. It has puzzles, opening explorer, and ..."
+          - generic [ref=e379]:
+            - generic [ref=e382]:
+              - link "chess .com vs lichess - Chess Forums - Page 3 Chess.com · https://www.chess.com › view" [ref=e384] [cursor=pointer]:
+                - /url: https://www.chess.com/forum/view/general/chess-com-vs-lichess-8?page=3
+                - heading "chess .com vs lichess - Chess Forums - Page 3" [level=3] [ref=e385]
+                - generic [ref=e390]:
+                  - generic [ref=e392]: Chess.com
+                  - generic [ref=e393]: ·
+                  - generic [ref=e395]: https://www.chess.com › view
+              - generic [ref=e396]:
+                - generic [ref=e397]: ·
+                - link "Shu sahifani tarjima qilish" [ref=e398] [cursor=pointer]:
+                  - /url: https://translate.google.com/translate?u=https://www.chess.com/forum/view/general/chess-com-vs-lichess-8?page%3D3&hl=uz&sl=en&tl=uz&client=search
+              - button "Bu natija haqida" [ref=e399] [cursor=pointer]:
+                - img [ref=e402]
+            - generic [ref=e405]:
+              - generic [ref=e406]: 27-iyl, 2021 —
+              - generic [ref=e407]:
+                - emphasis [ref=e408]: Lichess is better for reasons
+                - text: such as better/quicker analysis, free puzzles and the studying resources. The only upside to chess.com is it's chess learning ...
+          - generic [ref=e413]:
+            - heading "Shu kabi qidiruvlar" [level=2] [ref=e415]
+            - generic [ref=e416]:
+              - button "Is 1500 elo on Lichess good?" [ref=e422] [cursor=pointer]:
+                - generic [ref=e424]: Is 1500 elo on Lichess good?
+                - img [ref=e427]
+              - button "How to get 2000 rating in Lichess?" [ref=e436] [cursor=pointer]:
+                - generic [ref=e438]: How to get 2000 rating in Lichess?
+                - img [ref=e441]
+              - button "Is Lichess 100% free?" [ref=e450] [cursor=pointer]:
+                - generic [ref=e452]: Is Lichess 100% free?
+                - img [ref=e455]
+              - button "How to register in Leeches?" [ref=e464] [cursor=pointer]:
+                - generic [ref=e466]: How to register in Leeches?
+                - img [ref=e469]
+          - generic [ref=e475]:
+            - generic [ref=e478]:
+              - 'link "LiChess vs. Chess.com: Why I Choose LiChess Every Time Medium · Agadmator · 20+ layk · 2 yil oldin" [ref=e480] [cursor=pointer]':
+                - /url: https://medium.com/@Agadmator-Chess/lichess-vs-chess-com-why-i-choose-lichess-every-time-b020040cfc0b
+                - 'heading "LiChess vs. Chess.com: Why I Choose LiChess Every Time" [level=3] [ref=e481]'
+                - generic [ref=e486]:
+                  - generic [ref=e488]: Medium · Agadmator
+                  - generic [ref=e489]: ·
+                  - generic [ref=e491]: 20+ layk · 2 yil oldin
+              - button "Bu natija haqida" [ref=e492] [cursor=pointer]:
+                - img [ref=e495]
+            - generic [ref=e499]:
+              - text: Overall,
+              - emphasis [ref=e500]: LiChess offers a superior game play experience
+              - text: and a smoother learning curve compared to Chess.com, making it my preferred choice for ...
+      - navigation [ref=e503]:
+        - heading "Sahifalar navigatsiyasi" [level=1] [ref=e504]
+        - text: "1"
+        - link "Page 2" [ref=e507] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=10&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAE
+          - text: "2"
+        - link "Page 3" [ref=e509] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=20&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAG
+          - text: "3"
+        - link "Page 4" [ref=e511] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=30&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAI
+          - text: "4"
+        - link "Page 5" [ref=e513] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=40&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAK
+          - text: "5"
+        - link "Page 6" [ref=e515] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=50&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAM
+          - text: "6"
+        - link "Page 7" [ref=e517] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=60&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAO
+          - text: "7"
+        - link "Page 8" [ref=e519] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=70&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAQ
+          - text: "8"
+        - link "Page 9" [ref=e521] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=80&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAS
+          - text: "9"
+        - link "Page 10" [ref=e523] [cursor=pointer]:
+          - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=90&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8tMDegQIIRAU
+          - text: "10"
+        - heading "Keyingisi" [level=2] [ref=e525]:
+          - link "Keyingisi" [ref=e526] [cursor=pointer]:
+            - /url: /search?q=lichees.com&sca_esv=c2bd79d217e3461f&ei=75gpaqDCL8WExc8PvPmP8Ag&start=10&sa=N&sstk=AU9db-Bgq6pmaM2MDIYY--ErFZDQE8602v7LicHeBB7vpyvibbFPFaeCOMX2EOhy2Sy7-SQ3r3OLL2Uf6401jHYCRiOJrmiB2kxUkA&ved=2ahUKEwjg9YLPk_2UAxVFQvEDHbz8A44Q8NMDegQIIRAW
+            - generic [ref=e528]: Keyingisi
+      - navigation
+    - contentinfo [ref=e529]:
+      - heading "Taglavha havolalari" [level=1] [ref=e530]
+      - generic [ref=e534]:
+        - generic [ref=e536]:
+          - text: Oʻzbekiston
+          - generic [ref=e538]:
+            - button "Тоshkent - From your IP address" [ref=e540] [cursor=pointer]:
+              - generic [ref=e541]: Тоshkent
+              - generic [ref=e543]:
+                - text: "-"
+                - generic [ref=e544]: From your IP address
+            - text: "-"
+            - button "Joylashuvni yangilash" [ref=e546] [cursor=pointer]: Joylashuvni yangilash
+        - generic [ref=e549]:
+          - link "Yordam" [ref=e550] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=uz&fg=1
+          - link "Fikr-mulohaza yuborish" [ref=e551] [cursor=pointer]:
+            - /url: "#"
+          - link "Maxfiylik" [ref=e552] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=uz&fg=1
+          - link "Shartlar" [ref=e553] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=uz&fg=1

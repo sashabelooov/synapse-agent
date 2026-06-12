@@ -1,0 +1,987 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Guide" [ref=e9] [cursor=pointer]:
+          - generic [ref=e12]:
+            - img
+        - link "YouTube Home" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e19]:
+            - img
+        - button "Skip navigation" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: Skip navigation
+      - generic [ref=e28]:
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - combobox "Search" [expanded] [ref=e33]: brocode
+              - button "Clear search query" [ref=e115] [cursor=pointer]:
+                - generic [ref=e118]:
+                  - img
+            - button "Search" [ref=e34] [cursor=pointer]:
+              - generic [ref=e37]:
+                - img
+        - generic [ref=e39]:
+          - button "Search with your voice" [ref=e41] [cursor=pointer]:
+            - generic [ref=e1694]:
+              - img
+          - tooltip "tooltip"
+      - generic [ref=e50]:
+        - button "Settings" [ref=e55] [cursor=pointer]:
+          - generic [ref=e58]:
+            - img
+        - link "Sign in" [ref=e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F%2540BroCodez&hl=en&ec=65620
+          - generic [ref=e1695]:
+            - img
+          - generic [ref=e66]: Sign in
+  - navigation [ref=e70]:
+    - generic [ref=e71]:
+      - link "Home" [ref=e73] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e124]:
+          - img
+        - generic [ref=e77]: Home
+      - link "Shorts" [ref=e79] [cursor=pointer]:
+        - /url: /shorts/
+        - generic [ref=e82]:
+          - img
+        - generic [ref=e83]: Shorts
+      - link "Subscriptions" [ref=e85] [cursor=pointer]:
+        - /url: /feed/subscriptions
+        - generic [ref=e88]:
+          - img
+        - generic [ref=e89]: Subscriptions
+      - link "You" [ref=e91] [cursor=pointer]:
+        - /url: /feed/you
+        - generic [ref=e94]:
+          - img
+        - generic [ref=e95]: You
+  - generic [ref=e96]:
+    - text: • • • • • • • • • • • • · • • • • · •
+    - main [ref=e1696]:
+      - generic [ref=e1703]:
+        - generic [ref=e1716]:
+          - heading "Bro Code, Verified" [level=1] [ref=e1718]:
+            - generic [ref=e1719]:
+              - text: Bro Code
+              - img [ref=e1722]:
+                - generic [ref=e1724]:
+                  - img
+          - generic [ref=e1725]:
+            - group [ref=e1726]:
+              - generic [ref=e1727]: "@BroCodez"
+            - generic [ref=e1728]: •
+            - group [ref=e1729]:
+              - generic "3.26 million subscribers" [ref=e1730]: 3.26M subscribers
+              - generic [ref=e1731]: •
+              - generic [ref=e1732]: 1K videos
+          - generic [ref=e1734] [cursor=pointer]:
+            - generic [ref=e1735]: Coding bootcamps HATE HIM! 🗿
+            - button "Description. Coding bootcamps HATE HIM! 🗿...tap for more." [ref=e1736]:
+              - generic [ref=e1737]: ...more
+          - link "TikTok" [ref=e1742] [cursor=pointer]:
+            - /url: https://www.youtube.com/redirect?event=channel_header&redir_token=QUFFLUhqbTR2bHdCZUNtSTR6VnR3TktSSTJnMDBxZng4Z3xBQ3Jtc0tsV0pTZWNtVUU2eDAybDJRdUhyQlRIZVd0YVRZV2YyZV9iVk9LV2t5ZlhFT1Iyd05ma1l5aUtKeHZQZ3IycDA1TEJpaGlnZEEwZ2dwSnZTS05UYmZCYnJRMkJZRFdfajhtbzI1X3N1bTJzUS1mWXNpTQ&q=https%3A%2F%2Fwww.tiktok.com%2F%40truebrocode
+            - img [ref=e1744]:
+              - generic [ref=e1746]:
+                - img
+            - text: TikTok
+          - button "Subscribe" [ref=e1750] [cursor=pointer]:
+            - generic [ref=e1751]: Subscribe
+        - tablist [ref=e1758]:
+          - tablist [ref=e1762]:
+            - tab "Home" [selected] [ref=e1763] [cursor=pointer]:
+              - generic [ref=e1764]: Home
+            - tab "Videos" [ref=e1765] [cursor=pointer]:
+              - generic [ref=e1766]: Videos
+            - tab "Shorts" [ref=e1767] [cursor=pointer]:
+              - generic [ref=e1768]: Shorts
+            - tab "Courses" [ref=e1769] [cursor=pointer]:
+              - generic [ref=e1770]: Courses
+            - tab "Playlists" [ref=e1771] [cursor=pointer]:
+              - generic [ref=e1772]: Playlists
+            - button "Search" [ref=e1776] [cursor=pointer]:
+              - generic [ref=e1779]:
+                - img
+      - generic [ref=e1786]:
+        - generic [ref=e1790]:
+          - generic [ref=e1791]:
+            - heading "Intro to Coding Courses 👨‍💻 Play all" [level=2] [ref=e1793]:
+              - link "Intro to Coding Courses 👨‍💻" [ref=e1796] [cursor=pointer]:
+                - /url: /playlist?list=PLZPZq0r_RZON03iKBjYOsOKr1-TD7z2lH
+                - generic [ref=e1797]: Intro to Coding Courses 👨‍💻
+              - link "Play all" [ref=e1801] [cursor=pointer]:
+                - /url: /watch?v=ix9cRaBkVe0&list=PLZPZq0r_RZON03iKBjYOsOKr1-TD7z2lH
+                - generic [ref=e1805]:
+                  - img
+                - generic [ref=e1806]: Play all
+            - generic [ref=e1810]: Learn to code from the very beginning
+          - generic [ref=e1812]:
+            - generic [ref=e1815]:
+              - generic [ref=e1817] [cursor=pointer]:
+                - link [ref=e1818]:
+                  - /url: /watch?v=ix9cRaBkVe0
+                  - generic [ref=e1825]: 12:00:00
+                - generic [ref=e1827]:
+                  - generic [ref=e1828]:
+                    - heading "Python Full Course for free 🐍 12 hours" [level=3] [ref=e1829]:
+                      - link "Python Full Course for free 🐍 12 hours" [ref=e1830]:
+                        - /url: /watch?v=ix9cRaBkVe0
+                        - text: Python Full Course for free 🐍
+                    - generic [ref=e1832]:
+                      - group [ref=e1833]:
+                        - link "Bro Code" [ref=e1836]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e1839]:
+                            - generic [ref=e1841]:
+                              - img
+                      - group [ref=e1842]:
+                        - generic [ref=e1843]: 10M views
+                        - generic [ref=e1844]: •
+                        - generic "1 year ago" [ref=e1845]
+                      - group [ref=e1846]:
+                        - generic [ref=e1850]: Fundraiser
+                  - button "More actions" [ref=e1853]:
+                    - generic [ref=e1857]:
+                      - img
+              - generic [ref=e1862] [cursor=pointer]:
+                - link [ref=e1863]:
+                  - /url: /watch?v=xTtL8E4LzTQ
+                  - generic [ref=e1870]: 12:00:00
+                - generic [ref=e1872]:
+                  - generic [ref=e1873]:
+                    - heading "Java Full Course for free ☕ 12 hours" [level=3] [ref=e1874]:
+                      - link "Java Full Course for free ☕ 12 hours" [ref=e1875]:
+                        - /url: /watch?v=xTtL8E4LzTQ
+                        - text: Java Full Course for free ☕
+                    - generic [ref=e1877]:
+                      - group [ref=e1878]:
+                        - link "Bro Code" [ref=e1881]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e1884]:
+                            - generic [ref=e1886]:
+                              - img
+                      - group [ref=e1887]:
+                        - generic [ref=e1888]: 3.9M views
+                        - generic [ref=e1889]: •
+                        - generic "1 year ago" [ref=e1890]
+                      - group [ref=e1891]:
+                        - generic [ref=e1895]: Fundraiser
+                  - button "More actions" [ref=e1898]:
+                    - generic [ref=e1902]:
+                      - img
+              - generic [ref=e1907] [cursor=pointer]:
+                - link [ref=e1908]:
+                  - /url: /watch?v=xND0t1pr3KY
+                  - generic [ref=e1915]: 6:53:35
+                - generic [ref=e1917]:
+                  - generic [ref=e1918]:
+                    - heading "C Programming Full Course for free ⚙️ 6 hours, 53 minutes" [level=3] [ref=e1919]:
+                      - link "C Programming Full Course for free ⚙️ 6 hours, 53 minutes" [ref=e1920]:
+                        - /url: /watch?v=xND0t1pr3KY
+                        - text: C Programming Full Course for free ⚙️
+                    - generic [ref=e1922]:
+                      - group [ref=e1923]:
+                        - link "Bro Code" [ref=e1926]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e1929]:
+                            - generic [ref=e1931]:
+                              - img
+                      - group [ref=e1932]:
+                        - generic [ref=e1933]: 1.9M views
+                        - generic [ref=e1934]: •
+                        - generic "1 year ago" [ref=e1935]
+                      - group [ref=e1936]:
+                        - generic [ref=e1940]: Fundraiser
+                  - button "More actions" [ref=e1943]:
+                    - generic [ref=e1947]:
+                      - img
+              - generic [ref=e1952] [cursor=pointer]:
+                - link [ref=e1953]:
+                  - /url: /watch?v=-TkoO8Z07hI
+                  - generic [ref=e1960]: 6:00:00
+                - generic [ref=e1962]:
+                  - generic [ref=e1963]:
+                    - heading "C++ Full Course for free ⚡️ 6 hours" [level=3] [ref=e1964]:
+                      - link "C++ Full Course for free ⚡️ 6 hours" [ref=e1965]:
+                        - /url: /watch?v=-TkoO8Z07hI
+                        - text: C++ Full Course for free ⚡️
+                    - generic [ref=e1967]:
+                      - group [ref=e1968]:
+                        - link "Bro Code" [ref=e1971]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e1974]:
+                            - generic [ref=e1976]:
+                              - img
+                      - group [ref=e1977]:
+                        - generic [ref=e1978]: 7.7M views
+                        - generic [ref=e1979]: •
+                        - generic "3 years ago" [ref=e1980]
+                      - group [ref=e1981]:
+                        - generic [ref=e1985]: Fundraiser
+                  - button "More actions" [ref=e1988]:
+                    - generic [ref=e1992]:
+                      - img
+              - generic [ref=e1997] [cursor=pointer]:
+                - link [ref=e1998]:
+                  - /url: /watch?v=wxznTygnRfQ
+                  - generic [ref=e2005]: 4:00:01
+                - generic [ref=e2007]:
+                  - generic [ref=e2008]:
+                    - heading "C# Full Course for free 🎵 4 hours" [level=3] [ref=e2009]:
+                      - link "C# Full Course for free 🎵 4 hours" [ref=e2010]:
+                        - /url: /watch?v=wxznTygnRfQ
+                        - text: C# Full Course for free 🎵
+                    - generic [ref=e2012]:
+                      - group [ref=e2013]:
+                        - link "Bro Code" [ref=e2016]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2019]:
+                            - generic [ref=e2021]:
+                              - img
+                      - group [ref=e2022]:
+                        - generic [ref=e2023]: 2.5M views
+                        - generic [ref=e2024]: •
+                        - generic "4 years ago" [ref=e2025]
+                      - group [ref=e2026]:
+                        - generic [ref=e2030]: Fundraiser
+                  - button "More actions" [ref=e2033]:
+                    - generic [ref=e2037]:
+                      - img
+              - generic [ref=e2042] [cursor=pointer]:
+                - link [ref=e2043]:
+                  - /url: /watch?v=CBYHwZcbD-s
+                  - generic [ref=e2050]: 4:00:15
+                - generic [ref=e2052]:
+                  - generic [ref=e2053]:
+                    - heading "Data Structures and Algorithms Full Course 📈 4 hours" [level=3] [ref=e2054]:
+                      - link "Data Structures and Algorithms Full Course 📈 4 hours" [ref=e2055]:
+                        - /url: /watch?v=CBYHwZcbD-s
+                        - text: Data Structures and Algorithms Full Course 📈
+                    - generic [ref=e2057]:
+                      - group [ref=e2058]:
+                        - link "Bro Code" [ref=e2061]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2064]:
+                            - generic [ref=e2066]:
+                              - img
+                      - group [ref=e2067]:
+                        - generic [ref=e2068]: 2.7M views
+                        - generic [ref=e2069]: •
+                        - generic "4 years ago" [ref=e2070]
+                      - group [ref=e2071]:
+                        - generic [ref=e2075]: Fundraiser
+                  - button "More actions" [ref=e2078]:
+                    - generic [ref=e2082]:
+                      - img
+            - button "Next" [ref=e2088] [cursor=pointer]:
+              - generic [ref=e2092]:
+                - img
+        - generic [ref=e2099]:
+          - generic [ref=e2100]:
+            - heading "Web Development Courses 🗺️ Play all" [level=2] [ref=e2102]:
+              - link "Web Development Courses 🗺️" [ref=e2105] [cursor=pointer]:
+                - /url: /playlist?list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3
+                - generic [ref=e2106]: Web Development Courses 🗺️
+              - link "Play all" [ref=e2110] [cursor=pointer]:
+                - /url: /watch?v=HGTJBPNC-Gw&list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3&pp=0gcJCW4EgXWwhyeT
+                - generic [ref=e2114]:
+                  - img
+                - generic [ref=e2115]: Play all
+            - generic [ref=e2119]: Learn to code with web design
+          - generic [ref=e2121]:
+            - generic [ref=e2124]:
+              - generic [ref=e2126] [cursor=pointer]:
+                - link [ref=e2127]:
+                  - /url: /watch?v=HGTJBPNC-Gw
+                  - generic [ref=e2134]: 4:02:43
+                - generic [ref=e2136]:
+                  - generic [ref=e2137]:
+                    - heading "HTML & CSS Full Course for free 🌎 4 hours, 2 minutes" [level=3] [ref=e2138]:
+                      - link "HTML & CSS Full Course for free 🌎 4 hours, 2 minutes" [ref=e2139]:
+                        - /url: /watch?v=HGTJBPNC-Gw
+                        - text: HTML & CSS Full Course for free 🌎
+                    - generic [ref=e2141]:
+                      - group [ref=e2142]:
+                        - link "Bro Code" [ref=e2145]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2148]:
+                            - generic [ref=e2150]:
+                              - img
+                      - group [ref=e2151]:
+                        - generic [ref=e2152]: 5.6M views
+                        - generic [ref=e2153]: •
+                        - generic "3 years ago" [ref=e2154]
+                      - group [ref=e2155]:
+                        - generic [ref=e2159]: Fundraiser
+                  - button "More actions" [ref=e2162]:
+                    - generic [ref=e2166]:
+                      - img
+              - generic [ref=e2171] [cursor=pointer]:
+                - link [ref=e2172]:
+                  - /url: /watch?v=lfmg-EJ8gm4
+                  - generic [ref=e2179]: 12:00:00
+                - generic [ref=e2181]:
+                  - generic [ref=e2182]:
+                    - heading "JavaScript Full Course for free 🌐 12 hours" [level=3] [ref=e2183]:
+                      - link "JavaScript Full Course for free 🌐 12 hours" [ref=e2184]:
+                        - /url: /watch?v=lfmg-EJ8gm4
+                        - text: JavaScript Full Course for free 🌐
+                    - generic [ref=e2186]:
+                      - group [ref=e2187]:
+                        - link "Bro Code" [ref=e2190]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2193]:
+                            - generic [ref=e2195]:
+                              - img
+                      - group [ref=e2196]:
+                        - generic [ref=e2197]: 5.2M views
+                        - generic [ref=e2198]: •
+                        - generic "2 years ago" [ref=e2199]
+                      - group [ref=e2200]:
+                        - generic [ref=e2204]: Fundraiser
+                  - button "More actions" [ref=e2207]:
+                    - generic [ref=e2211]:
+                      - img
+              - generic [ref=e2216] [cursor=pointer]:
+                - link [ref=e2217]:
+                  - /url: /watch?v=CgkZ7MvWUAA
+                  - generic [ref=e2224]: 4:43:02
+                - generic [ref=e2226]:
+                  - generic [ref=e2227]:
+                    - heading "React Full Course for free ⚛️ 4 hours, 43 minutes" [level=3] [ref=e2228]:
+                      - link "React Full Course for free ⚛️ 4 hours, 43 minutes" [ref=e2229]:
+                        - /url: /watch?v=CgkZ7MvWUAA
+                        - text: React Full Course for free ⚛️
+                    - generic [ref=e2231]:
+                      - group [ref=e2232]:
+                        - link "Bro Code" [ref=e2235]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2238]:
+                            - generic [ref=e2240]:
+                              - img
+                      - group [ref=e2241]:
+                        - generic [ref=e2242]: 3.7M views
+                        - generic [ref=e2243]: •
+                        - generic "2 years ago" [ref=e2244]
+                      - group [ref=e2245]:
+                        - generic [ref=e2249]: Fundraiser
+                  - button "More actions" [ref=e2252]:
+                    - generic [ref=e2256]:
+                      - img
+              - generic [ref=e2261] [cursor=pointer]:
+                - link [ref=e2262]:
+                  - /url: /watch?v=c2M-rlkkT5o
+                  - generic [ref=e2269]: 1:00:00
+                - generic [ref=e2271]:
+                  - generic [ref=e2272]:
+                    - heading "Learn MongoDB in 1 hour 🍃 1 hour" [level=3] [ref=e2273]:
+                      - link "Learn MongoDB in 1 hour 🍃 1 hour" [ref=e2274]:
+                        - /url: /watch?v=c2M-rlkkT5o
+                        - text: Learn MongoDB in 1 hour 🍃
+                    - generic [ref=e2276]:
+                      - group [ref=e2277]:
+                        - link "Bro Code" [ref=e2280]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2283]:
+                            - generic [ref=e2285]:
+                              - img
+                      - group [ref=e2286]:
+                        - generic [ref=e2287]: 1.8M views
+                        - generic [ref=e2288]: •
+                        - generic "3 years ago" [ref=e2289]
+                      - group [ref=e2290]:
+                        - generic [ref=e2294]: Fundraiser
+                  - button "More actions" [ref=e2297]:
+                    - generic [ref=e2301]:
+                      - img
+              - generic [ref=e2306] [cursor=pointer]:
+                - link [ref=e2307]:
+                  - /url: /watch?v=5OdVJbNCSso
+                  - generic [ref=e2314]: 3:00:00
+                - generic [ref=e2316]:
+                  - generic [ref=e2317]:
+                    - heading "SQL Full Course for free 🐬 3 hours" [level=3] [ref=e2318]:
+                      - link "SQL Full Course for free 🐬 3 hours" [ref=e2319]:
+                        - /url: /watch?v=5OdVJbNCSso
+                        - text: SQL Full Course for free 🐬
+                    - generic [ref=e2321]:
+                      - group [ref=e2322]:
+                        - link "Bro Code" [ref=e2325]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2328]:
+                            - generic [ref=e2330]:
+                              - img
+                      - group [ref=e2331]:
+                        - generic [ref=e2332]: 3.6M views
+                        - generic [ref=e2333]: •
+                        - generic "3 years ago" [ref=e2334]
+                      - group [ref=e2335]:
+                        - generic [ref=e2339]: Fundraiser
+                  - button "More actions" [ref=e2342]:
+                    - generic [ref=e2346]:
+                      - img
+              - generic [ref=e2351] [cursor=pointer]:
+                - link [ref=e2352]:
+                  - /url: /watch?v=zZ6vybT1HQs
+                  - generic [ref=e2359]: 4:00:00
+                - generic [ref=e2361]:
+                  - generic [ref=e2362]:
+                    - heading "PHP Full Course for free 🐘 4 hours" [level=3] [ref=e2363]:
+                      - link "PHP Full Course for free 🐘 4 hours" [ref=e2364]:
+                        - /url: /watch?v=zZ6vybT1HQs
+                        - text: PHP Full Course for free 🐘
+                    - generic [ref=e2366]:
+                      - group [ref=e2367]:
+                        - link "Bro Code" [ref=e2370]:
+                          - /url: /@BroCodez
+                          - text: Bro Code
+                          - img [ref=e2373]:
+                            - generic [ref=e2375]:
+                              - img
+                      - group [ref=e2376]:
+                        - generic [ref=e2377]: 2.8M views
+                        - generic [ref=e2378]: •
+                        - generic "3 years ago" [ref=e2379]
+                      - group [ref=e2380]:
+                        - generic [ref=e2384]: Fundraiser
+                  - button "More actions" [ref=e2387]:
+                    - generic [ref=e2391]:
+                      - img
+            - button "Next" [ref=e2397] [cursor=pointer]:
+              - generic [ref=e2401]:
+                - img
+        - generic [ref=e2408]:
+          - generic [ref=e2409]:
+            - heading "AI & Machine Learning Prereqs 🧠 Play all" [level=2] [ref=e2411]:
+              - link "AI & Machine Learning Prereqs 🧠" [ref=e2414] [cursor=pointer]:
+                - /url: /playlist?list=PLZPZq0r_RZOO_wKfxdnAb9BgnffGtIHjR
+                - generic [ref=e2415]: AI & Machine Learning Prereqs 🧠
+              - link "Play all" [ref=e2419] [cursor=pointer]:
+                - /url: /watch?v=8KCuHHeC_M0&list=PLZPZq0r_RZOO_wKfxdnAb9BgnffGtIHjR
+                - generic [ref=e2423]:
+                  - img
+                - generic [ref=e2424]: Play all
+            - generic [ref=e2428]: Prerequisites for AI & machine learning
+          - generic [ref=e2433]:
+            - generic [ref=e2435] [cursor=pointer]:
+              - link [ref=e2436]:
+                - /url: /watch?v=8KCuHHeC_M0
+                - generic [ref=e2443]: 1:00:00
+              - generic [ref=e2445]:
+                - generic [ref=e2446]:
+                  - heading "Learn Python in 1 hour! 🐍 1 hour" [level=3] [ref=e2447]:
+                    - link "Learn Python in 1 hour! 🐍 1 hour" [ref=e2448]:
+                      - /url: /watch?v=8KCuHHeC_M0
+                      - text: Learn Python in 1 hour! 🐍
+                  - generic [ref=e2450]:
+                    - group [ref=e2451]:
+                      - link "Bro Code" [ref=e2454]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2457]:
+                          - generic [ref=e2459]:
+                            - img
+                    - group [ref=e2460]:
+                      - generic [ref=e2461]: 596K views
+                      - generic [ref=e2462]: •
+                      - generic "1 year ago" [ref=e2463]
+                    - group [ref=e2464]:
+                      - generic [ref=e2468]: Fundraiser
+                - button "More actions" [ref=e2471]:
+                  - generic [ref=e2475]:
+                    - img
+            - generic [ref=e2480] [cursor=pointer]:
+              - link [ref=e2481]:
+                - /url: /watch?v=VXU4LSAQDSc
+                - generic [ref=e2488]: 1:00:00
+              - generic [ref=e2490]:
+                - generic [ref=e2491]:
+                  - heading "Learn NumPy in 1 hour! 🔢 1 hour" [level=3] [ref=e2492]:
+                    - link "Learn NumPy in 1 hour! 🔢 1 hour" [ref=e2493]:
+                      - /url: /watch?v=VXU4LSAQDSc
+                      - text: Learn NumPy in 1 hour! 🔢
+                  - generic [ref=e2495]:
+                    - group [ref=e2496]:
+                      - link "Bro Code" [ref=e2499]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2502]:
+                          - generic [ref=e2504]:
+                            - img
+                    - group [ref=e2505]:
+                      - generic [ref=e2506]: 471K views
+                      - generic [ref=e2507]: •
+                      - generic "10 months ago" [ref=e2508]
+                    - group [ref=e2509]:
+                      - generic [ref=e2513]: Fundraiser
+                - button "More actions" [ref=e2516]:
+                  - generic [ref=e2520]:
+                    - img
+            - generic [ref=e2525] [cursor=pointer]:
+              - link [ref=e2526]:
+                - /url: /watch?v=VXtjG_GzO7Q
+                - generic [ref=e2533]: 1:00:00
+              - generic [ref=e2535]:
+                - generic [ref=e2536]:
+                  - heading "Learn Pandas in 1 hour! 🐼 1 hour" [level=3] [ref=e2537]:
+                    - link "Learn Pandas in 1 hour! 🐼 1 hour" [ref=e2538]:
+                      - /url: /watch?v=VXtjG_GzO7Q
+                      - text: Learn Pandas in 1 hour! 🐼
+                  - generic [ref=e2540]:
+                    - group [ref=e2541]:
+                      - link "Bro Code" [ref=e2544]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2547]:
+                          - generic [ref=e2549]:
+                            - img
+                    - group [ref=e2550]:
+                      - generic [ref=e2551]: 320K views
+                      - generic [ref=e2552]: •
+                      - generic "8 months ago" [ref=e2553]
+                    - group [ref=e2554]:
+                      - generic [ref=e2558]: Fundraiser
+                - button "More actions" [ref=e2561]:
+                  - generic [ref=e2565]:
+                    - img
+            - generic [ref=e2570] [cursor=pointer]:
+              - link [ref=e2571]:
+                - /url: /watch?v=c9vhHUGdav0
+                - generic [ref=e2578]: 1:00:00
+              - generic [ref=e2580]:
+                - generic [ref=e2581]:
+                  - heading "Learn Matplotlib in 1 hour! 📊 1 hour" [level=3] [ref=e2582]:
+                    - link "Learn Matplotlib in 1 hour! 📊 1 hour" [ref=e2583]:
+                      - /url: /watch?v=c9vhHUGdav0
+                      - text: Learn Matplotlib in 1 hour! 📊
+                  - generic [ref=e2585]:
+                    - group [ref=e2586]:
+                      - link "Bro Code" [ref=e2589]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2592]:
+                          - generic [ref=e2594]:
+                            - img
+                    - group [ref=e2595]:
+                      - generic [ref=e2596]: 147K views
+                      - generic [ref=e2597]: •
+                      - generic "8 months ago" [ref=e2598]
+                    - group [ref=e2599]:
+                      - generic [ref=e2603]: Fundraiser
+                - button "More actions" [ref=e2606]:
+                  - generic [ref=e2610]:
+                    - img
+        - generic [ref=e2617]:
+          - heading "Intro to Coding Playlists 👨‍💻" [level=2] [ref=e2620]:
+            - link "Intro to Coding Playlists 👨‍💻" [ref=e2623] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e2624]: Intro to Coding Playlists 👨‍💻
+          - generic [ref=e2626]:
+            - generic [ref=e2629]:
+              - generic [ref=e2631] [cursor=pointer]:
+                - link [ref=e2632]:
+                  - /url: /watch?v=Sg4GMVMdOPo&list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT
+                  - generic [ref=e2642]:
+                    - generic [ref=e2645]:
+                      - img
+                    - generic [ref=e2646]: 93 videos
+                - generic [ref=e2649]:
+                  - heading "Python tutorial for beginners 🐍" [level=3] [ref=e2650]:
+                    - link "Python tutorial for beginners 🐍" [ref=e2651]:
+                      - /url: /watch?v=Sg4GMVMdOPo&list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT
+                  - generic [ref=e2653]:
+                    - group [ref=e2654]:
+                      - link "Bro Code" [ref=e2657]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2660]:
+                          - generic [ref=e2662]:
+                            - img
+                      - generic [ref=e2663]: •
+                      - link "Playlist" [ref=e2666]:
+                        - /url: /@BroCodez
+                    - group [ref=e2667]:
+                      - link "View full playlist" [ref=e2670]:
+                        - /url: /playlist?list=PLZPZq0r_RZOOkUQbat8LyQii36cJf2SWT
+              - generic [ref=e2672] [cursor=pointer]:
+                - link [ref=e2673]:
+                  - /url: /watch?v=23HFxAPyJ9U&list=PLZPZq0r_RZOOj_NOZYq_R2PECIMglLemc
+                  - generic [ref=e2683]:
+                    - generic [ref=e2686]:
+                      - img
+                    - generic [ref=e2687]: 71 videos
+                - generic [ref=e2690]:
+                  - heading "Java tutorial for beginners ☕" [level=3] [ref=e2691]:
+                    - link "Java tutorial for beginners ☕" [ref=e2692]:
+                      - /url: /watch?v=23HFxAPyJ9U&list=PLZPZq0r_RZOOj_NOZYq_R2PECIMglLemc
+                  - generic [ref=e2694]:
+                    - group [ref=e2695]:
+                      - link "Bro Code" [ref=e2698]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2701]:
+                          - generic [ref=e2703]:
+                            - img
+                      - generic [ref=e2704]: •
+                      - link "Playlist" [ref=e2707]:
+                        - /url: /@BroCodez
+                    - group [ref=e2708]:
+                      - link "View full playlist" [ref=e2711]:
+                        - /url: /playlist?list=PLZPZq0r_RZOOj_NOZYq_R2PECIMglLemc
+              - generic [ref=e2713] [cursor=pointer]:
+                - link [ref=e2714]:
+                  - /url: /watch?v=2ciUcosJFBc&list=PLZPZq0r_RZOOzY_vR4zJM32SqsSInGMwe
+                  - generic [ref=e2724]:
+                    - generic [ref=e2727]:
+                      - img
+                    - generic [ref=e2728]: 46 videos
+                - generic [ref=e2731]:
+                  - heading "C tutorial for beginners ⚙️" [level=3] [ref=e2732]:
+                    - link "C tutorial for beginners ⚙️" [ref=e2733]:
+                      - /url: /watch?v=2ciUcosJFBc&list=PLZPZq0r_RZOOzY_vR4zJM32SqsSInGMwe
+                  - generic [ref=e2735]:
+                    - group [ref=e2736]:
+                      - link "Bro Code" [ref=e2739]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2742]:
+                          - generic [ref=e2744]:
+                            - img
+                      - generic [ref=e2745]: •
+                      - link "Playlist" [ref=e2748]:
+                        - /url: /@BroCodez
+                    - group [ref=e2749]:
+                      - link "View full playlist" [ref=e2752]:
+                        - /url: /playlist?list=PLZPZq0r_RZOOzY_vR4zJM32SqsSInGMwe
+              - generic [ref=e2754] [cursor=pointer]:
+                - link [ref=e2755]:
+                  - /url: /watch?v=S3nx34WFXjI&list=PLZPZq0r_RZOMHoXIcxze_lP97j2Ase2on
+                  - generic [ref=e2765]:
+                    - generic [ref=e2768]:
+                      - img
+                    - generic [ref=e2769]: 60 videos
+                - generic [ref=e2772]:
+                  - heading "C++ tutorial for beginners ⚡️" [level=3] [ref=e2773]:
+                    - link "C++ tutorial for beginners ⚡️" [ref=e2774]:
+                      - /url: /watch?v=S3nx34WFXjI&list=PLZPZq0r_RZOMHoXIcxze_lP97j2Ase2on
+                  - generic [ref=e2776]:
+                    - group [ref=e2777]:
+                      - link "Bro Code" [ref=e2780]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2783]:
+                          - generic [ref=e2785]:
+                            - img
+                      - generic [ref=e2786]: •
+                      - link "Playlist" [ref=e2789]:
+                        - /url: /@BroCodez
+                    - group [ref=e2790]:
+                      - link "View full playlist" [ref=e2793]:
+                        - /url: /playlist?list=PLZPZq0r_RZOMHoXIcxze_lP97j2Ase2on
+              - generic [ref=e2795] [cursor=pointer]:
+                - link [ref=e2796]:
+                  - /url: /watch?v=r3CExhZgZV8&list=PLZPZq0r_RZOPNy28FDBys3GVP2LiaIyP_
+                  - generic [ref=e2806]:
+                    - generic [ref=e2809]:
+                      - img
+                    - generic [ref=e2810]: 50 lessons
+                - generic [ref=e2813]:
+                  - heading "C# tutorial for beginners 🎵" [level=3] [ref=e2814]:
+                    - link "C# tutorial for beginners 🎵" [ref=e2815]:
+                      - /url: /watch?v=r3CExhZgZV8&list=PLZPZq0r_RZOPNy28FDBys3GVP2LiaIyP_
+                  - generic [ref=e2817]:
+                    - group [ref=e2818]:
+                      - link "Bro Code" [ref=e2821]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2824]:
+                          - generic [ref=e2826]:
+                            - img
+                      - generic [ref=e2827]: •
+                      - link "Course" [ref=e2830]:
+                        - /url: /@BroCodez
+                    - group [ref=e2831]:
+                      - link "View full course" [ref=e2834]:
+                        - /url: /playlist?list=PLZPZq0r_RZOPNy28FDBys3GVP2LiaIyP_
+              - generic [ref=e2836] [cursor=pointer]:
+                - link [ref=e2837]:
+                  - /url: /watch?v=xX5iOYCJmBI&list=PLZPZq0r_RZON1eaqfafTnEexRzuHbfZX8
+                  - generic [ref=e2847]:
+                    - generic [ref=e2850]:
+                      - img
+                    - generic [ref=e2851]: 27 lessons
+                - generic [ref=e2854]:
+                  - heading "Data Structures and Algorithms 📈" [level=3] [ref=e2855]:
+                    - link "Data Structures and Algorithms 📈" [ref=e2856]:
+                      - /url: /watch?v=xX5iOYCJmBI&list=PLZPZq0r_RZON1eaqfafTnEexRzuHbfZX8
+                  - generic [ref=e2858]:
+                    - group [ref=e2859]:
+                      - link "Bro Code" [ref=e2862]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2865]:
+                          - generic [ref=e2867]:
+                            - img
+                      - generic [ref=e2868]: •
+                      - link "Course" [ref=e2871]:
+                        - /url: /@BroCodez
+                    - group [ref=e2872]:
+                      - link "View full course" [ref=e2875]:
+                        - /url: /playlist?list=PLZPZq0r_RZON1eaqfafTnEexRzuHbfZX8
+            - button "Next" [ref=e2878] [cursor=pointer]:
+              - generic [ref=e2882]:
+                - img
+        - generic [ref=e2889]:
+          - heading "Web Development Playlists 🗺️" [level=2] [ref=e2892]:
+            - link "Web Development Playlists 🗺️" [ref=e2895] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e2896]: Web Development Playlists 🗺️
+          - generic [ref=e2898]:
+            - generic [ref=e2901]:
+              - generic [ref=e2903] [cursor=pointer]:
+                - link [ref=e2904]:
+                  - /url: /watch?v=2oCN2q1x3c4&list=PLZPZq0r_RZOOxqHgOzPyCzIl4AJjXbCYt
+                  - generic [ref=e2914]:
+                    - generic [ref=e2917]:
+                      - img
+                    - generic [ref=e2918]: 37 lessons
+                - generic [ref=e2921]:
+                  - heading "HTML & CSS tutorial for beginners 🌎" [level=3] [ref=e2922]:
+                    - link "HTML & CSS tutorial for beginners 🌎" [ref=e2923]:
+                      - /url: /watch?v=2oCN2q1x3c4&list=PLZPZq0r_RZOOxqHgOzPyCzIl4AJjXbCYt
+                  - generic [ref=e2925]:
+                    - group [ref=e2926]:
+                      - link "Bro Code" [ref=e2929]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2932]:
+                          - generic [ref=e2934]:
+                            - img
+                      - generic [ref=e2935]: •
+                      - link "Course" [ref=e2938]:
+                        - /url: /@BroCodez
+                    - group [ref=e2939]:
+                      - link "View full course" [ref=e2942]:
+                        - /url: /playlist?list=PLZPZq0r_RZOOxqHgOzPyCzIl4AJjXbCYt
+              - generic [ref=e2944] [cursor=pointer]:
+                - link [ref=e2945]:
+                  - /url: /watch?v=Ihy0QziLDf0&list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv
+                  - generic [ref=e2955]:
+                    - generic [ref=e2958]:
+                      - img
+                    - generic [ref=e2959]: 80 videos
+                - generic [ref=e2962]:
+                  - heading "JavaScript tutorial for beginners 🌐" [level=3] [ref=e2963]:
+                    - link "JavaScript tutorial for beginners 🌐" [ref=e2964]:
+                      - /url: /watch?v=Ihy0QziLDf0&list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv
+                  - generic [ref=e2966]:
+                    - group [ref=e2967]:
+                      - link "Bro Code" [ref=e2970]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e2973]:
+                          - generic [ref=e2975]:
+                            - img
+                      - generic [ref=e2976]: •
+                      - link "Playlist" [ref=e2979]:
+                        - /url: /@BroCodez
+                    - group [ref=e2980]:
+                      - link "View full playlist" [ref=e2983]:
+                        - /url: /playlist?list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv
+              - generic [ref=e2985] [cursor=pointer]:
+                - link [ref=e2986]:
+                  - /url: /watch?v=hn80mWvP-9g&list=PLZPZq0r_RZOMQArzyI32mVndGBZ3D99XQ
+                  - generic [ref=e2996]:
+                    - generic [ref=e2999]:
+                      - img
+                    - generic [ref=e3000]: 20 lessons
+                - generic [ref=e3003]:
+                  - heading "React tutorial for beginners ⚛️" [level=3] [ref=e3004]:
+                    - link "React tutorial for beginners ⚛️" [ref=e3005]:
+                      - /url: /watch?v=hn80mWvP-9g&list=PLZPZq0r_RZOMQArzyI32mVndGBZ3D99XQ
+                  - generic [ref=e3007]:
+                    - group [ref=e3008]:
+                      - link "Bro Code" [ref=e3011]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e3014]:
+                          - generic [ref=e3016]:
+                            - img
+                      - generic [ref=e3017]: •
+                      - link "Course" [ref=e3020]:
+                        - /url: /@BroCodez
+                    - group [ref=e3021]:
+                      - link "View full course" [ref=e3024]:
+                        - /url: /playlist?list=PLZPZq0r_RZOMQArzyI32mVndGBZ3D99XQ
+              - generic [ref=e3026] [cursor=pointer]:
+                - link [ref=e3027]:
+                  - /url: /watch?v=6DoLxeMlVTI&list=PLZPZq0r_RZONbmOn3EsHac5u5_-Rue3ne
+                  - generic [ref=e3037]:
+                    - generic [ref=e3040]:
+                      - img
+                    - generic [ref=e3041]: 12 lessons
+                - generic [ref=e3044]:
+                  - heading "MongoDB tutorial for beginners 🍃" [level=3] [ref=e3045]:
+                    - link "MongoDB tutorial for beginners 🍃" [ref=e3046]:
+                      - /url: /watch?v=6DoLxeMlVTI&list=PLZPZq0r_RZONbmOn3EsHac5u5_-Rue3ne
+                  - generic [ref=e3048]:
+                    - group [ref=e3049]:
+                      - link "Bro Code" [ref=e3052]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e3055]:
+                          - generic [ref=e3057]:
+                            - img
+                      - generic [ref=e3058]: •
+                      - link "Course" [ref=e3061]:
+                        - /url: /@BroCodez
+                    - group [ref=e3062]:
+                      - link "View full course" [ref=e3065]:
+                        - /url: /playlist?list=PLZPZq0r_RZONbmOn3EsHac5u5_-Rue3ne
+              - generic [ref=e3067] [cursor=pointer]:
+                - link [ref=e3068]:
+                  - /url: /watch?v=oPV2sjMG53U&list=PLZPZq0r_RZOMskz6MdsMOgxzheIyjo-BZ
+                  - generic [ref=e3078]:
+                    - generic [ref=e3081]:
+                      - img
+                    - generic [ref=e3082]: 31 lessons
+                - generic [ref=e3085]:
+                  - heading "MySQL tutorial for beginners 🐬" [level=3] [ref=e3086]:
+                    - link "MySQL tutorial for beginners 🐬" [ref=e3087]:
+                      - /url: /watch?v=oPV2sjMG53U&list=PLZPZq0r_RZOMskz6MdsMOgxzheIyjo-BZ
+                  - generic [ref=e3089]:
+                    - group [ref=e3090]:
+                      - link "Bro Code" [ref=e3093]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e3096]:
+                          - generic [ref=e3098]:
+                            - img
+                      - generic [ref=e3099]: •
+                      - link "Course" [ref=e3102]:
+                        - /url: /@BroCodez
+                    - group [ref=e3103]:
+                      - link "View full course" [ref=e3106]:
+                        - /url: /playlist?list=PLZPZq0r_RZOMskz6MdsMOgxzheIyjo-BZ
+              - generic [ref=e3108] [cursor=pointer]:
+                - link [ref=e3109]:
+                  - /url: /watch?v=SI69DXbYHXU&list=PLZPZq0r_RZOO6bGTY9jbLOyF_x6tgwcuB
+                  - generic [ref=e3119]:
+                    - generic [ref=e3122]:
+                      - img
+                    - generic [ref=e3123]: 28 lessons
+                - generic [ref=e3126]:
+                  - heading "PHP tutorial for beginners 🐘" [level=3] [ref=e3127]:
+                    - link "PHP tutorial for beginners 🐘" [ref=e3128]:
+                      - /url: /watch?v=SI69DXbYHXU&list=PLZPZq0r_RZOO6bGTY9jbLOyF_x6tgwcuB
+                  - generic [ref=e3130]:
+                    - group [ref=e3131]:
+                      - link "Bro Code" [ref=e3134]:
+                        - /url: /@BroCodez
+                        - text: Bro Code
+                        - img [ref=e3137]:
+                          - generic [ref=e3139]:
+                            - img
+                      - generic [ref=e3140]: •
+                      - link "Course" [ref=e3143]:
+                        - /url: /@BroCodez
+                    - group [ref=e3144]:
+                      - link "View full course" [ref=e3147]:
+                        - /url: /playlist?list=PLZPZq0r_RZOO6bGTY9jbLOyF_x6tgwcuB
+            - button "Next" [ref=e3150] [cursor=pointer]:
+              - generic [ref=e3154]:
+                - img
+        - generic [ref=e3161]:
+          - heading "AI & ML Prereqs Playlists 🧠" [level=2] [ref=e3164]:
+            - link "AI & ML Prereqs Playlists 🧠" [ref=e3167] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e3168]: AI & ML Prereqs Playlists 🧠
+          - generic [ref=e3173]:
+            - generic [ref=e3175] [cursor=pointer]:
+              - link [ref=e3176]:
+                - /url: /watch?v=Gc-dwloxNFE&list=PLZPZq0r_RZOMldEsyG8-3BebUNbTFVfmY
+                - generic [ref=e3186]:
+                  - generic [ref=e3189]:
+                    - img
+                  - generic [ref=e3190]: 12 videos
+              - generic [ref=e3193]:
+                - heading "NumPy tutorial for beginners 🔢" [level=3] [ref=e3194]:
+                  - link "NumPy tutorial for beginners 🔢" [ref=e3195]:
+                    - /url: /watch?v=Gc-dwloxNFE&list=PLZPZq0r_RZOMldEsyG8-3BebUNbTFVfmY
+                - generic [ref=e3197]:
+                  - group [ref=e3198]:
+                    - link "Bro Code" [ref=e3201]:
+                      - /url: /@BroCodez
+                      - text: Bro Code
+                      - img [ref=e3204]:
+                        - generic [ref=e3206]:
+                          - img
+                    - generic [ref=e3207]: •
+                    - link "Playlist" [ref=e3210]:
+                      - /url: /@BroCodez
+                  - group [ref=e3211]:
+                    - link "View full playlist" [ref=e3214]:
+                      - /url: /playlist?list=PLZPZq0r_RZOMldEsyG8-3BebUNbTFVfmY
+            - generic [ref=e3216] [cursor=pointer]:
+              - link [ref=e3217]:
+                - /url: /watch?v=uTvo5DHbWQg&list=PLZPZq0r_RZONoiL6kRbNM9nPiUM0eErWG
+                - generic [ref=e3227]:
+                  - generic [ref=e3230]:
+                    - img
+                  - generic [ref=e3231]: 8 videos
+              - generic [ref=e3234]:
+                - heading "Pandas tutorial for beginners 🐼" [level=3] [ref=e3235]:
+                  - link "Pandas tutorial for beginners 🐼" [ref=e3236]:
+                    - /url: /watch?v=uTvo5DHbWQg&list=PLZPZq0r_RZONoiL6kRbNM9nPiUM0eErWG
+                - generic [ref=e3238]:
+                  - group [ref=e3239]:
+                    - link "Bro Code" [ref=e3242]:
+                      - /url: /@BroCodez
+                      - text: Bro Code
+                      - img [ref=e3245]:
+                        - generic [ref=e3247]:
+                          - img
+                    - generic [ref=e3248]: •
+                    - link "Playlist" [ref=e3251]:
+                      - /url: /@BroCodez
+                  - group [ref=e3252]:
+                    - link "View full playlist" [ref=e3255]:
+                      - /url: /playlist?list=PLZPZq0r_RZONoiL6kRbNM9nPiUM0eErWG
+            - generic [ref=e3257] [cursor=pointer]:
+              - link [ref=e3258]:
+                - /url: /watch?v=2KY5AaFvWtE&list=PLZPZq0r_RZONpa_Xg1MmyjmctJjL4l3Ay
+                - generic [ref=e3268]:
+                  - generic [ref=e3271]:
+                    - img
+                  - generic [ref=e3272]: 10 videos
+              - generic [ref=e3275]:
+                - heading "Matplotlib tutorial for beginners 📊" [level=3] [ref=e3276]:
+                  - link "Matplotlib tutorial for beginners 📊" [ref=e3277]:
+                    - /url: /watch?v=2KY5AaFvWtE&list=PLZPZq0r_RZONpa_Xg1MmyjmctJjL4l3Ay
+                - generic [ref=e3279]:
+                  - group [ref=e3280]:
+                    - link "Bro Code" [ref=e3283]:
+                      - /url: /@BroCodez
+                      - text: Bro Code
+                      - img [ref=e3286]:
+                        - generic [ref=e3288]:
+                          - img
+                    - generic [ref=e3289]: •
+                    - link "Playlist" [ref=e3292]:
+                      - /url: /@BroCodez
+                  - group [ref=e3293]:
+                    - link "View full playlist" [ref=e3296]:
+                      - /url: /playlist?list=PLZPZq0r_RZONpa_Xg1MmyjmctJjL4l3Ay

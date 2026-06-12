@@ -1,0 +1,194 @@
+- generic [ref=e2]:
+  - navigation "Main" [ref=e4]:
+    - link "Skip to content" [ref=e6] [cursor=pointer]:
+      - /url: "#scroll-top-anchor"
+      - generic [ref=e7]: Skip to content
+    - link "Chess.com - Play Chess Online" [ref=e8] [cursor=pointer]:
+      - /url: https://www.chess.com/
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - link "Play" [ref=e15] [cursor=pointer]:
+          - /url: https://www.chess.com/play
+          - img [ref=e16]
+          - generic [ref=e17]: Play
+        - link "Puzzles" [ref=e20] [cursor=pointer]:
+          - /url: https://www.chess.com/puzzles
+          - img [ref=e21]
+          - generic [ref=e22]: Puzzles
+        - link "Learn" [ref=e25] [cursor=pointer]:
+          - /url: https://www.chess.com/learn
+          - img [ref=e26]
+          - generic [ref=e27]: Learn
+      - generic [ref=e29]:
+        - link "Train" [ref=e32] [cursor=pointer]:
+          - /url: https://www.chess.com/train
+          - img [ref=e33]
+          - generic [ref=e34]: Train
+        - link "Watch" [ref=e37] [cursor=pointer]:
+          - /url: https://www.chess.com/watch
+          - img [ref=e38]
+          - generic [ref=e39]: Watch
+        - link "Community" [ref=e42] [cursor=pointer]:
+          - /url: https://www.chess.com/community
+          - img [ref=e43]
+          - generic [ref=e44]: Community
+        - link "Other" [ref=e47] [cursor=pointer]:
+          - /url: https://www.chess.com/other
+          - img [ref=e48]
+          - generic [ref=e49]: Other
+    - separator
+    - generic [ref=e51] [cursor=pointer]:
+      - img [ref=e53]
+      - heading "Search" [level=2] [ref=e55]
+    - generic [ref=e56]:
+      - link "Sign Up" [ref=e57] [cursor=pointer]:
+        - /url: https://www.chess.com/register?returnUrl=https://www.chess.com/
+        - generic [ref=e58]: Sign Up
+      - link "Log In" [ref=e59] [cursor=pointer]:
+        - /url: https://www.chess.com/login_and_go?returnUrl=https://www.chess.com/
+        - generic [ref=e60]: Log In
+      - button "Help & Support" [ref=e61] [cursor=pointer]:
+        - img [ref=e63]
+        - generic [ref=e65]: Help & Support
+      - button "Change Language" [ref=e66] [cursor=pointer]:
+        - img [ref=e68]
+        - generic [ref=e70]: English
+  - generic [ref=e71]:
+    - main [ref=e72]:
+      - generic [ref=e74]:
+        - generic [ref=e80]:
+          - 'heading "Play Chess Online on the #1 Site!" [level=1] [ref=e81]'
+          - generic [ref=e82]: Join 250+ million players in the world's largest chess community
+          - link "Get Started" [ref=e84] [cursor=pointer]:
+            - /url: https://www.chess.com/register?returnUrl=https://www.chess.com/
+            - generic [ref=e85]: Get Started
+        - generic [ref=e91]:
+          - heading "Improve Your Game with Lessons" [level=2] [ref=e92]
+          - generic [ref=e93]: Learn with quick, fun lessons designed for players of all levels.
+          - link "Start a Lesson" [ref=e95] [cursor=pointer]:
+            - /url: https://www.chess.com/learn
+            - img [ref=e96]
+            - generic [ref=e97]: Start a Lesson
+        - generic [ref=e103]:
+          - heading "Play Chess Bots" [level=2] [ref=e104]
+          - generic [ref=e105]: Play against unique chess personalities ranging in skill and playstyle.
+          - link "Challenge a Bot" [ref=e107] [cursor=pointer]:
+            - /url: https://www.chess.com/play/computer
+            - img [ref=e108]
+            - generic [ref=e109]: Challenge a Bot
+        - generic [ref=e115]:
+          - heading "Level Up With Chess Puzzles" [level=2] [ref=e116]
+          - generic [ref=e117]: Sharpen your skills and improve your game with thousands of puzzles.
+          - link "Solve a Puzzle" [ref=e119] [cursor=pointer]:
+            - /url: https://www.chess.com/puzzles
+            - img [ref=e120]
+            - generic [ref=e121]: Solve a Puzzle
+        - generic [ref=e127]:
+          - heading "Watch the Best in the World Compete" [level=2] [ref=e128]
+          - generic [ref=e129]: Tune into live events, and follow top players move-by-move with real-time analysis.
+          - link "Watch Chess" [ref=e131] [cursor=pointer]:
+            - /url: https://www.chess.com/events
+            - img [ref=e132]
+            - generic [ref=e133]: Watch Chess
+        - generic [ref=e138]:
+          - heading "Play Anywhere with the Chess.com App" [level=3] [ref=e139]
+          - generic [ref=e140]:
+            - link "Download on the App Store" [ref=e141] [cursor=pointer]:
+              - /url: https://apps.apple.com/us/app/chess-play-learn/id329218549?mt=8&uo=4
+              - generic [ref=e144]:
+                - generic [ref=e145]: Download on the
+                - heading "App Store" [level=4] [ref=e146]
+            - link "Get it on Google Play" [ref=e147] [cursor=pointer]:
+              - /url: http://play.google.com/store/apps/details?id=com.chess
+              - generic [ref=e150]:
+                - generic [ref=e151]: Get it on
+                - heading "Google Play" [level=4] [ref=e152]
+        - generic [ref=e154]:
+          - heading "Learn, Play, and Have Fun!" [level=2] [ref=e155]
+          - link "Get Started" [ref=e157] [cursor=pointer]:
+            - /url: https://www.chess.com/register?returnUrl=https://www.chess.com/
+            - generic [ref=e158]: Get Started
+    - contentinfo [ref=e159]:
+      - navigation [ref=e160]:
+        - list [ref=e161]:
+          - listitem [ref=e162]:
+            - link "Support" [ref=e163] [cursor=pointer]:
+              - /url: https://chess.com/support
+            - text: •
+          - listitem [ref=e164]:
+            - link "Chess Terms" [ref=e165] [cursor=pointer]:
+              - /url: https://www.chess.com/terms
+            - text: •
+          - listitem [ref=e166]:
+            - link "About" [ref=e167] [cursor=pointer]:
+              - /url: https://www.chess.com/about
+            - text: •
+          - listitem [ref=e168]:
+            - link "Jobs" [ref=e169] [cursor=pointer]:
+              - /url: https://www.chess.com/jobs
+            - text: •
+          - listitem [ref=e170]:
+            - link "Developers" [ref=e171] [cursor=pointer]:
+              - /url: https://www.chess.com/club/chess-com-developer-community
+            - text: •
+          - listitem [ref=e172]:
+            - link "User Agreement" [ref=e173] [cursor=pointer]:
+              - /url: https://www.chess.com/legal/user-agreement
+            - text: •
+          - listitem [ref=e174]:
+            - link "Privacy Policy" [ref=e175] [cursor=pointer]:
+              - /url: https://www.chess.com/legal/privacy
+            - text: •
+          - listitem [ref=e176]:
+            - link "Privacy Settings" [ref=e177] [cursor=pointer]:
+              - /url: https://www.chess.com/legal/privacy#privacy_settings
+            - text: •
+          - listitem [ref=e178]:
+            - link "Cheating & Fair Play" [ref=e179] [cursor=pointer]:
+              - /url: https://www.chess.com/cheating
+            - text: •
+          - listitem [ref=e180]:
+            - link "Partners" [ref=e181] [cursor=pointer]:
+              - /url: https://www.chess.com/partners
+            - text: •
+          - listitem [ref=e182]:
+            - link "Compliance" [ref=e183] [cursor=pointer]:
+              - /url: https://www.chess.com/legal/compliance
+            - text: •
+          - listitem [ref=e184]:
+            - link "Chess.com, LLC © 2026" [ref=e185] [cursor=pointer]:
+              - /url: https://www.chess.com/
+      - navigation [ref=e186]:
+        - list [ref=e187]:
+          - listitem [ref=e188]:
+            - link "App for iOS / iPhone / iPad" [ref=e189] [cursor=pointer]:
+              - /url: https://www.chess.com/play/apps/ios
+              - img [ref=e191]
+          - listitem [ref=e193]:
+            - link "App for Android" [ref=e194] [cursor=pointer]:
+              - /url: https://www.chess.com/play/apps/android
+              - img [ref=e196]
+          - listitem [ref=e198]:
+            - link "TikTok" [ref=e199] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@chess
+              - img [ref=e201]
+          - listitem [ref=e203]:
+            - link "X (formerly Twitter)" [ref=e204] [cursor=pointer]:
+              - /url: https://twitter.com/chesscom
+              - img [ref=e206]
+          - listitem [ref=e208]:
+            - link "Youtube" [ref=e209] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/wwwChesscom
+              - img [ref=e211]
+          - listitem [ref=e213]:
+            - link "Twitch" [ref=e214] [cursor=pointer]:
+              - /url: https://www.twitch.tv/chess
+              - img [ref=e216]
+          - listitem [ref=e218]:
+            - link "Instagram" [ref=e219] [cursor=pointer]:
+              - /url: https://www.instagram.com/wwwchesscom
+              - img [ref=e221]
+          - listitem [ref=e223]:
+            - link "Discord" [ref=e224] [cursor=pointer]:
+              - /url: https://discord.gg/3VbUQME
+              - img [ref=e226]

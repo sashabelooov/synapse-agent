@@ -1,0 +1,739 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Guide" [active] [ref=e9] [cursor=pointer]:
+          - generic [ref=e12]:
+            - img
+        - link "YouTube Home" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e19]:
+            - img
+        - button "Skip navigation" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: Skip navigation
+      - generic [ref=e28]:
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - combobox "Search" [expanded] [ref=e33]: milliy cover ai
+              - button "Clear search query" [ref=e115] [cursor=pointer]:
+                - generic [ref=e118]:
+                  - img
+            - button "Search" [ref=e34] [cursor=pointer]:
+              - generic [ref=e37]:
+                - img
+        - generic [ref=e39]:
+          - button "Search with your voice" [ref=e41] [cursor=pointer]:
+            - generic [ref=e122]:
+              - img
+          - tooltip "tooltip"
+      - generic [ref=e50]:
+        - button "Settings" [ref=e55] [cursor=pointer]:
+          - generic [ref=e58]:
+            - img
+        - link "Sign in" [ref=e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fresults%253Fsearch_query%253Dmilliy%252Bcover%252Bai&hl=en&ec=65620
+          - generic [ref=e123]:
+            - img
+          - generic [ref=e66]: Sign in
+  - navigation [ref=e70]:
+    - generic [ref=e71]:
+      - link "Home" [ref=e73] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e124]:
+          - img
+        - generic [ref=e77]: Home
+      - link "Shorts" [ref=e79] [cursor=pointer]:
+        - /url: /shorts/
+        - generic [ref=e82]:
+          - img
+        - generic [ref=e83]: Shorts
+      - link "Subscriptions" [ref=e85] [cursor=pointer]:
+        - /url: /feed/subscriptions
+        - generic [ref=e88]:
+          - img
+        - generic [ref=e89]: Subscriptions
+      - link "You" [ref=e91] [cursor=pointer]:
+        - /url: /feed/you
+        - generic [ref=e94]:
+          - img
+        - generic [ref=e95]: You
+  - generic [ref=e96]:
+    - text: •
+    - main [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e128]:
+          - tablist [ref=e133]:
+            - tab "All" [selected] [ref=e137] [cursor=pointer]:
+              - generic [ref=e139]: All
+            - tab "Shorts" [ref=e146] [cursor=pointer]:
+              - generic [ref=e148]: Shorts
+            - tab "Unwatched" [ref=e155] [cursor=pointer]:
+              - generic [ref=e157]: Unwatched
+            - tab "Watched" [ref=e164] [cursor=pointer]:
+              - generic [ref=e166]: Watched
+            - tab "Videos" [ref=e173] [cursor=pointer]:
+              - generic [ref=e175]: Videos
+            - tab "Recently uploaded" [ref=e182] [cursor=pointer]:
+              - generic [ref=e184]: Recently uploaded
+            - tab "Live" [ref=e191] [cursor=pointer]:
+              - generic [ref=e193]: Live
+          - generic [ref=e198]:
+            - button "Search filters" [ref=e200] [cursor=pointer]:
+              - generic [ref=e201]: Filters
+            - tooltip "tooltip"
+        - generic [ref=e212]:
+          - generic [ref=e214]:
+            - link [ref=e216] [cursor=pointer]:
+              - /url: /@MilliyCoverAI
+            - generic [ref=e219]:
+              - link "MilliyCoverAI @MilliyCoverAI•53.7K subscribers Assalomu alaykum! “Milliy Cover AI” kanalida O'zbekistonning mashhur qo'shiqlari AI yordamida yangicha talqin etiladi. Har bir ..." [ref=e220] [cursor=pointer]:
+                - /url: /@MilliyCoverAI
+                - generic [ref=e221]:
+                  - generic [ref=e225]: MilliyCoverAI
+                  - generic [ref=e226]: "@MilliyCoverAI•53.7K subscribers"
+                  - generic [ref=e227]: Assalomu alaykum! “Milliy Cover AI” kanalida O'zbekistonning mashhur qo'shiqlari AI yordamida yangicha talqin etiladi. Har bir ...
+              - link "Subscribe" [ref=e232] [cursor=pointer]:
+                - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fresults%253Fsearch_query%253Dmilliy%252Bcover%252Bai%26continue_action%3DQUFFLUhqbTMwYjNENTRLWVd1a0pfbkRBVUgwYkQ0WF92UXxBQ3Jtc0tuMkVyR3FLd2E4Q0xfeG9uaEd0Nm5vcm1EVmVMLUp4WXpaa190T1R1MzNacGxESk9ydHdXWW96LTdVUU1pcHU3ajRyQ0Ria1NnV1VHeHVDYnpIYUFlSDFVUVBLTDNQTnRnSFc0ZnNJWUNiNkhBZ1hLb1ExSGVqVXZpb0NMdUNUS1k5QmVUd2h1LTlQS0V3aUs3MGFEeXJrR0pOZ3pXcTZDQnNBaS0tQ3VSaTNsV05RQW8xZFlQWVR2TG04cGdJY3BhckdvZFI&hl=en
+                - generic [ref=e233]: Subscribe
+          - generic [ref=e238]:
+            - link [ref=e240] [cursor=pointer]:
+              - /url: /watch?v=BuzQ5_3hYY4&list=RDBuzQ5_3hYY4&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+              - img [ref=e242]
+              - img [ref=e245]:
+                - generic [ref=e247]: 5:44
+              - generic:
+                - generic: Now playing
+                - generic:
+                  - img
+            - generic [ref=e248] [cursor=pointer]:
+              - generic [ref=e249]:
+                - heading "Oh onajon (Dolya Vorovkaya) — Bomba ijro 🔥 5 minutes, 44 seconds" [level=3] [ref=e251]:
+                  - link "Oh onajon (Dolya Vorovkaya) — Bomba ijro 🔥 5 minutes, 44 seconds" [ref=e252]:
+                    - /url: /watch?v=BuzQ5_3hYY4&list=RDBuzQ5_3hYY4&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Oh onajon (Dolya Vorovkaya) — Bomba ijro 🔥
+                - generic [ref=e255]:
+                  - generic [ref=e256]: 5M views
+                  - generic [ref=e257]: •3 weeks ago
+              - generic [ref=e258]:
+                - link "Go to channel MilliyCoverAI" [ref=e259]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e265]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e266]:
+                - generic [ref=e267]: Qalbni larzaga soladigan, dard va hissiyotga boy cover ijro! Eshitib baho berishni unutmang Layk bosing Komment ...
+                - tooltip "tooltip"
+          - generic [ref=e269] [cursor=pointer]:
+            - link [ref=e270]:
+              - /url: /watch?v=I7uXkvCgwng&list=RDI7uXkvCgwng&start_radio=1
+              - generic [ref=e282]: Mix
+            - generic [ref=e285]:
+              - heading "Mix - Yulduz Usmonova - Topilmaydi | MilliyCoverAi" [level=3] [ref=e286]:
+                - link "Mix - Yulduz Usmonova - Topilmaydi | MilliyCoverAi" [ref=e287]:
+                  - /url: /watch?v=I7uXkvCgwng&list=RDI7uXkvCgwng&start_radio=1
+              - generic [ref=e289]:
+                - group [ref=e290]:
+                  - generic [ref=e291]: Yulduz Usmonova, G'aybulla Tursunov, and more
+                - group [ref=e292]
+                - group [ref=e293]:
+                  - link "Yulduz Usmonova - Topilmaydi | MilliyCoverAi · 3:09" [ref=e295]:
+                    - /url: /watch?v=I7uXkvCgwng&list=RDI7uXkvCgwng&start_radio=1
+                - group [ref=e296]:
+                  - link "🎤 Yulduz Usmonova – Sog‘indingmi | (Bolaligim, sen ham meni sog‘indingmi) | Bomba Cover · 3:40" [ref=e298]:
+                    - /url: /watch?v=lZx3OUBeAX0&list=RDI7uXkvCgwng&start_radio=1
+                - group [ref=e299]
+          - generic [ref=e301]:
+            - link [ref=e303] [cursor=pointer]:
+              - /url: /watch?v=I7uXkvCgwng&list=RDI7uXkvCgwng&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e305] [cursor=pointer]:
+              - generic [ref=e306]:
+                - heading "Yulduz Usmonova - Topilmaydi | MilliyCoverAi 3 minutes, 9 seconds" [level=3] [ref=e308]:
+                  - link "Yulduz Usmonova - Topilmaydi | MilliyCoverAi 3 minutes, 9 seconds" [ref=e309]:
+                    - /url: /watch?v=I7uXkvCgwng&list=RDI7uXkvCgwng&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Yulduz Usmonova - Topilmaydi | MilliyCoverAi
+                - generic [ref=e312]:
+                  - generic [ref=e313]: 593K views
+                  - generic [ref=e314]: •1 month ago
+              - generic [ref=e315]:
+                - link "Go to channel MilliyCoverAI" [ref=e316]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e322]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e323]:
+                - text: MilliyCoverAI taqdim etadi! O'zbekiston xalq artisti Yulduz Usmonovaning barcha davrlar uchun o'lmas xiti — "Topilmaydi" ...
+                - tooltip "tooltip"
+          - generic [ref=e325]:
+            - link [ref=e327] [cursor=pointer]:
+              - /url: /watch?v=mFYRyxeOARo&list=RDmFYRyxeOARo&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e329] [cursor=pointer]:
+              - generic [ref=e330]:
+                - heading "Doda - Laylo (Official Video Clip) 4 minutes, 23 seconds" [level=3] [ref=e332]:
+                  - link "Doda - Laylo (Official Video Clip) 4 minutes, 23 seconds" [ref=e333]:
+                    - /url: /watch?v=mFYRyxeOARo&list=RDmFYRyxeOARo&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Doda - Laylo (Official Video Clip)
+                - generic [ref=e336]:
+                  - generic [ref=e337]: 3.3M views
+                  - generic [ref=e338]: •2 weeks ago
+              - generic [ref=e339]:
+                - link "Go to channel MilliyCoverAI" [ref=e340]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e345]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e346]:
+                - text: Assalomu alaykum, aziz musiqasevarlar! "MilliyCoverAI" loyihasining navbatdagi maxsus premyerasini kutib oling. O'zbek ...
+                - tooltip "tooltip"
+          - generic [ref=e348]:
+            - link [ref=e350] [cursor=pointer]:
+              - /url: /watch?v=mbuDivX1umU&list=RDmbuDivX1umU&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e352] [cursor=pointer]:
+              - generic [ref=e353]:
+                - heading "🔥SHaytanat - Azim mullahonov | (Bomba cover) | MilliyCoverAI 🔥 3 minutes, 39 seconds" [level=3] [ref=e355]:
+                  - link "🔥SHaytanat - Azim mullahonov | (Bomba cover) | MilliyCoverAI 🔥 3 minutes, 39 seconds" [ref=e356]:
+                    - /url: /watch?v=mbuDivX1umU&list=RDmbuDivX1umU&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: 🔥SHaytanat - Azim mullahonov | (Bomba cover) | MilliyCoverAI 🔥
+                - generic [ref=e359]:
+                  - generic [ref=e360]: 53K views
+                  - generic [ref=e361]: •1 month ago
+              - generic [ref=e362]:
+                - link "Go to channel MilliyCoverAI" [ref=e363]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e368]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e369]:
+                - generic [ref=e370]: Afsonaviy “Shaytanat” ruhidagi ushbu qo'shiq yangi talqinda! Azim Mullahonov ijodidan ilhomlanib tayyorlangan bu cover sizni ...
+                - tooltip "tooltip"
+          - generic [ref=e372]:
+            - link [ref=e374] [cursor=pointer]:
+              - /url: /watch?v=lZMivgs1paY&list=RDlZMivgs1paY&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e376] [cursor=pointer]:
+              - generic [ref=e377]:
+                - heading "Ketmoqdaman - Hojiakbar Hamidov | (Bomba cover) 💥 2 minutes, 45 seconds" [level=3] [ref=e379]:
+                  - link "Ketmoqdaman - Hojiakbar Hamidov | (Bomba cover) 💥 2 minutes, 45 seconds" [ref=e380]:
+                    - /url: /watch?v=lZMivgs1paY&list=RDlZMivgs1paY&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Ketmoqdaman - Hojiakbar Hamidov | (Bomba cover) 💥
+                - generic [ref=e383]:
+                  - generic [ref=e384]: 65K views
+                  - generic [ref=e385]: •1 month ago
+              - generic [ref=e386]:
+                - link "Go to channel MilliyCoverAI" [ref=e387]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e392]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e393]:
+                - generic [ref=e394]: Hojiakbar Hamidovning mashhur "Ketmoqdaman" taronasini yangicha talqin va yuqori sifatli (AI) ishlovda taqdim etamiz. Ushbu ...
+                - tooltip "tooltip"
+          - generic [ref=e396]:
+            - link [ref=e398] [cursor=pointer]:
+              - /url: /watch?v=xVGRm1_wKHA&list=RDxVGRm1_wKHA&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e400] [cursor=pointer]:
+              - generic [ref=e401]:
+                - heading "O'xshaydiku - Tavakkal Qodirov | MilliyCoverAI (Bomba Cover) 4 minutes, 14 seconds" [level=3] [ref=e403]:
+                  - link "O'xshaydiku - Tavakkal Qodirov | MilliyCoverAI (Bomba Cover) 4 minutes, 14 seconds" [ref=e404]:
+                    - /url: /watch?v=xVGRm1_wKHA&list=RDxVGRm1_wKHA&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: O'xshaydiku - Tavakkal Qodirov | MilliyCoverAI (Bomba Cover)
+                - generic [ref=e407]:
+                  - generic [ref=e408]: 158K views
+                  - generic [ref=e409]: •3 weeks ago
+              - generic [ref=e410]:
+                - link "Go to channel MilliyCoverAI" [ref=e411]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e416]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e417]:
+                - text: Bugun sizlar uchun o'zbek san'atining o'lmas durdonalaridan biri — ustoz san'atkor Tavakkal Qodirov ijrosidagi "O'xshaydiku" ...
+                - tooltip "tooltip"
+          - generic [ref=e418]:
+            - generic [ref=e421]:
+              - img [ref=e423]
+              - heading "Shorts" [level=2] [ref=e426]
+            - generic [ref=e428]:
+              - generic [ref=e431]:
+                - link [ref=e432] [cursor=pointer]:
+                  - /url: /shorts/hzQXPrkIT4g
+                  - img [ref=e437]:
+                    - generic [ref=e438]: New
+                - generic [ref=e439] [cursor=pointer]:
+                  - link "Meniki bo’lmagan faqat sen qolding (AI) - UZCoverLab (ZohidZiyo) v1-2 Short | Cover by UZCoverLab" [ref=e440]:
+                    - /url: /shorts/hzQXPrkIT4g
+                  - generic [ref=e441]: 809 views
+                - button "More actions" [ref=e443] [cursor=pointer]:
+                  - generic [ref=e447]:
+                    - img
+              - generic [ref=e453]:
+                - link [ref=e454] [cursor=pointer]:
+                  - /url: /shorts/yL7-ComnvlE
+                  - img [ref=e459]:
+                    - generic [ref=e460]: New
+                - generic [ref=e461] [cursor=pointer]:
+                  - link "Meniki bo’lmagan faqat sen qolding (AI) - UZCoverLab (ZohidZiyo) v2-2 Short | Cover by UZCoverLab" [ref=e462]:
+                    - /url: /shorts/yL7-ComnvlE
+                  - generic [ref=e463]: No views
+                - button "More actions" [ref=e465] [cursor=pointer]:
+                  - generic [ref=e469]:
+                    - img
+              - generic [ref=e475]:
+                - link [ref=e476] [cursor=pointer]:
+                  - /url: /shorts/FjTBZYYlDgI
+                - generic [ref=e480] [cursor=pointer]:
+                  - link "Hayot ayt (AI Cover) - Madison Beer & Jisoo & Billie Eilish & Shahzoda" [ref=e481]:
+                    - /url: /shorts/FjTBZYYlDgI
+                  - generic [ref=e482]: 2.8K views
+                - button "More actions" [ref=e484] [cursor=pointer]:
+                  - generic [ref=e488]:
+                    - img
+              - generic [ref=e494]:
+                - link [ref=e495] [cursor=pointer]:
+                  - /url: /shorts/8rmuR7W1AdI
+                - generic [ref=e499] [cursor=pointer]:
+                  - 'link "Mast Aylading (Cover AI) #coverai #music #uzbekmusic #ulugbekyolchiyev #milliyqoshiq #mastayladi" [ref=e500]':
+                    - /url: /shorts/8rmuR7W1AdI
+                  - generic [ref=e501]: 839 views
+                - button "More actions" [ref=e503] [cursor=pointer]:
+                  - generic [ref=e507]:
+                    - img
+              - generic [ref=e513]:
+                - link [ref=e514] [cursor=pointer]:
+                  - /url: /shorts/8x6h1h2ebrc
+                  - img [ref=e519]:
+                    - generic [ref=e520]: New
+                - generic [ref=e521] [cursor=pointer]:
+                  - link "yor yor cover ai" [ref=e522]:
+                    - /url: /shorts/8x6h1h2ebrc
+                  - generic [ref=e523]: 1.3K views
+                - button "More actions" [ref=e525] [cursor=pointer]:
+                  - generic [ref=e529]:
+                    - img
+          - generic [ref=e534]:
+            - link [ref=e536] [cursor=pointer]:
+              - /url: /watch?v=756YnmbbO70&list=RD756YnmbbO70&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e538] [cursor=pointer]:
+              - generic [ref=e539]:
+                - heading "Dadajon (Bomba Ijro) 4 minutes, 58 seconds" [level=3] [ref=e541]:
+                  - link "Dadajon (Bomba Ijro) 4 minutes, 58 seconds" [ref=e542]:
+                    - /url: /watch?v=756YnmbbO70&list=RD756YnmbbO70&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Dadajon (Bomba Ijro)
+                - generic [ref=e545]:
+                  - generic [ref=e546]: 306K views
+                  - generic [ref=e547]: •2 weeks ago
+              - generic [ref=e548]:
+                - link "Go to channel MilliyCoverAI" [ref=e549]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e554]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e555]:
+                - text: Siz kutgan oʻsha bomba ijro! Atxam Axror ijrosidagi "Dadajon" (Доля воровская узбекская) qoʻshigʻining toʻliq va jonli talqini.
+                - tooltip "tooltip"
+          - generic [ref=e557]:
+            - link [ref=e559] [cursor=pointer]:
+              - /url: /watch?v=lZx3OUBeAX0&list=RDlZx3OUBeAX0&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e561] [cursor=pointer]:
+              - generic [ref=e562]:
+                - heading "🎤 Yulduz Usmonova – Sog‘indingmi | (Bolaligim, sen ham meni sog‘indingmi) | Bomba Cover 3 minutes, 40 seconds" [level=3] [ref=e564]:
+                  - link "🎤 Yulduz Usmonova – Sog‘indingmi | (Bolaligim, sen ham meni sog‘indingmi) | Bomba Cover 3 minutes, 40 seconds" [ref=e565]:
+                    - /url: /watch?v=lZx3OUBeAX0&list=RDlZx3OUBeAX0&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: 🎤 Yulduz Usmonova – Sog‘indingmi | (Bolaligim, sen ham meni sog‘indingmi) | Bomba Cover
+                - generic [ref=e568]:
+                  - generic [ref=e569]: 2.8M views
+                  - generic [ref=e570]: •1 month ago
+              - generic [ref=e571]:
+                - link "Go to channel MilliyCoverAI" [ref=e572]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e577]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e578]:
+                - generic [ref=e579]: Assalomu alaykum aziz muxlislar! Sizlar uchun yana bir ajoyib cover tayyorladik. Bu safar yuraklarga yaqin bo'lgan, sog'inch va ...
+                - tooltip "tooltip"
+          - generic [ref=e581]:
+            - link [ref=e583] [cursor=pointer]:
+              - /url: /watch?v=0ZyfkiD_ZBc&list=RD0ZyfkiD_ZBc&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e585] [cursor=pointer]:
+              - generic [ref=e586]:
+                - heading "🎶 Do‘st – Sardor Rahimxon | Bomba Cover 3 minutes, 37 seconds" [level=3] [ref=e588]:
+                  - link "🎶 Do‘st – Sardor Rahimxon | Bomba Cover 3 minutes, 37 seconds" [ref=e589]:
+                    - /url: /watch?v=0ZyfkiD_ZBc&list=RD0ZyfkiD_ZBc&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: 🎶 Do‘st – Sardor Rahimxon | Bomba Cover
+                - generic [ref=e592]:
+                  - generic [ref=e593]: 699K views
+                  - generic [ref=e594]: •1 month ago
+              - generic [ref=e595]:
+                - link "Go to channel MilliyCoverAI" [ref=e596]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e601]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e602]:
+                - text: Ushbu coverda Sardor Rahimxonning mashhur “Do'st” qo'shig'i yangicha uslubda qayta ijro etildi. His-tuyg'uga boy vokal, ...
+                - tooltip "tooltip"
+          - generic [ref=e603]:
+            - generic [ref=e606]:
+              - img [ref=e608]
+              - heading "Shorts" [level=2] [ref=e611]
+            - generic [ref=e612]:
+              - generic [ref=e613]:
+                - generic [ref=e616]:
+                  - link [ref=e617] [cursor=pointer]:
+                    - /url: /shorts/zUdQsYJKTxU
+                  - generic [ref=e621] [cursor=pointer]:
+                    - link "Ai Milly Bronx Cover Art Concept" [ref=e622]:
+                      - /url: /shorts/zUdQsYJKTxU
+                    - generic [ref=e623]: 67 views
+                  - button "More actions" [ref=e625] [cursor=pointer]:
+                    - generic [ref=e629]:
+                      - img
+                - generic [ref=e635]:
+                  - link [ref=e636] [cursor=pointer]:
+                    - /url: /shorts/5c9M0BVie_Y
+                  - generic [ref=e640] [cursor=pointer]:
+                    - link "Milly makes a pizza AI" [ref=e641]:
+                      - /url: /shorts/5c9M0BVie_Y
+                    - generic [ref=e642]: 274 views
+                  - button "More actions" [ref=e644] [cursor=pointer]:
+                    - generic [ref=e648]:
+                      - img
+                - generic [ref=e654]:
+                  - link [ref=e655] [cursor=pointer]:
+                    - /url: /shorts/3WXBdhpoLSI
+                  - generic [ref=e659] [cursor=pointer]:
+                    - 'link "made by @ai.milliy.qiz#ai #uzbekistan#culture#viral#youtubeshorts" [ref=e660]':
+                      - /url: /shorts/3WXBdhpoLSI
+                    - generic [ref=e661]: 29K views
+                  - button "More actions" [ref=e663] [cursor=pointer]:
+                    - generic [ref=e667]:
+                      - img
+                - generic [ref=e673]:
+                  - link [ref=e674] [cursor=pointer]:
+                    - /url: /shorts/XU-6HxGyaRY
+                    - img [ref=e679]:
+                      - generic [ref=e680]: New
+                  - generic [ref=e681] [cursor=pointer]:
+                    - link "Jahongir Otajonov – O‘ynasin (AI Cover) | Yangi Talqin🔥 | Uzbek Music 2026" [ref=e682]:
+                      - /url: /shorts/XU-6HxGyaRY
+                    - generic [ref=e683]: 1.1K views
+                  - button "More actions" [ref=e685] [cursor=pointer]:
+                    - generic [ref=e689]:
+                      - img
+                - generic [ref=e695]:
+                  - link [ref=e696] [cursor=pointer]:
+                    - /url: /shorts/UO8fPLGKyZ4
+                    - img [ref=e701]:
+                      - generic [ref=e702]: New
+                  - generic [ref=e703] [cursor=pointer]:
+                    - link "Sen Ketding | Uzbek AI Emotional Song | Female Vocal Rain Music" [ref=e704]:
+                      - /url: /shorts/UO8fPLGKyZ4
+                    - generic [ref=e705]: 24 views
+                  - button "More actions" [ref=e707] [cursor=pointer]:
+                    - generic [ref=e711]:
+                      - img
+              - generic [ref=e715]:
+                - generic [ref=e718]:
+                  - link [ref=e719] [cursor=pointer]:
+                    - /url: /shorts/AZXUh0p1yIg
+                  - generic [ref=e723] [cursor=pointer]:
+                    - 'link "Ai Milly Boyz Cry cover song Therapy Vibes #aimilly #boyscry #dancehall #jamaica #therapy" [ref=e724]':
+                      - /url: /shorts/AZXUh0p1yIg
+                    - generic [ref=e725]: 807 views
+                  - button "More actions" [ref=e727] [cursor=pointer]:
+                    - generic [ref=e731]:
+                      - img
+                - generic [ref=e737]:
+                  - link [ref=e738] [cursor=pointer]:
+                    - /url: /shorts/4HoXcxtoimA
+                    - img [ref=e743]:
+                      - generic [ref=e744]: New
+                  - generic [ref=e745] [cursor=pointer]:
+                    - link "Aidana Yuldasheva will represent Uzbekistan 🇺🇿 at Megavision AI Song Contest 01 in Stockholm,Sweden🌟" [ref=e746]:
+                      - /url: /shorts/4HoXcxtoimA
+                    - generic [ref=e747]: 4 views
+                  - button "More actions" [ref=e749] [cursor=pointer]:
+                    - generic [ref=e753]:
+                      - img
+                - generic [ref=e759]:
+                  - link [ref=e760] [cursor=pointer]:
+                    - /url: /shorts/7FhI99-aFI0
+                  - generic [ref=e764] [cursor=pointer]:
+                    - link "Ai Milly WTDO Cover Art Concept Design" [ref=e765]:
+                      - /url: /shorts/7FhI99-aFI0
+                    - generic [ref=e766]: 155 views
+                  - button "More actions" [ref=e768] [cursor=pointer]:
+                    - generic [ref=e772]:
+                      - img
+                - generic [ref=e778]:
+                  - link [ref=e779] [cursor=pointer]:
+                    - /url: /shorts/wlSJykPQPdk
+                    - img [ref=e784]:
+                      - generic [ref=e785]: New
+                  - generic [ref=e786] [cursor=pointer]:
+                    - 'link "#uzbekistan #uzbek #ai #trend #music" [ref=e787]':
+                      - /url: /shorts/wlSJykPQPdk
+                    - generic [ref=e788]: 341 views
+                  - button "More actions" [ref=e790] [cursor=pointer]:
+                    - generic [ref=e794]:
+                      - img
+                - generic [ref=e800]:
+                  - link [ref=e801] [cursor=pointer]:
+                    - /url: /shorts/8l33uqYKO4I
+                    - img [ref=e806]:
+                      - generic [ref=e807]: New
+                  - generic [ref=e808] [cursor=pointer]:
+                    - link "Meniki bo’lmagan faqat sen qolding (AI) - UZCoverLab (ZohidZiyo) v2-1 Short | Cover by UZCoverLab" [ref=e809]:
+                      - /url: /shorts/8l33uqYKO4I
+                    - generic [ref=e810]: 11 views
+                  - button "More actions" [ref=e812] [cursor=pointer]:
+                    - generic [ref=e816]:
+                      - img
+            - button "Show more" [ref=e823] [cursor=pointer]:
+              - generic [ref=e824]: Show more
+              - generic [ref=e828]:
+                - img
+          - generic [ref=e833]:
+            - link [ref=e835] [cursor=pointer]:
+              - /url: /watch?v=EKmJFo5opGk&list=RDEKmJFo5opGk&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e837] [cursor=pointer]:
+              - generic [ref=e838]:
+                - heading "Yulduz Usmonova - Xasta bo'lma | (bomba cover) | MilliyCoverAI 4 minutes, 1 second" [level=3] [ref=e840]:
+                  - link "Yulduz Usmonova - Xasta bo'lma | (bomba cover) | MilliyCoverAI 4 minutes, 1 second" [ref=e841]:
+                    - /url: /watch?v=EKmJFo5opGk&list=RDEKmJFo5opGk&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Yulduz Usmonova - Xasta bo'lma | (bomba cover) | MilliyCoverAI
+                - generic [ref=e844]:
+                  - generic [ref=e845]: 309K views
+                  - generic [ref=e846]: •1 month ago
+              - generic [ref=e847]:
+                - link "Go to channel MilliyCoverAI" [ref=e848]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e853]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e854]:
+                - generic [ref=e855]: Ushbu cover orqali biz Yulduz Usmonovaning mashhur “Xasta bo'lma” qo'shig'iga yangi ruh va zamonaviy hissiyot berdik.
+                - tooltip "tooltip"
+          - generic [ref=e857]:
+            - link [ref=e859] [cursor=pointer]:
+              - /url: /watch?v=qCSbVd0XmGA&list=RDqCSbVd0XmGA&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e861] [cursor=pointer]:
+              - generic [ref=e862]:
+                - heading "O'ZBEGIM | AI COVER 3 minutes, 51 seconds" [level=3] [ref=e864]:
+                  - link "O'ZBEGIM | AI COVER 3 minutes, 51 seconds" [ref=e865]:
+                    - /url: /watch?v=qCSbVd0XmGA&list=RDqCSbVd0XmGA&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: O'ZBEGIM | AI COVER
+                - generic [ref=e868]:
+                  - generic [ref=e869]: 181 views
+                  - generic [ref=e870]: •4 months ago
+              - generic [ref=e871]:
+                - link "Go to channel HYDRO AI MIX | Viral AI Covers" [ref=e872]:
+                  - /url: /@HYDROAI-Mix
+                - link "HYDRO AI MIX | Viral AI Covers" [ref=e877]:
+                  - /url: /@HYDROAI-Mix
+              - generic [ref=e878]:
+                - text: Welcome to HydroAI-Mix! Dive into the best music experience with our latest remix. Perfect for car trips, workout, or chilling.
+                - tooltip "tooltip"
+              - img "4K" [ref=e883]:
+                - generic [ref=e884]: 4K
+          - generic [ref=e886]:
+            - heading "People also watched" [level=2] [ref=e889]:
+              - generic [ref=e891]: People also watched
+            - generic [ref=e893]:
+              - generic [ref=e894]:
+                - generic [ref=e896]:
+                  - link [ref=e898] [cursor=pointer]:
+                    - /url: /watch?v=A28qYbeJRVo&list=RDA28qYbeJRVo&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                  - generic [ref=e900] [cursor=pointer]:
+                    - generic [ref=e901]:
+                      - heading "90 yillar xitlarii Voy alamjonn jon alam👏🏻👏🏻👏🏻👏🏻👏🏻 7 minutes, 59 seconds" [level=3] [ref=e903]:
+                        - link "90 yillar xitlarii Voy alamjonn jon alam👏🏻👏🏻👏🏻👏🏻👏🏻 7 minutes, 59 seconds" [ref=e904]:
+                          - /url: /watch?v=A28qYbeJRVo&list=RDA28qYbeJRVo&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                          - text: 90 yillar xitlarii Voy alamjonn jon alam👏🏻👏🏻👏🏻👏🏻👏🏻
+                      - generic [ref=e907]:
+                        - generic [ref=e908]: 6.4M views
+                        - generic [ref=e909]: •6 years ago
+                    - generic [ref=e910]:
+                      - link "Go to channel Dilshod Mirzamurotov (Gayrat)" [ref=e911]:
+                        - /url: /@gayrat-misha
+                      - link "Dilshod Mirzamurotov (Gayrat)" [ref=e916]:
+                        - /url: /@gayrat-misha
+                    - generic [ref=e917]:
+                      - text: Voy alamjon jon allam yorvordi.
+                      - tooltip "tooltip"
+                - generic [ref=e919]:
+                  - link [ref=e921] [cursor=pointer]:
+                    - /url: /watch?v=64UYGboK8Aw&list=RD64UYGboK8Aw&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                  - generic [ref=e923] [cursor=pointer]:
+                    - generic [ref=e924]:
+                      - heading "Azim Mullaxonov - Shaytanat (Matnli) 4 minutes, 48 seconds" [level=3] [ref=e926]:
+                        - link "Azim Mullaxonov - Shaytanat (Matnli) 4 minutes, 48 seconds" [ref=e927]:
+                          - /url: /watch?v=64UYGboK8Aw&list=RD64UYGboK8Aw&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                          - text: Azim Mullaxonov - Shaytanat (Matnli)
+                      - generic [ref=e930]:
+                        - generic [ref=e931]: 4.1M views
+                        - generic [ref=e932]: •4 years ago
+                    - generic [ref=e933]:
+                      - link "Go to channel Vlogs and Nostalgic Songs" [ref=e934]:
+                        - /url: /@nostalgicsongs2282
+                      - link "Vlogs and Nostalgic Songs" [ref=e939]:
+                        - /url: /@nostalgicsongs2282
+                    - generic [ref=e940]:
+                      - text: "Matnli qo'shiqlar * Songs with lyrics Mp3 lar uchun Telegram kanali: https://t.me/nostalgicsongs_19 Telegram channel for mp3: ..."
+                      - tooltip "tooltip"
+                - generic [ref=e942]:
+                  - link [ref=e944] [cursor=pointer]:
+                    - /url: /watch?v=NKLgmJeCeG0&list=RDNKLgmJeCeG0&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                  - generic [ref=e946] [cursor=pointer]:
+                    - generic [ref=e947]:
+                      - heading "Ох, Онажон (Доля воровская) | NeomSongs AI Cover 3 minutes, 55 seconds" [level=3] [ref=e949]:
+                        - link "Ох, Онажон (Доля воровская) | NeomSongs AI Cover 3 minutes, 55 seconds" [ref=e950]:
+                          - /url: /watch?v=NKLgmJeCeG0&list=RDNKLgmJeCeG0&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                          - text: Ох, Онажон (Доля воровская) | NeomSongs AI Cover
+                      - generic [ref=e953]:
+                        - generic [ref=e954]: 441K views
+                        - generic [ref=e955]: •2 weeks ago
+                    - generic [ref=e956]:
+                      - link "Go to channel NeomSongs-Uzbek Ai" [ref=e957]:
+                        - /url: /@NeomSongs
+                      - link "NeomSongs-Uzbek Ai" [ref=e962]:
+                        - /url: /@NeomSongs
+                    - generic [ref=e963]:
+                      - text: Ох, Онажон — Доля воровская” — бу дард, соғинч, она меҳри ва озодлик қадри ҳақидаги таъсирли қўшиқ. Қўшиқда панjara ...
+                      - tooltip "tooltip"
+                - generic [ref=e965]:
+                  - link [ref=e967] [cursor=pointer]:
+                    - /url: /watch?v=-SBIKx1KzXs&list=RD-SBIKx1KzXs&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                  - generic [ref=e969] [cursor=pointer]:
+                    - generic [ref=e970]:
+                      - heading "Yulduz Usmanova - Hasrat (Ruslan Sharipov) 7 minutes, 11 seconds" [level=3] [ref=e972]:
+                        - link "Yulduz Usmanova - Hasrat (Ruslan Sharipov) 7 minutes, 11 seconds" [ref=e973]:
+                          - /url: /watch?v=-SBIKx1KzXs&list=RD-SBIKx1KzXs&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                          - text: Yulduz Usmanova - Hasrat (Ruslan Sharipov)
+                      - generic [ref=e976]:
+                        - generic [ref=e977]: 16M views
+                        - generic [ref=e978]: •8 years ago
+                    - generic [ref=e979]:
+                      - link "Go to channel Milliy TV" [ref=e980]:
+                        - /url: /@MilliyTV
+                      - generic [ref=e981]:
+                        - link "Milliy TV" [ref=e985]:
+                          - /url: /@MilliyTV
+                        - img "Verified" [ref=e990]
+              - generic "+6 more" [ref=e993] [cursor=pointer]
+          - generic [ref=e995]:
+            - link [ref=e997] [cursor=pointer]:
+              - /url: /watch?v=KbYwaZ9dOKo&list=RDKbYwaZ9dOKo&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e999] [cursor=pointer]:
+              - generic [ref=e1000]:
+                - heading "Kamoliddin Rahimov - Nargiz | Zamonaviy talqin (Modern Cover Art) | MilliyCoverAI 4 minutes, 14 seconds" [level=3] [ref=e1002]:
+                  - link "Kamoliddin Rahimov - Nargiz | Zamonaviy talqin (Modern Cover Art) | MilliyCoverAI 4 minutes, 14 seconds" [ref=e1003]:
+                    - /url: /watch?v=KbYwaZ9dOKo&list=RDKbYwaZ9dOKo&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Kamoliddin Rahimov - Nargiz | Zamonaviy talqin (Modern Cover Art) | MilliyCoverAI
+                - generic [ref=e1006]:
+                  - generic [ref=e1007]: 23K views
+                  - generic [ref=e1008]: •1 month ago
+              - generic [ref=e1009]:
+                - link "Go to channel MilliyCoverAI" [ref=e1010]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e1015]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e1016]:
+                - text: "Sarlavha varianti: Matn: O'zbek xalqining ardoqli san'atkori, betakror ovoz sohibi Kamoliddin Rahimov ijrosidagi boqiylik kasb ..."
+                - tooltip "tooltip"
+          - generic [ref=e1018]:
+            - link [ref=e1020] [cursor=pointer]:
+              - /url: /watch?v=DEmnwcVhCMk&list=RDDEmnwcVhCMk&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e1022] [cursor=pointer]:
+              - generic [ref=e1023]:
+                - 'heading "🎵 Umr o`tmoqdadur - Faxriddin Umarov | (Bomba Cover) 4 minutes, 38 seconds" [level=3] [ref=e1025]':
+                  - 'link "🎵 Umr o`tmoqdadur - Faxriddin Umarov | (Bomba Cover) 4 minutes, 38 seconds" [ref=e1026]':
+                    - /url: /watch?v=DEmnwcVhCMk&list=RDDEmnwcVhCMk&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: "🎵 Umr o`tmoqdadur - Faxriddin Umarov | (Bomba Cover)"
+                - generic [ref=e1029]:
+                  - generic [ref=e1030]: 593K views
+                  - generic [ref=e1031]: •1 month ago
+              - generic [ref=e1032]:
+                - link "Go to channel MilliyCoverAI" [ref=e1033]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e1038]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e1039]:
+                - generic [ref=e1040]: Hayot bir lahza, umr esa ko'z ochib yumguncha o'tadi... Ushbu cover orqali qalbingizga yetib boradigan hislar, chuqur ma'no va ...
+                - tooltip "tooltip"
+          - generic [ref=e1042] [cursor=pointer]:
+            - link [ref=e1043]:
+              - /url: /watch?v=mryYky5GZ9g&list=PLOynw1DtYBOm3UUyqQvGvhnfyYASt_E6_
+              - generic [ref=e1055]: 210 videos
+            - generic [ref=e1058]:
+              - heading "Milliy cover AI" [level=3] [ref=e1059]:
+                - link "Milliy cover AI" [ref=e1060]:
+                  - /url: /watch?v=mryYky5GZ9g&list=PLOynw1DtYBOm3UUyqQvGvhnfyYASt_E6_
+              - generic [ref=e1062]:
+                - group [ref=e1063]:
+                  - link "Ozodbek Mirzayev" [ref=e1066]:
+                    - /url: /@ozodbekmirzaevofficial
+                  - generic [ref=e1067]: •
+                  - link "Playlist" [ref=e1070]:
+                    - /url: /@ozodbekmirzaevofficial
+                - group [ref=e1071]
+                - group [ref=e1072]:
+                  - link "Binafsha - Odamlar 💔 · 3:58" [ref=e1074]:
+                    - /url: /watch?v=mryYky5GZ9g&list=PLOynw1DtYBOm3UUyqQvGvhnfyYASt_E6_&pp=0gcJCfcAOCosWNin
+                - group [ref=e1075]:
+                  - link "Doda - qum mozor (yog'ar yomg'ir, yog'ar qor) | Bomba ijro · 4:58" [ref=e1077]:
+                    - /url: /watch?v=bKKW2qnvdUI&list=PLOynw1DtYBOm3UUyqQvGvhnfyYASt_E6_
+                - group [ref=e1078]
+                - group [ref=e1079]:
+                  - link "View full playlist" [ref=e1082]:
+                    - /url: /playlist?list=PLOynw1DtYBOm3UUyqQvGvhnfyYASt_E6_
+          - generic [ref=e1084]:
+            - link [ref=e1086] [cursor=pointer]:
+              - /url: /watch?v=c8wcvj-UTHU&list=RDc8wcvj-UTHU&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e1088] [cursor=pointer]:
+              - generic [ref=e1089]:
+                - heading "Ey gozal - Muxriddin Xoliqov | Bomba cover 3 minutes, 59 seconds" [level=3] [ref=e1091]:
+                  - link "Ey gozal - Muxriddin Xoliqov | Bomba cover 3 minutes, 59 seconds" [ref=e1092]:
+                    - /url: /watch?v=c8wcvj-UTHU&list=RDc8wcvj-UTHU&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Ey gozal - Muxriddin Xoliqov | Bomba cover
+                - generic [ref=e1095]:
+                  - generic [ref=e1096]: 107K views
+                  - generic [ref=e1097]: •1 month ago
+              - generic [ref=e1098]:
+                - link "Go to channel MilliyCoverAI" [ref=e1099]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e1104]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e1105]:
+                - text: Yurakka yetib boradigan qo'shiq yana yangicha talqinda! ❤️ Eski hissiyotlar, zamonaviy atmosfera va kuchli emosiyalar ...
+                - tooltip "tooltip"
+          - generic [ref=e1107]:
+            - link [ref=e1109] [cursor=pointer]:
+              - /url: /watch?v=akW-42iBaI4&list=RDakW-42iBaI4&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e1111] [cursor=pointer]:
+              - generic [ref=e1112]:
+                - heading "Yo'qchilik - Ruslan Sharipov | (Bomba cover) 4 minutes, 59 seconds" [level=3] [ref=e1114]:
+                  - link "Yo'qchilik - Ruslan Sharipov | (Bomba cover) 4 minutes, 59 seconds" [ref=e1115]:
+                    - /url: /watch?v=akW-42iBaI4&list=RDakW-42iBaI4&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Yo'qchilik - Ruslan Sharipov | (Bomba cover)
+                - generic [ref=e1118]:
+                  - generic [ref=e1119]: 629K views
+                  - generic [ref=e1120]: •3 weeks ago
+              - generic [ref=e1121]:
+                - link "Go to channel MilliyCoverAI" [ref=e1122]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e1127]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e1128]:
+                - text: O'zbek estradasining unutilmas namoyandasi Ruslan Sharipovning "Yo'qchilik" taronasi ko'pchilikning qalbida chuqur joy ...
+                - tooltip "tooltip"
+          - generic [ref=e1130]:
+            - link [ref=e1132] [cursor=pointer]:
+              - /url: /watch?v=Vx-gDzyTmOI&list=RDVx-gDzyTmOI&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+            - generic [ref=e1134] [cursor=pointer]:
+              - generic [ref=e1135]:
+                - heading "Miyagi & Эндшпиль - Captain | Oʻzbek tilida Milliy Cover (AI Versiya) 🇺🇿 4 minutes, 1 second" [level=3] [ref=e1137]:
+                  - link "Miyagi & Эндшпиль - Captain | Oʻzbek tilida Milliy Cover (AI Versiya) 🇺🇿 4 minutes, 1 second" [ref=e1138]:
+                    - /url: /watch?v=Vx-gDzyTmOI&list=RDVx-gDzyTmOI&start_radio=1&pp=ygUPbWlsbGl5IGNvdmVyIGFpoAcB
+                    - text: Miyagi & Эндшпиль - Captain | Oʻzbek tilida Milliy Cover (AI Versiya) 🇺🇿
+                - generic [ref=e1141]:
+                  - generic [ref=e1142]: 1K views
+                  - generic [ref=e1143]: •6 months ago
+              - generic [ref=e1144]:
+                - link "Go to channel MilliyCoverAI" [ref=e1145]:
+                  - /url: /@MilliyCoverAI
+                - link "MilliyCoverAI" [ref=e1150]:
+                  - /url: /@MilliyCoverAI
+              - generic [ref=e1151]:
+                - text: Sizlarni uzoq kutilgan Miyagi & Эндшпиль ijodiga mansub mashhur "Captain" (Kapitan) qoʻshigʻining mutlaqo yangicha talqini ...
+                - tooltip "tooltip"

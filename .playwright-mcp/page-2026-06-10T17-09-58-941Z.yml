@@ -1,0 +1,668 @@
+- generic [ref=e1]:
+  - button "Accessibility - Enable blind mode" [ref=e3] [cursor=pointer]
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - checkbox "Navigation" [ref=e6]
+      - link "" [ref=e9] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e10]: 
+      - navigation [ref=e11]:
+        - generic [ref=e12]:
+          - link "lichess.org" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - group [ref=e14]:
+            - link "Create lobby game" [ref=e15] [cursor=pointer]:
+              - /url: /?any#hook
+            - link "Arena tournaments" [ref=e16] [cursor=pointer]:
+              - /url: /tournament
+            - link "Swiss tournaments" [ref=e17] [cursor=pointer]:
+              - /url: /swiss
+            - link "Simultaneous exhibitions" [ref=e18] [cursor=pointer]:
+              - /url: /simul
+            - link "Donate " [ref=e19] [cursor=pointer]:
+              - /url: /patron
+        - generic [ref=e20]:
+          - link "Puzzles" [ref=e21] [cursor=pointer]:
+            - /url: /training
+          - group [ref=e22]:
+            - link "Puzzles" [ref=e23] [cursor=pointer]:
+              - /url: /training
+            - link "Puzzle Themes" [ref=e24] [cursor=pointer]:
+              - /url: /training/themes
+            - link "Puzzle Dashboard" [ref=e25] [cursor=pointer]:
+              - /url: /training/dashboard/30
+            - link "Puzzle Streak" [ref=e26] [cursor=pointer]:
+              - /url: /streak
+            - link "Puzzle Storm" [ref=e27] [cursor=pointer]:
+              - /url: /storm
+            - link "Puzzle Racer" [ref=e28] [cursor=pointer]:
+              - /url: /racer
+        - generic [ref=e29]:
+          - link "Learn" [ref=e30] [cursor=pointer]:
+            - /url: /learn
+          - group [ref=e31]:
+            - link "Chess basics" [ref=e32] [cursor=pointer]:
+              - /url: /learn
+            - link "Practice" [ref=e33] [cursor=pointer]:
+              - /url: /practice
+            - link "Coordinates" [ref=e34] [cursor=pointer]:
+              - /url: /training/coordinate
+            - link "Study" [ref=e35] [cursor=pointer]:
+              - /url: /study
+            - link "Coaches" [ref=e36] [cursor=pointer]:
+              - /url: /coach
+        - generic [ref=e37]:
+          - link "Watch" [ref=e38] [cursor=pointer]:
+            - /url: /broadcast
+          - group [ref=e39]:
+            - link "Broadcasts" [ref=e40] [cursor=pointer]:
+              - /url: /broadcast
+            - link "Lichess TV" [ref=e41] [cursor=pointer]:
+              - /url: /tv
+            - link "Current games" [ref=e42] [cursor=pointer]:
+              - /url: /games
+            - link "Streamers" [ref=e43] [cursor=pointer]:
+              - /url: /streamer
+            - link "Video library" [ref=e44] [cursor=pointer]:
+              - /url: /video
+        - generic [ref=e45]:
+          - link "Community" [ref=e46] [cursor=pointer]:
+            - /url: /player
+          - group [ref=e47]:
+            - link "Players" [ref=e48] [cursor=pointer]:
+              - /url: /player
+            - link "Teams" [ref=e49] [cursor=pointer]:
+              - /url: /team
+            - link "Forum" [ref=e50] [cursor=pointer]:
+              - /url: /forum
+            - link "Blog" [ref=e51] [cursor=pointer]:
+              - /url: /blog/community
+        - generic [ref=e52]:
+          - link "Tools" [ref=e53] [cursor=pointer]:
+            - /url: /analysis
+          - group [ref=e54]:
+            - link "Analysis board" [ref=e55] [cursor=pointer]:
+              - /url: /analysis
+            - link "Openings" [ref=e56] [cursor=pointer]:
+              - /url: /opening
+            - link "Board editor" [ref=e57] [cursor=pointer]:
+              - /url: /editor
+            - link "Import game" [ref=e58] [cursor=pointer]:
+              - /url: /paste
+            - link "Advanced search" [ref=e59] [cursor=pointer]:
+              - /url: /games/search
+      - link "Donate" [ref=e60] [cursor=pointer]:
+        - /url: /patron
+    - generic [ref=e61]:
+      - text: 
+      - generic [ref=e62]:
+        - generic [ref=e63] [cursor=pointer]: 
+        - textbox "Search"
+      - generic [ref=e64]:
+        - link "Sign in" [ref=e65] [cursor=pointer]:
+          - /url: /login?referrer=/
+        - link "Register" [ref=e66] [cursor=pointer]:
+          - /url: /signup
+      - button "Preferences" [ref=e68] [cursor=pointer]: 
+  - main [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - link "IM Sladgie IM hosting Pawnda Blitz Arena on lichess.org !donate !lessons" [ref=e73] [cursor=pointer]:
+          - /url: /streamer/sparklehorse?redirect=true
+          - strong [ref=e74]: IM Sladgie
+          - text: IM hosting Pawnda Blitz Arena on lichess.org !donate !lessons
+        - link "Streamers »" [ref=e75] [cursor=pointer]:
+          - /url: /streamer
+      - generic [ref=e76]:
+        - link " Blohberger vs Navara With GM Colovic & GM Ragger Playing now" [ref=e77] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=mjPaRth0Eus
+          - generic [ref=e78]: 
+          - generic [ref=e79]:
+            - generic [ref=e80]: Blohberger vs Navara
+            - generic [ref=e81]: With GM Colovic & GM Ragger
+            - text: Playing now
+        - link " Blitz Shield Arena Battle for the Blitz Shield 1,740 players • 4 hours remaining" [ref=e82] [cursor=pointer]:
+          - /url: /tournament/sF6bPl9q
+          - generic [ref=e83]: 
+          - generic [ref=e84]:
+            - generic [ref=e85]: Blitz Shield Arena
+            - generic [ref=e86]: Battle for the Blitz Shield
+            - generic [ref=e87]:
+              - text: 1,740 players •
+              - time [ref=e88]: 4 hours remaining
+        - link " Daily SuperBlitz Arena 576 players • Playing now" [ref=e89] [cursor=pointer]:
+          - /url: /tournament/VtEx70hL
+          - generic [ref=e90]: 
+          - generic [ref=e91]:
+            - generic [ref=e92]: Daily SuperBlitz Arena
+            - text: 576 players • Playing now
+      - generic [ref=e93]:
+        - text: Lichess is a free (
+        - link "really" [ref=e94] [cursor=pointer]:
+          - /url: /features
+        - text: ), libre, no-ads, open source chess server.
+        - link "About Lichess..." [ref=e95] [cursor=pointer]:
+          - /url: /about
+    - generic [ref=e96]:
+      - tablist [ref=e97]:
+        - tab "Quick pairing" [ref=e98] [cursor=pointer]
+        - tab "Lobby" [ref=e99] [cursor=pointer]
+        - tab "Correspondence" [ref=e100] [cursor=pointer]
+      - generic [ref=e101]:
+        - button "" [ref=e102] [cursor=pointer]
+        - button "" [ref=e103] [cursor=pointer]
+        - table [ref=e104]:
+          - rowgroup [ref=e105]:
+            - row "Time Mode" [ref=e106]:
+              - columnheader [ref=e107]
+              - columnheader "Time" [ref=e108]: Time
+              - columnheader "Mode" [ref=e109]: Mode
+          - rowgroup [ref=e362]:
+            - button "Anonymous ½+0 Casual" [ref=e363]:
+              - cell "Anonymous" [ref=e364] [cursor=pointer]
+              - cell "½+0" [ref=e365] [cursor=pointer]
+              - cell "Casual" [ref=e366] [cursor=pointer]
+            - button "Anonymous 0+3 Casual" [ref=e505]:
+              - cell "Anonymous" [ref=e506] [cursor=pointer]
+              - cell "0+3" [ref=e507] [cursor=pointer]
+              - cell "Casual" [ref=e508] [cursor=pointer]
+            - button "Anonymous 1.5+3 Casual" [ref=e509]:
+              - cell "Anonymous" [ref=e510] [cursor=pointer]
+              - cell "1.5+3" [ref=e511] [cursor=pointer]
+              - cell "Casual" [ref=e512] [cursor=pointer]
+            - button "Anonymous 3+1 Casual" [ref=e513]:
+              - cell "Anonymous" [ref=e514] [cursor=pointer]
+              - cell "3+1" [ref=e515] [cursor=pointer]
+              - cell "Casual" [ref=e516] [cursor=pointer]
+            - button "Anonymous 3+3 Casual" [ref=e517]:
+              - cell "Anonymous" [ref=e518] [cursor=pointer]
+              - cell "3+3" [ref=e519] [cursor=pointer]
+              - cell "Casual" [ref=e520] [cursor=pointer]
+            - button "Anonymous 5+1 Casual" [ref=e521]:
+              - cell "Anonymous" [ref=e522]
+              - cell "5+1" [ref=e523]
+              - cell "Casual" [ref=e524]
+            - button "Anonymous 5+8 Casual" [ref=e525]:
+              - cell "Anonymous" [ref=e526]
+              - cell "5+8" [ref=e527]
+              - cell "Casual" [ref=e528]
+            - button "Anonymous 10+3 Casual" [ref=e529]:
+              - cell "Anonymous" [ref=e530]
+              - cell "10+3" [ref=e531]
+              - cell "Casual" [ref=e532]
+            - button "Anonymous 30+0 Casual" [ref=e533]:
+              - cell "Anonymous" [ref=e534]
+              - cell "30+0" [ref=e535]
+              - cell "Casual" [ref=e536]
+            - button "Anonymous 5+180 Casual" [ref=e537]:
+              - cell "Anonymous" [ref=e538]
+              - cell "5+180" [ref=e539]
+              - cell "Casual" [ref=e540]
+            - row "— Variant —" [ref=e407]:
+              - cell "— Variant —" [ref=e408]
+            - button "Anonymous 2+0 Casual" [ref=e541]:
+              - cell "Anonymous" [ref=e542] [cursor=pointer]
+              - cell "2+0" [ref=e543] [cursor=pointer]
+              - cell "Casual" [ref=e544] [cursor=pointer]
+            - button "Anonymous 5+0 Casual" [ref=e545]:
+              - cell "Anonymous" [ref=e546] [cursor=pointer]
+              - cell "5+0" [ref=e547] [cursor=pointer]
+              - cell "Casual" [ref=e548] [cursor=pointer]
+            - button "Anonymous 7+0 Casual" [ref=e413]:
+              - cell "Anonymous" [ref=e414] [cursor=pointer]
+              - cell "7+0" [ref=e415] [cursor=pointer]
+              - cell "Casual" [ref=e416] [cursor=pointer]
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - button " Create lobby game" [ref=e112] [cursor=pointer]
+        - button " Challenge a friend" [ref=e113] [cursor=pointer]
+        - button " Play against computer" [ref=e114] [cursor=pointer]
+      - dialog "Game setup" [ref=e550]:
+        - button "Close" [ref=e551] [cursor=pointer]: 
+        - generic [ref=e553]:
+          - heading "Game setup" [level=2] [ref=e554]
+          - generic [ref=e555]:
+            - generic [ref=e556]:
+              - checkbox " Standard Standard rules of chess (FIDE) " [active] [ref=e557]
+              - generic [ref=e558] [cursor=pointer]:
+                - generic [ref=e559]: 
+                - generic [ref=e560]:
+                  - generic [ref=e561]: Standard
+                  - generic [ref=e562]: Standard rules of chess (FIDE)
+                - text: 
+            - generic [ref=e563]:
+              - tablist [ref=e564]:
+                - tab "Real time" [ref=e565] [cursor=pointer]
+                - tab "Correspondence" [ref=e566] [cursor=pointer]
+                - tab "Unlimited" [ref=e567] [cursor=pointer]
+              - generic [ref=e568]: Take all the time you need
+            - generic [ref=e570]:
+              - generic [ref=e571]: Strength
+              - generic [ref=e572]:
+                - generic [ref=e573]:
+                  - radio "1" [checked] [ref=e574]
+                  - generic [ref=e575] [cursor=pointer]: "1"
+                - generic [ref=e576]:
+                  - radio "2" [ref=e577]
+                  - generic [ref=e578] [cursor=pointer]: "2"
+                - generic [ref=e579]:
+                  - radio "3" [ref=e580]
+                  - generic [ref=e581] [cursor=pointer]: "3"
+                - generic [ref=e582]:
+                  - radio "4" [ref=e583]
+                  - generic [ref=e584] [cursor=pointer]: "4"
+                - generic [ref=e585]:
+                  - radio "5" [ref=e586]
+                  - generic [ref=e587] [cursor=pointer]: "5"
+                - generic [ref=e588]:
+                  - radio "6" [ref=e589]
+                  - generic [ref=e590] [cursor=pointer]: "6"
+                - generic [ref=e591]:
+                  - radio "7" [ref=e592]
+                  - generic [ref=e593] [cursor=pointer]: "7"
+                - generic [ref=e594]:
+                  - radio "8" [ref=e595]
+                  - generic [ref=e596] [cursor=pointer]: "8"
+            - generic [ref=e597]:
+              - generic [ref=e598]: Side
+              - generic [ref=e599]:
+                - generic [ref=e600]:
+                  - radio "Black" [ref=e601]
+                  - generic [ref=e605] [cursor=pointer]: Black
+                - generic [ref=e606]:
+                  - radio "Random side" [checked] [ref=e607]
+                  - generic [ref=e611] [cursor=pointer]: Random side
+                - generic [ref=e612]:
+                  - radio "White" [ref=e613]
+                  - generic [ref=e617] [cursor=pointer]: White
+          - button " Play against computer" [ref=e619] [cursor=pointer]
+      - generic [ref=e115]:
+        - link "104,711 players" [ref=e620] [cursor=pointer]:
+          - /url: /player
+          - strong [ref=e117]: 104,711
+          - text: players
+        - link "43,816 games in play" [ref=e621] [cursor=pointer]:
+          - /url: /games
+          - strong [ref=e119]: 43,816
+          - text: games in play
+    - link "FM Brastrodamus 2766 2:28 GM Experience_Chess 2794 2:24" [ref=e622] [cursor=pointer]:
+      - /url: /tv
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic "FIDE Master" [ref=e124]: FM
+          - text: Brastrodamus
+          - img [ref=e125]
+          - generic [ref=e126]: "2766"
+        - generic [ref=e127]: 2:28
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - generic "Grandmaster" [ref=e133]: GM
+          - text: Experience_Chess
+          - img [ref=e134]
+          - generic [ref=e135]: "2794"
+        - generic [ref=e136]: 2:24
+    - generic [ref=e420]:
+      - link " Donate Become a Lichess Patron" [ref=e421] [cursor=pointer]:
+        - /url: /patron
+        - generic [ref=e422]: 
+        - generic [ref=e423]:
+          - strong [ref=e424]: Donate
+          - generic [ref=e425]: Become a Lichess Patron
+      - link " Swag Store Play chess in style" [ref=e426] [cursor=pointer]:
+        - /url: /swag
+        - generic [ref=e427]: 
+        - generic [ref=e428]:
+          - strong [ref=e429]: Swag Store
+          - generic [ref=e430]: Play chess in style
+    - link "Puzzle of the day Black to play" [ref=e137] [cursor=pointer]:
+      - /url: /training/daily
+      - generic [ref=e138]: Puzzle of the day
+      - generic [ref=e142]: Black to play
+    - generic [ref=e431]:
+      - generic [ref=e432]:
+        - 'link "Jun 6, 2026 RuyLopez1000 Fischer vs Karpov: The Match That Never Was" [ref=e440] [cursor=pointer]':
+          - /url: /@/RuyLopez1000/blog/fischer-vs-karpov-the-match-that-never-was/7IZZ4bhy
+          - generic [ref=e441]:
+            - img [ref=e442]
+            - time [ref=e443]: Jun 6, 2026
+            - generic [ref=e444]: RuyLopez1000
+          - 'heading "Fischer vs Karpov: The Match That Never Was" [level=2] [ref=e446]'
+        - link "Jun 7, 2026 jk_182 A Visual Recap of Norway Chess 2026" [ref=e447] [cursor=pointer]:
+          - /url: /@/jk_182/blog/a-visual-recap-of-norway-chess-2026/v6D39kFN
+          - generic [ref=e448]:
+            - img [ref=e449]
+            - time [ref=e450]: Jun 7, 2026
+            - generic [ref=e451]: jk_182
+          - heading "A Visual Recap of Norway Chess 2026" [level=2] [ref=e453]
+        - 'link "Jun 3, 2026 NDpatzer Science of Chess: The AI Revolution Hasn''t Made Chess Better (yet!)" [ref=e454] [cursor=pointer]':
+          - /url: /@/NDpatzer/blog/science-of-chess-the-ai-revolution-hasnt-made-chess-better-yet/ekinNtP1
+          - generic [ref=e455]:
+            - img [ref=e456]
+            - time [ref=e457]: Jun 3, 2026
+            - generic [ref=e458]: NDpatzer
+          - 'heading "Science of Chess: The AI Revolution Hasn''t Made Chess Better (yet!)" [level=2] [ref=e460]'
+        - 'link "Jun 7, 2026 GetDiscombobulated Common Patterns : Breaking the Bg4 Pin" [ref=e461] [cursor=pointer]':
+          - /url: /@/GetDiscombobulated/blog/common-patterns--breaking-the-bg4-pin/tkTfJMJm
+          - generic [ref=e462]:
+            - img [ref=e463]
+            - time [ref=e464]: Jun 7, 2026
+            - generic [ref=e465]: GetDiscombobulated
+          - 'heading "Common Patterns : Breaking the Bg4 Pin" [level=2] [ref=e467]'
+        - link "Jun 3, 2026 FM move5 5 Dazzling Queen Sacrifices" [ref=e468] [cursor=pointer]:
+          - /url: /@/move5/blog/5-dazzling-queen-sacrifices/cKl15wqt
+          - generic [ref=e469]:
+            - img [ref=e470]
+            - time [ref=e471]: Jun 3, 2026
+            - generic [ref=e472]: FM move5
+          - heading "5 Dazzling Queen Sacrifices" [level=2] [ref=e474]
+        - link "1600 is OK Jun 4, 2026 NM ZugAddict Are you rated 1600? Good." [ref=e475] [cursor=pointer]:
+          - /url: /@/ZugAddict/blog/are-you-rated-1600-good/NXws0m8k
+          - generic [ref=e476]:
+            - img "1600 is OK" [ref=e477]
+            - time [ref=e478]: Jun 4, 2026
+            - generic [ref=e479]: NM ZugAddict
+          - heading "Are you rated 1600? Good." [level=2] [ref=e481]
+        - 'link "May 27, 2026 gh0strpm Analyzing Games Based on Opening #5 - King''s Indian Attack" [ref=e482] [cursor=pointer]':
+          - /url: /@/gh0strpm/blog/analyzing-games-based-on-opening-5-kings-indian-attack/cFZO8MgF
+          - generic [ref=e483]:
+            - img [ref=e484]
+            - time [ref=e485]: May 27, 2026
+            - generic [ref=e486]: gh0strpm
+          - 'heading "Analyzing Games Based on Opening #5 - King''s Indian Attack" [level=2] [ref=e488]'
+        - link "Timeless koalamousepp 复盘2026年李杯的部分直播对局 避免失误篇" [ref=e489] [cursor=pointer]:
+          - /url: /@/koalamousepp/blog/2026-/VjxDiF0A
+          - generic [ref=e490]:
+            - img [ref=e491]
+            - generic [ref=e492]: Timeless
+            - generic [ref=e493]: koalamousepp
+          - heading "复盘2026年李杯的部分直播对局 避免失误篇" [level=2] [ref=e495]
+        - link "Jun 5, 2026 OesterreichSchach Beating a World Champion and winning the bronze medal" [ref=e496] [cursor=pointer]:
+          - /url: /@/OesterreichSchach/blog/beating-a-world-champion-and-winning-the-bronze-medal/Jime5CCm
+          - generic [ref=e497]:
+            - img [ref=e498]
+            - time [ref=e499]: Jun 5, 2026
+            - generic [ref=e500]: OesterreichSchach
+          - heading "Beating a World Champion and winning the bronze medal" [level=2] [ref=e502]
+        - 'link "Jun 4, 2026 Lichess Lichess Game of the Month: April ''26" [ref=e433] [cursor=pointer]':
+          - /url: /@/Lichess/blog/lichess-game-of-the-month-april-26/quyYWuyT
+          - generic [ref=e434]:
+            - img [ref=e435]
+            - time [ref=e436]: Jun 4, 2026
+            - generic [ref=e437]: Lichess
+          - 'heading "Lichess Game of the Month: April ''26" [level=2] [ref=e439]'
+      - generic:
+        - button "" [ref=e503] [cursor=pointer]
+        - button "" [ref=e504] [cursor=pointer]
+    - generic [ref=e144]:
+      - generic [ref=e146]:
+        - link "25 hours ago" [ref=e147] [cursor=pointer]:
+          - /url: /feed#8w2kRY
+          - time [ref=e148]: 25 hours ago
+        - paragraph [ref=e149]:
+          - text: Our
+          - link "Game of the Month May Contest" [ref=e150] [cursor=pointer]:
+            - /url: https://lichess.org/forum/general-chess-discussion/lichess-game-of-the-month-may-2026-contest
+          - text: "is still underway: Share your best Lichess standard game played in May 2026 until"
+          - time [ref=e151]: June 13, 2026 at 5:00 AM
+          - text: "! The winner will be announced on"
+          - time [ref=e152]: June 24, 2026
+          - text: ", followed by a"
+          - link "blog post" [ref=e153] [cursor=pointer]:
+            - /url: https://lichess.org/@/Lichess/blog/lichess-game-of-the-month-april-26/quyYWuyT
+          - text: with
+          - link "commentary" [ref=e154] [cursor=pointer]:
+            - /url: https://lichess.org/study/H9L6kgcH/CXHfwdq8#0
+          - text: on the game.
+      - generic [ref=e156]:
+        - link "2 days ago" [ref=e157] [cursor=pointer]:
+          - /url: /feed#3CqVff
+          - time [ref=e158]: 2 days ago
+        - paragraph [ref=e159]:
+          - text: GM
+          - link "Felix Blohberger" [ref=e160] [cursor=pointer]:
+            - /url: https://lichess.org/fide/1632051/Blohberger_Felix
+          - text: and GM
+          - link "David Navara" [ref=e161] [cursor=pointer]:
+            - /url: https://lichess.org/fide/309095/Navara_David
+          - text: play a classical OTB match from June 8 to 13, starting every day at
+          - time [ref=e162]: 6:00 PM
+          - text: "! Tune in now for"
+          - link "live commentary by GM Alex Colovic and IM Kostya Kavutskiy" [ref=e163] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=c3Q-YN3Mj0s
+          - text: and follow the games in our
+          - link "broadcast" [ref=e164] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/gm-felix-blohberger-vs-gm-david-navara/QDXcTfNo
+          - text: .
+      - generic [ref=e166]:
+        - link "3 days ago" [ref=e167] [cursor=pointer]:
+          - /url: /feed#gRaUFQ
+          - time [ref=e168]: 3 days ago
+        - paragraph [ref=e169]:
+          - text: Congratulations to IM
+          - link "Renato Alfredo Terry Luján" [ref=e170] [cursor=pointer]:
+            - /url: https://lichess.org/@/AngelitoRT
+          - text: for winning our
+          - link "Chess960 Titled Arena June 2026" [ref=e171] [cursor=pointer]:
+            - /url: https://lichess.org/tournament/960jun26
+          - text: ", ahead of IM"
+          - link "Yoseph Theolifus Taher" [ref=e172] [cursor=pointer]:
+            - /url: https://lichess.org/@/yoseph2013
+          - text: ", FM"
+          - link "Dmitry Goltsev" [ref=e173] [cursor=pointer]:
+            - /url: https://lichess.org/@/goltsev2000
+          - text: ", GM"
+          - link "@handofprince" [ref=e174] [cursor=pointer]:
+            - /url: /@/handofprince
+          - text: ", and FM"
+          - link "Cristian Arrieta Hernández" [ref=e175] [cursor=pointer]:
+            - /url: https://lichess.org/@/Guary1
+          - text: "!"
+      - generic [ref=e177]:
+        - link "4 days ago" [ref=e178] [cursor=pointer]:
+          - /url: /feed#UVTFJx
+          - time [ref=e179]: 4 days ago
+        - paragraph [ref=e180]:
+          - text: Our Chess960 3+2
+          - link "Warm-up Arena" [ref=e181] [cursor=pointer]:
+            - /url: https://lichess.org/tournament/96wjun26
+          - text: starts today,
+          - time [ref=e182]: June 6, 2026 at 11:00 PM
+          - text: "! Play against some of the titled players before they enter our"
+          - link "Chess960 Titled Arena" [ref=e183] [cursor=pointer]:
+            - /url: https://lichess.org/tournament/960jun26
+          - text: at
+          - time [ref=e184]: 12:00 AM
+          - text: .
+      - generic [ref=e186]:
+        - link "4 days ago" [ref=e187] [cursor=pointer]:
+          - /url: /feed#JwpLVw
+          - time [ref=e188]: 4 days ago
+        - paragraph [ref=e189]:
+          - link "Kong Xiangrui" [ref=e190] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--open/round-1/pHXOBgRi#players/8632200
+          - text: won the
+          - link "2026 Asian Individual Chess Championship" [ref=e191] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--open/ZyJ9pks5
+          - text: ", becoming the first IM to ever win the tournament and gaining the GM title directly! In the"
+          - link "women's section" [ref=e192] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--women/BIKzR7Yl
+          - text: ","
+          - link "Savitha Shri B" [ref=e193] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/asian-individual-chess-championship-2026--women/round-1/IWQDPWaX#players/35061887
+          - text: won on tiebreaks with a score of 7.5/9.
+      - generic [ref=e195]:
+        - link "4 days ago" [ref=e196] [cursor=pointer]:
+          - /url: /feed#5lvr2y
+          - time [ref=e197]: 4 days ago
+        - paragraph [ref=e198]:
+          - link "Praggnanandhaa R" [ref=e199] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/norway-chess-2026--open/round-10--armageddon/JRUqqpsa#players/25059530
+          - text: won
+          - link "Norway Chess 2026" [ref=e200] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/norway-chess-2026--open/kDQUxYbE
+          - text: after 4 classical wins in a row to score 18 points, while
+          - link "Bibisara Assaubayeva" [ref=e201] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/norway-chess-2026--women/round-1/tsYUmD9p#players/13708694
+          - text: secured victory in the women's section a round in advance with a score of 16.5.
+      - generic [ref=e203]:
+        - link "5 days ago" [ref=e204] [cursor=pointer]:
+          - /url: /feed#vFBQOT
+          - time [ref=e205]: 5 days ago
+        - paragraph [ref=e206]:
+          - text: 15-year-old Anastasiia Hnatyshyn won the
+          - link "2026 European Women's Chess Championship" [ref=e207] [cursor=pointer]:
+            - /url: https://lichess.org/broadcast/25th-european-womens-chess-championship-2026/round-11/yUnCXILA
+          - text: "! Entering the tournament as the 76th seed with a 2207 rating, she finished with a 2580 performance to gain 214 Elo from the event and become the women's world No. 18."
+      - link "All updates »" [ref=e210] [cursor=pointer]:
+        - /url: /feed
+    - generic [ref=e212]:
+      - link "Open tournaments More »" [ref=e213] [cursor=pointer]:
+        - /url: /tournament
+        - heading "Open tournaments" [level=2] [ref=e214]
+        - generic [ref=e215]: More »
+      - table [ref=e217]:
+        - rowgroup [ref=e218]:
+          - row "Blitz Shield 4 hours remaining 6h 1740" [ref=e219]:
+            - cell "Blitz Shield" [ref=e220]:
+              - link "Blitz Shield" [ref=e221] [cursor=pointer]:
+                - /url: /tournament/sF6bPl9q
+            - cell "4 hours remaining" [ref=e222]:
+              - time [ref=e224]: 4 hours remaining
+            - cell "6h" [ref=e226]
+            - cell "1740" [ref=e227]
+          - row "Hourly Rapid 47 minutes remaining 1h 57m 734" [ref=e228]:
+            - cell "Hourly Rapid" [ref=e229]:
+              - link "Hourly Rapid" [ref=e230] [cursor=pointer]:
+                - /url: /tournament/c2MRjHJb
+            - cell "47 minutes remaining" [ref=e231]:
+              - time [ref=e233]: 47 minutes remaining
+            - cell "1h 57m" [ref=e235]
+            - cell "734" [ref=e236]
+          - row "Daily SuperBlitz 1 hour remaining 1h 30m 576" [ref=e237]:
+            - cell "Daily SuperBlitz" [ref=e238]:
+              - link "Daily SuperBlitz" [ref=e239] [cursor=pointer]:
+                - /url: /tournament/VtEx70hL
+            - cell "1 hour remaining" [ref=e240]:
+              - time [ref=e242]: 1 hour remaining
+            - cell "1h 30m" [ref=e244]
+            - cell "576" [ref=e245]
+          - row "Hourly Three-check 17 minutes remaining 27m 31" [ref=e246]:
+            - cell "Hourly Three-check" [ref=e247]:
+              - link "Hourly Three-check" [ref=e248] [cursor=pointer]:
+                - /url: /tournament/aOBHpeVD
+            - cell "17 minutes remaining" [ref=e249]:
+              - time [ref=e251]: 17 minutes remaining
+            - cell "27m" [ref=e253]
+            - cell "31" [ref=e254]
+          - row "Hourly Bullet 17 minutes remaining 27m 223" [ref=e255]:
+            - cell "Hourly Bullet" [ref=e256]:
+              - link "Hourly Bullet" [ref=e257] [cursor=pointer]:
+                - /url: /tournament/5pb7yE5P
+            - cell "17 minutes remaining" [ref=e258]:
+              - time [ref=e260]: 17 minutes remaining
+            - cell "27m" [ref=e262]
+            - cell "223" [ref=e263]
+          - row "Hourly Chess960 47 minutes remaining 57m 42" [ref=e264]:
+            - cell "Hourly Chess960" [ref=e265]:
+              - link "Hourly Chess960" [ref=e266] [cursor=pointer]:
+                - /url: /tournament/AN4hVuRe
+            - cell "47 minutes remaining" [ref=e267]:
+              - time [ref=e269]: 47 minutes remaining
+            - cell "57m" [ref=e271]
+            - cell "42" [ref=e272]
+          - row "≤1500 Bullet 17 minutes remaining 27m 39" [ref=e273]:
+            - cell "≤1500 Bullet" [ref=e274]:
+              - link "≤1500 Bullet" [ref=e275] [cursor=pointer]:
+                - /url: /tournament/eSbzkt7m
+            - cell "17 minutes remaining" [ref=e276]:
+              - time [ref=e278]: 17 minutes remaining
+            - cell "27m" [ref=e280]
+            - cell "39" [ref=e281]
+          - row "Hourly Racing Kings 47 minutes remaining 57m 17" [ref=e282]:
+            - cell "Hourly Racing Kings" [ref=e283]:
+              - link "Hourly Racing Kings" [ref=e284] [cursor=pointer]:
+                - /url: /tournament/aMkmtCQv
+            - cell "47 minutes remaining" [ref=e285]:
+              - time [ref=e287]: 47 minutes remaining
+            - cell "57m" [ref=e289]
+            - cell "17" [ref=e290]
+          - row "≤1300 SuperBlitz 47 minutes remaining 57m 54" [ref=e291]:
+            - cell "≤1300 SuperBlitz" [ref=e292]:
+              - link "≤1300 SuperBlitz" [ref=e293] [cursor=pointer]:
+                - /url: /tournament/TtXnlSVX
+            - cell "47 minutes remaining" [ref=e294]:
+              - time [ref=e296]: 47 minutes remaining
+            - cell "57m" [ref=e298]
+            - cell "54" [ref=e299]
+          - row "≤1700 Rapid 47 minutes remaining 57m 180" [ref=e300]:
+            - cell "≤1700 Rapid" [ref=e301]:
+              - link "≤1700 Rapid" [ref=e302] [cursor=pointer]:
+                - /url: /tournament/sBjYpG54
+            - cell "47 minutes remaining" [ref=e303]:
+              - time [ref=e305]: 47 minutes remaining
+            - cell "57m" [ref=e307]
+            - cell "180" [ref=e308]
+          - row "Hourly Antichess 47 minutes remaining 57m 45" [ref=e309]:
+            - cell "Hourly Antichess" [ref=e310]:
+              - link "Hourly Antichess" [ref=e311] [cursor=pointer]:
+                - /url: /tournament/fmHnVGpT
+            - cell "47 minutes remaining" [ref=e312]:
+              - time [ref=e314]: 47 minutes remaining
+            - cell "57m" [ref=e316]
+            - cell "45" [ref=e317]
+          - row "Hourly HyperBullet 17 minutes remaining 27m 85" [ref=e318]:
+            - cell "Hourly HyperBullet" [ref=e319]:
+              - link "Hourly HyperBullet" [ref=e320] [cursor=pointer]:
+                - /url: /tournament/FueQrUEk
+            - cell "17 minutes remaining" [ref=e321]:
+              - time [ref=e323]: 17 minutes remaining
+            - cell "27m" [ref=e325]
+            - cell "85" [ref=e326]
+          - row "Hourly Atomic 47 minutes remaining 57m 35" [ref=e327]:
+            - cell "Hourly Atomic" [ref=e328]:
+              - link "Hourly Atomic" [ref=e329] [cursor=pointer]:
+                - /url: /tournament/bxhYiE28
+            - cell "47 minutes remaining" [ref=e330]:
+              - time [ref=e332]: 47 minutes remaining
+            - cell "57m" [ref=e334]
+            - cell "35" [ref=e335]
+          - row "≤2000 Blitz 47 minutes remaining 57m 162" [ref=e336]:
+            - cell "≤2000 Blitz" [ref=e337]:
+              - link "≤2000 Blitz" [ref=e338] [cursor=pointer]:
+                - /url: /tournament/lIbn9aw2
+            - cell "47 minutes remaining" [ref=e339]:
+              - time [ref=e341]: 47 minutes remaining
+            - cell "57m" [ref=e343]
+            - cell "162" [ref=e344]
+    - generic [ref=e345]:
+      - link "About Lichess" [ref=e346] [cursor=pointer]:
+        - /url: /about
+      - link "FAQ" [ref=e347] [cursor=pointer]:
+        - /url: /faq
+      - link "Contact" [ref=e348] [cursor=pointer]:
+        - /url: /contact
+      - link "Mobile App" [ref=e349] [cursor=pointer]:
+        - /url: /app
+      - link "Terms of Service" [ref=e350] [cursor=pointer]:
+        - /url: /terms-of-service
+      - link "Privacy" [ref=e351] [cursor=pointer]:
+        - /url: /privacy
+      - link "Source Code" [ref=e352] [cursor=pointer]:
+        - /url: /source
+      - link "Ads" [ref=e353] [cursor=pointer]:
+        - /url: /ads
+      - generic [ref=e354]:
+        - link "Mastodon" [ref=e355] [cursor=pointer]:
+          - /url: https://mastodon.online/@lichess
+        - link "GitHub" [ref=e356] [cursor=pointer]:
+          - /url: https://github.com/lichess-org
+        - link "Discord" [ref=e357] [cursor=pointer]:
+          - /url: https://discord.gg/lichess
+        - link "Bluesky" [ref=e358] [cursor=pointer]:
+          - /url: https://bsky.app/profile/lichess.org
+        - link "YouTube" [ref=e359] [cursor=pointer]:
+          - /url: https://youtube.com/@LichessDotOrg
+        - link "Twitch" [ref=e360] [cursor=pointer]:
+          - /url: https://www.twitch.tv/lichessdotorg
+  - generic [ref=e361] [cursor=pointer]: 
+  - img

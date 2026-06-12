@@ -1,0 +1,111 @@
+- generic [ref=e2]:
+  - navigation "Main" [ref=e4]:
+    - link "Skip to content" [ref=e6] [cursor=pointer]:
+      - /url: "#scroll-top-anchor"
+      - generic [ref=e7]: Skip to content
+    - link "Chess.com - Play Chess Online" [ref=e8] [cursor=pointer]:
+      - /url: https://www.chess.com/
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - link "Play" [ref=e15] [cursor=pointer]:
+          - /url: https://www.chess.com/play
+          - img [ref=e16]
+          - generic: Play
+        - link "Puzzles" [ref=e19] [cursor=pointer]:
+          - /url: https://www.chess.com/puzzles
+          - img [ref=e20]
+          - generic: Puzzles
+        - link "Learn" [ref=e23] [cursor=pointer]:
+          - /url: https://www.chess.com/learn
+          - img [ref=e24]
+          - generic: Learn
+      - generic [ref=e26]:
+        - link "Train" [ref=e29] [cursor=pointer]:
+          - /url: https://www.chess.com/train
+          - img [ref=e30]
+          - generic: Train
+        - link "Watch" [ref=e33] [cursor=pointer]:
+          - /url: https://www.chess.com/watch
+          - img [ref=e34]
+          - generic: Watch
+        - link "Community" [ref=e37] [cursor=pointer]:
+          - /url: https://www.chess.com/community
+          - img [ref=e38]
+          - generic: Community
+        - link "Other" [ref=e41] [cursor=pointer]:
+          - /url: https://www.chess.com/other
+          - img [ref=e42]
+          - generic: Other
+    - separator
+    - generic [ref=e44] [cursor=pointer]:
+      - img [ref=e46]
+      - heading "Search" [level=2]
+    - generic [ref=e48]:
+      - link "Sign Up" [ref=e49] [cursor=pointer]:
+        - /url: https://www.chess.com/register?returnUrl=https://www.chess.com/
+        - img [ref=e51]
+      - link "Log In" [ref=e53] [cursor=pointer]:
+        - /url: https://www.chess.com/login_and_go?returnUrl=https://www.chess.com/
+        - img [ref=e55]
+      - button "Help & Support" [ref=e57] [cursor=pointer]:
+        - img [ref=e59]
+        - generic: Help & Support
+      - button "Change Language" [ref=e61] [cursor=pointer]:
+        - img [ref=e63]
+        - generic: English
+  - generic [ref=e65]:
+    - main [ref=e66]:
+      - generic [ref=e68]:
+        - generic [ref=e74]:
+          - 'heading "Play Chess Online on the #1 Site!" [level=1] [ref=e75]'
+          - generic [ref=e76]: Join 250+ million players in the world's largest chess community
+          - link "Get Started" [ref=e78] [cursor=pointer]:
+            - /url: https://www.chess.com/register?returnUrl=https://www.chess.com/
+            - generic [ref=e79]: Get Started
+        - generic [ref=e85]:
+          - heading "Improve Your Game with Lessons" [level=2] [ref=e86]
+          - generic [ref=e87]: Learn with quick, fun lessons designed for players of all levels.
+          - link "Start a Lesson" [ref=e89] [cursor=pointer]:
+            - /url: https://www.chess.com/learn
+            - img [ref=e90]
+            - generic [ref=e91]: Start a Lesson
+        - generic [ref=e97]:
+          - heading "Play Chess Bots" [level=2] [ref=e98]
+          - generic [ref=e99]: Play against unique chess personalities ranging in skill and playstyle.
+          - link "Challenge a Bot" [ref=e101] [cursor=pointer]:
+            - /url: https://www.chess.com/play/computer
+            - img [ref=e102]
+            - generic [ref=e103]: Challenge a Bot
+        - generic [ref=e109]:
+          - heading "Level Up With Chess Puzzles" [level=2] [ref=e110]
+          - generic [ref=e111]: Sharpen your skills and improve your game with thousands of puzzles.
+          - link "Solve a Puzzle" [ref=e113] [cursor=pointer]:
+            - /url: https://www.chess.com/puzzles
+            - img [ref=e114]
+            - generic [ref=e115]: Solve a Puzzle
+        - generic [ref=e121]:
+          - heading "Watch the Best in the World Compete" [level=2] [ref=e122]
+          - generic [ref=e123]: Tune into live events, and follow top players move-by-move with real-time analysis.
+          - link "Watch Chess" [ref=e125] [cursor=pointer]:
+            - /url: https://www.chess.com/events
+            - img [ref=e126]
+            - generic [ref=e127]: Watch Chess
+        - generic [ref=e132]:
+          - heading "Play Anywhere with the Chess.com App" [level=3] [ref=e133]
+          - generic [ref=e134]:
+            - link "Download on the App Store" [ref=e135] [cursor=pointer]:
+              - /url: https://apps.apple.com/us/app/chess-play-learn/id329218549?mt=8&uo=4
+              - generic [ref=e138]:
+                - generic [ref=e139]: Download on the
+                - heading "App Store" [level=4] [ref=e140]
+            - link "Get it on Google Play" [ref=e141] [cursor=pointer]:
+              - /url: http://play.google.com/store/apps/details?id=com.chess
+              - generic [ref=e144]:
+                - generic [ref=e145]: Get it on
+                - heading "Google Play" [level=4] [ref=e146]
+        - generic [ref=e148]:
+          - heading "Learn, Play, and Have Fun!" [level=2] [ref=e149]
+          - link "Get Started" [ref=e151] [cursor=pointer]:
+            - /url: https://www.chess.com/register?returnUrl=https://www.chess.com/
+            - generic [ref=e152]: Get Started
+    - text: • • • • • • • • • • •
