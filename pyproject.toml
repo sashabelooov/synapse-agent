@@ -22,3 +22,11 @@ dependencies = [
     "numpy>=2.2.6",
     "mcp>=1.27.2",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

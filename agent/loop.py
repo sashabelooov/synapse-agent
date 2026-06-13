@@ -7,6 +7,7 @@ from agent.context import manage_context
 from agent.session import save_session, load_session, list_sessions
 from agent.thinking import FALLBACK_INSTRUCTION, split_thinking, render_thinking
 from agent.skills import get_skill_manager
+from agent.persistent_memory import get_memory_manager
 
 
 SYSTEM_PROMPT = (
@@ -111,7 +112,7 @@ def _handle_command(raw: str, messages: list[dict]) -> bool | None:
                 messages.clear()
                 messages.extend(loaded)
                 print(colored(f"Loaded '{arg}' ({len(loaded)} messages)", "green"))
-            except FileNotFoundError as e:
+            except ValueError as e:
                 print(colored(str(e), "red"))
     elif cmd == "/sessions":
         names = list_sessions()
@@ -143,6 +144,12 @@ def chat_with_model(adapter: ModelAdapter, model_name: str) -> None:
     skills_block = get_skill_manager().prompt_block()
     if skills_block:
         system_prompt += "\n\n" + skills_block
+
+    # Inject frozen memory snapshot — loaded once at session start, never
+    # modified mid-session so the LLM prefix cache stays stable.
+    memory_block = get_memory_manager().system_prompt_block()
+    if memory_block:
+        system_prompt += "\n\n" + memory_block
 
     messages: list[dict] = [{"role": "system", "content": system_prompt}]
 

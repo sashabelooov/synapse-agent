@@ -1,240 +1,494 @@
-# Agent Rewrite Plan
+# Synapse Agent — Professional Reconstruction Plan
 
-Status: DRAFT — awaiting approval
-Approach: **Full clean rewrite**, reusing the good ideas (adapter pattern, auto-discovery registry) but rebuilding the core with self-modification and multi-format file handling designed in from day one.
-
----
-
-## What we keep from v0.2
-
-These were the right calls. They survive the rewrite:
-
-- **Provider adapter pattern** (`models/base.py` → ollama / openai / anthropic). Good abstraction.
-- **Auto-discovery tool registry** (`tools/base/registry.py`). Drop a folder, get a tool. This is the mechanism the self-build mode rides on.
-- **Pydantic `ToolDefinition`**. Type-safe tool specs.
-
-## What we throw out / fix
-
-- **Tool-result message routing** — `agent.py:75` hardcodes OpenAI format for all providers. The adapters already have `build_tool_result_message()` that never gets called. Fixed in the new loop.
-- **Anthropic history corruption** — `agent.py:59` drops `tool_use` blocks. New loop stores full provider-native assistant messages.
-- **String-parsed "thinking"** — `agent.py:63` greps `Thinking:` out of text. Fragile. Replaced with real structured thinking (Phase 2).
-- **Wrong defaults** — `OLLAMA_HOST=https://ollama.com` (marketing site, not API), `AGENT_MODEL=gpt-oss:120b-cloud` (not a real model). Fixed in config.
-- **Weak web_search** — DuckDuckGo Instant Answers returns almost nothing for technical queries. Swapped for a real search API (Tavily/Brave/Serper).
+**Reference implementation:** [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
+**Strategy:** Evolve existing codebase — keep adapter pattern, registry, MCP client as the base; add Hermes features phase by phase.
+**Goal:** A production-grade, self-improving AI agent for coding, research, and DevOps — matching Hermes feature-for-feature.
 
 ---
 
-## Target architecture
+## Ground rules (non-negotiable, always follow)
+
+1. **One feature at a time.** Build → test → document → ship. Then start the next.
+2. **Never touch `master` directly.** All agent-built changes go `branch → PR → human merges`. Manual doc fixes on master are fine.
+3. **Tests must pass before merge.** Failing tests = stop. Never merge broken code.
+4. **No secrets in the repo, ever.** `.env` is gitignored. `.env.example` has placeholders only.
+5. **Every feature documented in `features.md`** before the PR is opened. Not done until it's written there.
+
+---
+
+## Status legend
 
 ```
-main.py                 CLI entry, arg parsing, mode dispatch
-config.py               provider/model/env resolution (fixed defaults)
-agent/
-  loop.py               core conversation loop (provider-correct tool routing)
-  thinking.py           structured thinking (Phase 2)
-  session.py            save/load conversation history to disk
-  modes.py              chat | research | self-build mode dispatch
-models/
-  base.py               ModelAdapter ABC (keep)
-  ollama.py openai.py anthropic.py   (keep, wire up build_tool_result_message)
-tools/
-  base/                 registry + ToolDefinition (keep)
-  files/                NEW: unified multi-format CRUD (Phase 1)
-  research/             NEW: autonomous research tools (Phase 3)
-  self_build/           NEW: code-writing + self-edit tools (Phase 4)
-  ... existing tools (grep, run_command, web_search, etc.)
+✅ Done   🔄 In progress   ⬜ Planned
 ```
 
 ---
 
-## Phase 0 — Working foundation (rewrite the core)  ✅ DONE
+## Phase 0 — Core foundation ✅
 
-Goal: the agent works correctly on all three providers before adding anything new.
+Multi-provider (Ollama / OpenAI / Anthropic) via adapter pattern. 15 auto-discovered native tools. Native thinking + streaming. 4-layer context management (full window → RAG offload → compaction → hard trim). RAG vector memory (numpy + JSON). Session save/load as JSON. Skills system (`SkillManager`, `use_skill` tool, `code_review` skill). MCP client (stdio, background asyncio loop). GitHub MCP (read-only: repos, issues, pull_requests). Playwright MCP (23 browser tools).
 
-- [x] Rewrite `agent/loop.py` with provider-correct tool-result routing (calls `adapter.build_tool_result_message()`)
-- [x] Store full provider-native assistant messages (fix Anthropic `tool_use` history) via `build_assistant_message()`
-- [x] `config.py` per-provider default model (env `AGENT_MODEL` still wins). NOTE: Ollama Cloud config was NOT a bug — left intact.
-- [x] Add `agent/session.py` — save/load history as JSON + `/save` `/load` `/sessions` `/reset` chat commands
-- [x] Add context-window guard (`agent/context.py`) — trims oldest turns, never orphans a tool result
-- [x] Swap `web_search` to a real backend — Tavily if `TAVILY_API_KEY` set, else DuckDuckGo HTML scrape (keyless, real results)
-- [x] Smoke test: full app imports clean, context guard verified
-
-Exit criteria: a multi-turn, multi-tool conversation completes cleanly on all 3 providers. (Import + unit verified; live multi-provider run pending real API calls.)
+*All Phase 0 deliverables are in `features.md`.*
 
 ---
 
-## Phase 1 — Multi-format file CRUD  ✅ DONE
+## Phase 1 — Repo polish & documentation ✅ (current)
 
-Goal: full Create / Read / Update / Delete across txt, md, DOCX, Excel, CSV, PDF, images (OCR).
+| Item | Status |
+|---|---|
+| GitHub repo created (`sashabelooov/synapse-agent`) | ✅ |
+| LICENSE (Apache-2.0) | ✅ |
+| `.gitignore` | ✅ |
+| `README.md` with badges, setup, architecture, roadmap | ✅ |
+| `.env.example` with all variables | ✅ |
+| `features.md` — living feature log | ✅ |
+| `PLAN.md` — this file, updated | ✅ |
+| CI workflow (pytest on push) + CI badge | ⬜ optional |
 
-Delivered: `tools/files/` dispatch engine + unified `read_file` / `write_file` / `edit_file` / `delete_file`. 14/14 format round-trip tests pass. `create_file` removed (superseded by `write_file`). Dead `create_pdf`/`edit_pdf` dirs cleaned up. Tesseract OCR binary not installed — image read fails with a clear install message (graceful).
-
-Design: ONE `tools/files/` package with format dispatch by extension. The model sees simple verbs (`read_file`, `write_file`, `edit_file`, `delete_file`); the dispatch picks the right parser underneath.
-
-| Format | Read | Write/Create | Edit | Library |
-|--------|------|--------------|------|---------|
-| txt / md | ✓ | ✓ | ✓ | stdlib |
-| CSV | ✓ | ✓ | ✓ (row/cell) | stdlib `csv` |
-| Excel (xlsx) | ✓ | ✓ | ✓ (cell) | `openpyxl` |
-| DOCX | ✓ | ✓ | ✓ (paragraph) | `python-docx` |
-| PDF | ✓ (text) | ✓ (generate) | append-only | `pdfplumber` read, `reportlab` write |
-| Images | ✓ (OCR) | — | — | `pytesseract` + `pillow` |
-
-- [ ] `tools/files/dispatch.py` — extension → handler map
-- [ ] Handlers: `text_handler`, `csv_handler`, `xlsx_handler`, `docx_handler`, `pdf_handler`, `image_ocr_handler`
-- [ ] Unified tools: `read_file`, `write_file`, `edit_file`, `delete_file` (delete stays format-agnostic)
-- [ ] Graceful failure when a format can't do an op (e.g. "PDF edit is append-only")
-- [ ] Tesseract is a system binary — document the install (`apt install tesseract-ocr`), fail with a clear message if missing
-- [ ] Tests per format with sample fixture files
-
-Notes / honest limits:
-- **PDF editing is not real editing.** PDFs aren't text files. We support read (extract text) + create (generate new) + append. In-place edit of an existing PDF is out of scope — say so plainly to the model.
-- **Image OCR is read-only.** We're not generating/editing images.
-
-Open question to confirm during this phase: do you want **structured** reads (e.g. CSV → rows the model can reason over) or just **flattened text**? Structured is more useful for data tasks; flattened is simpler.
+**Exit criterion:** repo is public, readable, and complete for a new contributor.
 
 ---
 
-## Phase 2 — Real thinking method  ✅ DONE
+## Phase 2 — Memory & long-session upgrade ⬜
 
-Goal: replace the `Thinking:` string-grep hack with structured reasoning the model actually supports.
+**Goal:** the agent remembers facts about itself and the user across every session — permanently.
 
-Delivered: `parse_response` now returns `(content, tool_calls, thinking)`. `gpt-oss` via Ollama returns NATIVE thinking (`think=True` → `message.thinking`) — verified live, reasoning arrives in its own channel. Anthropic extended thinking wired + guarded (auto-disables on reject). OpenAI/gpt-4o uses the prompted `<thinking>` fallback via `agent/thinking.py`. Loop renders thinking in a dim blue channel, never mixed into the answer. Thinking blocks persist in history (Anthropic requires it). Correction to original plan: Ollama gpt-oss is a NATIVE-thinking path, not a fallback.
+Inspired by Hermes `tools/memory_tool.py`.
 
-Two layers:
+### Deliverables
 
-1. **Native reasoning where the provider supports it**
-   - Anthropic: extended thinking via the `thinking` parameter — real reasoning tokens, returned as `thinking` blocks.
-   - OpenAI: reasoning models (o-series) expose reasoning effort.
-   - Ollama: fall back to a prompted scratchpad (the current approach, but isolated cleanly).
+**`agent/persistent_memory.py`** — two files on disk:
+- `MEMORY.md` — agent's own notes (what it knows, decisions made, useful facts). Max ~2200 chars.
+- `USER.md` — user profile (name, preferences, working style, domain). Max ~1375 chars.
 
-2. **Explicit plan-act-observe scratchpad** (provider-agnostic)
-   - Before tool calls, the model writes a short plan to a dedicated `thinking.py` channel, NOT mixed into user-visible content.
-   - Rendered separately in the CLI (dim/blue), kept in history so the model can see its own past reasoning.
+Design constraints (copied from Hermes because they are correct):
+- Entries delimited by `§` (section sign) — immune to markdown/JSON injection.
+- **Frozen snapshot** at session start → injected into system prompt → never modified mid-session. This preserves the LLM prefix cache across all turns.
+- Atomic writes: write to temp file → rename. Readers always see complete files.
+- **Drift detection**: if file was externally modified since load, back up to `.bak.<timestamp>` before writing — never silently overwrite.
+- **Injection scanning**: all entries scanned against threat patterns before entering the system prompt.
+- Deduplication: identical entries removed automatically.
 
-- [ ] `agent/thinking.py` — abstraction over native-vs-prompted thinking
-- [ ] Per-adapter: expose native reasoning when available, prompted scratchpad otherwise
-- [ ] CLI renders thinking in a separate visual channel (not parsed out of text)
-- [ ] Thinking persisted in session history
+**`tools/memory/memory.py`** — `memory` tool exposed to the model. Four actions:
+- `add` — append a new entry (content-validated, size-checked)
+- `replace` — find by substring, update in place
+- `remove` — delete entry by substring
+- `read` — view current state (no modification)
 
-This also feeds Phase 3/4 — research and self-build need the model to plan explicitly before acting.
+**`agent/session.py`** — migrate from JSON → **SQLite** (`sessions.db`):
+- Schema: `sessions(id, name, created_at, updated_at)` + `messages(id, session_id, role, content, ts)`
+- Enables FTS5 full-text search across all past sessions.
 
----
+**`tools/search_sessions/search_sessions.py`** — `search_sessions` tool:
+- Query: semantic meaning via RAG, or keyword via SQLite FTS5.
+- Returns matching message excerpts with session name + date.
+- Use case: "what did we discuss last week about the auth bug?"
 
-## Phase 2.5 — Multi-modal + memory + UX  ✅ DONE
+**`agent/context.py`** — add memory-flush step: before compaction, write important facts from the current session into `MEMORY.md` so nothing is permanently lost when old turns are trimmed.
 
-Added between Phase 2 and 3 on user request. Three capability jumps:
+### Tests
+- `tests/test_persistent_memory.py` — add/replace/remove/read, atomic write, drift detection, injection scan, size limits
+- `tests/test_sessions_sqlite.py` — save, load, list, FTS5 search
 
-**Vision (describe_image tool)** — the agent can SEE images, not just OCR text.
-Runs on `qwen3-vl:235b-instruct` via Ollama Cloud API (zero local capacity — a
-235B model can't fit on a laptop, so it's cloud-only by design). Verified: it
-described a red-circle-on-blue image that OCR returns nothing for. Configurable
-via `VISION_MODEL`. Main agent stays on gpt-oss (text-only).
-
-**RAG / vector memory** — `index_file` + `search_knowledge` tools backed by
-`agent/memory.py`. Embeddings via LOCAL `nomic-embed-text` (274MB, CPU-light;
-the cloud plan has no embedding model → 401). Store is numpy + JSON cosine
-search (NOT chromadb — its onnxruntime dep has no Python 3.10 wheel, and we
-bring our own embeddings so we don't need it). Persists to `vector_store/`,
-survives restarts → cross-session memory. Verified: semantic retrieval works
-("how much is rent?" → budget.xlsx).
-
-**Streaming + token tracking** — Ollama responses stream live (thinking + answer
-print as tokens arrive) via `stream_chat`. Token usage shown per-call and
-cumulative. Graceful: non-streaming providers use the existing path; thinking
-fallback intact. Verified end-to-end with a tool call across two streamed turns.
-
-Architecture note: text brain on gpt-oss (Ollama), specialized senses split —
-vision on cloud, embeddings on local. All overridable via env.
+### Exit criterion
+Agent knows your name, preferences, and ongoing projects without being told each session.
 
 ---
 
-## Phase 3 — Auto-research mode
+## Phase 3 — Telegram gateway ⬜
 
-Goal: an autonomous research loop. Given a topic, the agent searches, reads multiple sources, synthesizes, and writes structured notes — without a human driving each step.
+**Goal:** talk to the agent from your phone via Telegram.
 
-Loop: `plan → search → read sources → extract → synthesize → save → assess gaps → repeat until satisfied or budget hit`.
+Inspired by Hermes `gateway/` + `apps/`.
 
-- [ ] `agent/modes.py` — add `research` mode (`main.py --mode research "<topic>"`)
-- [ ] Research budget: max iterations / max sources / max tokens (prevents infinite loops + runaway cost)
-- [ ] `tools/research/` — `search_sources`, `read_source`, `take_notes`, `synthesize`
-- [ ] Output: `research/<topic_slug>/notes.md` with sources cited
-- [ ] Gap assessment: after each round, model decides "do I know enough?" and either stops or queries again
-- [ ] Hard stop on budget so it can't loop forever
+### Architecture change — extract the agent turn
 
-This is the safe precursor to Phase 4: the research loop is exactly what self-build uses, minus the code-writing.
+Before adding Telegram, refactor `agent/loop.py`:
 
----
-
-## Phase 4 — Self-build mode (the ambitious one)
-
-Goal: the agent improves itself. It researches a capability gap, then **writes new tools AND can modify its own core code** (`agent/`, `config.py`, `models/`). New tools are auto-discovered by the registry; core edits require a restart.
-
-Scope (your call): **full self-modification** — tools + core code.
-
-Flow:
-```
-1. Identify gap (user says it, or agent notices a failure)
-2. Research how to solve it (Phase 3 loop)
-3. Write the code (new tool file, or edit to core)
-4. [SAFETY GATE — see below]
-5. Validate (syntax check, import check, run tests)
-6. Activate (registry auto-loads new tool / restart for core edit)
-7. On failure → rollback
+```python
+# agent/runner.py — new file
+async def run_agent_turn(message: str, session: Session, adapter, model) -> AsyncIterator[str]:
+    """Single agent turn: takes a message, yields reply chunks."""
 ```
 
-- [ ] `tools/self_build/` — `write_tool`, `edit_core`, `validate_code`, `run_tests`
-- [ ] **Mandatory git checkpoint before EVERY self-edit** — auto-commit so any change is reversible with one command
-- [ ] Validation gate: new/edited code must pass `python -m py_compile` + import check + existing test suite before activation
-- [ ] Crash recovery: if the agent bricks itself on a core edit, a supervisor process detects the crash and `git reset` to last good commit
-- [ ] Self-edits to core require restart; new tools are hot-loaded by the registry
+This one function is shared by CLI, Telegram, Discord, and any future interface. The loop/gateway just calls it and displays the output in its own way.
 
-### ⚠️ Safety gate — DECISION DEFERRED (you chose "decide later")
+### Deliverables
 
-When the agent writes/runs self-generated code, two designs are on the table. We pick before building Phase 4:
+**`gateway/telegram.py`**:
+- `aiogram` 3.x bot
+- **Locked to your Telegram user ID** (mandatory — agent has shell access)
+- One SQLite session per `chat_id`
+- Streams reply in real time (edits the message as tokens arrive, Telegram-style)
+- Splits replies at 4096-char Telegram limit
+- Commands: `/start`, `/reset`, `/sessions`, `/help`, `/quit`
+- Tool calls shown as short status messages (e.g. `⚙ running web_search…`)
 
-- **Option A — Approve before each self-edit.** Agent proposes code, you review, you approve/reject before anything is written or run. You stay in the loop.
-- **Option B — Fully autonomous + git rollback.** Agent writes, commits, and runs on its own. Review happens after the fact; you `git reset` if it misbehaves.
+**`main.py`** — add `--mode telegram` flag:
+```bash
+uv run python3 main.py --mode telegram
+```
 
-Both ride on the same mandatory-git-checkpoint mechanism. The only difference is whether a human approves before or audits after. **This must be decided before Phase 4 starts.**
+### Security (non-negotiable)
+- `TELEGRAM_ALLOWED_USER_ID` env var. If incoming `user_id != allowed`, reply "not authorized" and stop. No exceptions.
 
-### Honest risks of full self-modification
+### Tests
+- `tests/test_telegram_gateway.py` — mock `aiogram`, verify auth gate, session routing, reply splitting
 
-- A bad core edit can brick the agent mid-run. Mitigation: git checkpoint + supervisor + validation gate. But you should expect it to happen at least once.
-- The agent running its own generated code is an arbitrary-code-execution path by design. Keep it on a machine where that's acceptable (it already has `run_command` with shell access, so this isn't a new category of risk — but self-build makes it routine).
-- "Improve itself" can mean "wander off and rewrite things you liked." The plan-act-observe thinking (Phase 2) + approval gate (Option A) are the guardrails against drift.
+### Exit criterion
+Send a message on Telegram → agent replies, uses tools, streams output. Unknown user gets blocked.
 
 ---
 
-## Dependency additions (pyproject.toml)
+## Phase 4 — Voice ⬜
 
-```
-pdfplumber        # PDF text extraction
-reportlab         # PDF generation
-python-docx       # DOCX
-openpyxl          # Excel
-pytesseract       # OCR (needs system tesseract-ocr binary)
-pillow            # image loading for OCR
-tavily-python     # real web search (or brave/serper)
-```
+**Goal:** speak to the agent; it speaks back.
+
+Inspired by Hermes `tools/transcription_tools.py` + `tools/tts_tool.py`.
+
+### Deliverables
+
+**`tools/transcribe/transcribe.py`** — `transcribe_audio` tool:
+- Input: audio file path (ogg, mp3, wav, m4a)
+- Backend: `faster-whisper` (local, CPU) or OpenAI Whisper API (cloud)
+- Returns: transcript text
+
+**`tools/tts/tts.py`** — `text_to_speech` tool:
+- Input: text string, optional voice/speed
+- Backend: `pyttsx3` (local, offline) or OpenAI TTS API
+- Outputs: audio file path
+
+**`gateway/telegram.py`** — wire up voice messages:
+- Telegram voice message → download ogg → `transcribe_audio` → pass text to agent turn
+- Agent text reply → `text_to_speech` → send as voice note back
+
+### Tests
+- `tests/test_voice.py` — mock Whisper, verify transcript → agent → TTS pipeline
+
+### Exit criterion
+Send a voice message on Telegram → agent transcribes, replies, speaks back.
 
 ---
 
-## Build order summary
+## Phase 5 — Cron scheduler / heartbeat ⬜
 
-```
-Phase 0  Working foundation (fix core, all providers green)   ← do first
-Phase 1  Multi-format file CRUD
-Phase 2  Real thinking method
-Phase 3  Auto-research mode
-Phase 4  Self-build mode      ← safety gate decision required before starting
+**Goal:** the agent acts proactively — it wakes up on a schedule and messages you first.
+
+Inspired by Hermes `cron/scheduler.py` + `cron/jobs.py`.
+
+### Deliverables
+
+**`cron/scheduler.py`** — background thread, `tick()` every 60 seconds:
+- Reads `cron/jobs.json` for due jobs
+- File-based lock (one tick at a time across processes)
+- Two thread pools: parallel (independent jobs) + sequential (state-mutating jobs)
+- Hard-stops jobs that exceed timeout
+
+**`cron/jobs.json`** — job config (user-editable):
+```json
+{
+  "daily_summary": {
+    "schedule": "0 9 * * *",
+    "prompt": "Check my GitHub issues and summarize anything new.",
+    "delivery": "telegram",
+    "enabled": true
+  }
+}
 ```
 
-Each phase ends working and committed. We don't start Phase N+1 until N is green.
+**`tools/cronjob/cronjob.py`** — `cronjob` tool:
+- Actions: `list`, `add`, `enable`, `disable`, `delete`, `run_now`
+- Security: cron agents cannot schedule more cron jobs (prevents runaway loops)
+
+**`gateway/telegram.py`** — delivery target: cron results delivered as Telegram messages.
+
+### Example use cases
+- 09:00 daily: "Summarize new GitHub issues in synapse-agent repo"
+- Every 30 min: "Check if CI is passing; alert me if it fails"
+- Weekly: "Generate a progress summary from recent sessions"
+
+### Tests
+- `tests/test_scheduler.py` — tick logic, job due-time calculation, lock, timeout, sequential/parallel pools
+
+### Exit criterion
+Add a cron job in-chat. It fires at the scheduled time and sends results to Telegram.
 
 ---
 
-## Decisions still open
+## Phase 6 — Rich TUI ⬜
 
-1. **Safety gate** (Phase 4): Option A approve-first vs Option B autonomous+rollback. Deferred by your choice — must resolve before Phase 4.
-2. **File reads** (Phase 1): structured (rows/cells) vs flattened text. Lean structured.
-3. **Search provider** (Phase 0): Tavily (recommended) vs Brave vs Serper. Need an API key for whichever.
+**Goal:** replace the plain `input/print` CLI with a proper terminal UI.
+
+Inspired by Hermes `ui-tui/`.
+
+### Deliverables
+
+**`tui/app.py`** — `textual`-based TUI:
+- Scrollable chat history panel (left/main)
+- Live tool-call status panel (right sidebar): shows active tool, args, elapsed time
+- Input box at the bottom (multiline, Ctrl+Enter to send)
+- Status bar: current provider, model, token count, memory usage
+- Thinking channel rendered in a collapsible panel (dim blue)
+- Session name shown in header
+
+**`main.py`** — `--mode tui` flag:
+```bash
+uv run python3 main.py --mode tui
+```
+
+### Tests
+- `tests/test_tui.py` — Textual test harness, verify layout renders, input routing
+
+### Exit criterion
+`uv run python3 main.py --mode tui` launches a working rich terminal UI.
+
+---
+
+## Phase 7 — Subagent spawning ⬜
+
+**Goal:** the agent can delegate subtasks to isolated child agents running in parallel.
+
+Inspired by Hermes `tools/mixture_of_agents_tool.py`.
+
+### Architecture
+
+```
+Main agent
+  ├── Subagent A: "research the Playwright MCP API"
+  ├── Subagent B: "search GitHub issues for this error"
+  └── Subagent C: "summarize this 50-page PDF"
+        → results merged back into main agent turn
+```
+
+Each subagent:
+- Gets its own isolated message history (no shared state)
+- Has a restricted toolset (no shell, no memory writes)
+- Has a token/time budget — hard-stops when exceeded
+- Returns a plain text result to the parent
+
+### Deliverables
+
+**`tools/spawn_agent/spawn_agent.py`** — `spawn_agent` tool:
+- Parameters: `task` (string), `tools` (allowed list), `budget_tokens` (int), `timeout_s` (int)
+- Runs child agent on a thread pool
+- Returns combined output as a string
+
+**`agent/subagent.py`** — lightweight agent runner for subagents (no streaming, no session, no memory writes)
+
+### Tests
+- `tests/test_subagent.py` — spawn, budget enforcement, isolation (no memory bleed)
+
+### Exit criterion
+"Research X and Y in parallel" → two subagents run simultaneously, results merged in one reply.
+
+---
+
+## Phase 8 — Discord / Slack gateway ⬜
+
+**Goal:** same agent accessible from Discord and Slack workspaces.
+
+Inspired by Hermes `gateway/platforms/`.
+
+### Deliverables
+
+**`gateway/discord.py`** — `discord.py` bot:
+- Locked to allowed guild + user IDs
+- Uses shared `run_agent_turn()` from Phase 3
+- Slash commands: `/chat`, `/reset`, `/sessions`
+
+**`gateway/slack.py`** — Slack Bolt app:
+- Locked to allowed workspace + user IDs
+- App mentions trigger agent turn
+- Slash commands: `/synapse`, `/reset`
+
+**`main.py`** — `--mode discord` / `--mode slack`
+
+### Tests
+- `tests/test_discord_gateway.py`
+- `tests/test_slack_gateway.py`
+
+### Exit criterion
+Message the bot in Discord or Slack → agent responds using full tool set.
+
+---
+
+## Phase 9 — Computer use ⬜
+
+**Goal:** the agent controls the mouse and keyboard — real desktop automation beyond browser.
+
+Inspired by Hermes `tools/computer_use/`.
+
+### Deliverables
+
+**`tools/computer_use/computer_use.py`**:
+- `screenshot` — capture screen as image → pass to vision model
+- `click(x, y)` — mouse click
+- `type_text(text)` — keyboard input
+- `key(combo)` — keyboard shortcut (e.g. `Ctrl+C`)
+- `scroll(x, y, direction)` — scroll wheel
+
+Backend: `pyautogui` (cross-platform) with `Pillow` for screenshots.
+
+**Safety gate**: every computer-use action requires explicit user confirmation in `.env`:
+```
+ALLOW_COMPUTER_USE=true
+```
+If not set, tool returns an error explaining how to enable it.
+
+### Tests
+- `tests/test_computer_use.py` — mock pyautogui, verify safety gate
+
+### Exit criterion
+"Open terminal and run pytest" → agent takes a screenshot, finds the terminal, clicks, types the command.
+
+---
+
+## Phase 10 — Image & video generation ⬜
+
+**Goal:** the agent generates images and videos on demand.
+
+Inspired by Hermes `tools/image_generation_tool.py` + `tools/video_generation_tool.py`.
+
+### Deliverables
+
+**`tools/generate_image/generate_image.py`** — `generate_image` tool:
+- Backend: Stable Diffusion via `diffusers` (local) or DALL-E 3 (OpenAI API)
+- Returns: file path to generated image
+
+**`tools/generate_video/generate_video.py`** — `generate_video` tool:
+- Backend: RunwayML or Replicate API
+- Returns: file path to generated video
+
+Both tools configurable via env vars: `IMAGE_BACKEND`, `VIDEO_BACKEND`.
+
+### Tests
+- `tests/test_image_generation.py` — mock backends, verify parameter routing
+
+### Exit criterion
+"Generate an image of X" → image file saved and path returned to the agent.
+
+---
+
+## Phase 11 — Docker packaging ⬜
+
+**Goal:** run the full agent stack with one command.
+
+### Deliverables
+
+**`Dockerfile`**:
+- Python 3.12 base
+- `uv` for dependency install
+- Tesseract + Node.js included
+- Non-root user
+
+**`docker-compose.yml`**:
+- `synapse` service (the agent)
+- Mounts `~/.synapse/` for MEMORY.md, USER.md, sessions.db, vector_store/
+- Env from `.env` file
+- Optional: `ollama` service (local model server)
+
+**`docs/docker.md`** — setup guide
+
+### Tests
+- `tests/test_docker_build.py` — build image, smoke-test import
+
+### Exit criterion
+`docker compose up` → agent running, all tools available, memory persisted to host volume.
+
+---
+
+## Phase 12 — More MCP servers ⬜
+
+**Goal:** expand the agent's knowledge sources.
+
+Inspired by Hermes `optional-mcps/`.
+
+| Server | Toolset | Config |
+|---|---|---|
+| **Context7** | Live library docs (replaces stale training data) | `npx -y @upstash/context7-mcp` |
+| **PostgreSQL** | Read-only SQL queries on your databases | `uvx mcp-server-postgres` |
+| **Filesystem** | Controlled access to specific directories | `npx -y @modelcontextprotocol/server-filesystem` |
+| **Slack** | Read Slack channels (with token) | `npx -y @modelcontextprotocol/server-slack` |
+
+All configured in `mcp_servers.json`. Each is optional and non-fatal on failure.
+
+### Exit criterion
+`mcp_servers.json` entry → server connects → tools available in agent. No code changes needed.
+
+---
+
+## Phase 13 — Supervised self-improvement ⬜
+
+**Goal:** the agent researches and drafts improvements to itself. Humans control every risky step.
+
+This is the final phase — it requires all previous phases to be stable.
+
+### The loop
+
+```
+Research → Plan → [HUMAN: approve] → Branch → Code → Test → [HUMAN: review PR] → [HUMAN: merge]
+```
+
+### Step 1 — Research
+Agent reads Hermes repo (via GitHub MCP on `NousResearch/hermes-agent`) and web docs. Writes `research/<feature>.md` summarizing findings.
+
+### Step 2 — Plan
+Agent drafts a concrete plan: files to add/change, tests to write, scope (one small feature only). Saves to `plans/<feature>.md`.
+
+### Step 3 — Human approves (Gate 1)
+You read the plan. Say "go" or request changes. **No code written until you approve.**
+
+### Step 4 — Branch
+```bash
+git checkout -b feature/<name>
+```
+Never `master`.
+
+### Step 5 — Code
+Agent implements on the branch. KISS, DRY, SoC, SSOT, fail fast, full type hints. Small atomic commits.
+
+### Step 6 — Test (Gate 2, automatic)
+Agent runs `pytest`. Pass → continue. Fail → fix (max 3 retries) → stop and report. Never proceeds with failing tests. Updates `features.md`.
+
+### Step 7 — PR (Gate 3, human)
+Agent opens a PR. You read the diff: correctness, security, no secrets. Approve or request changes.
+
+### Step 8 — Merge
+**Only you merge.** Delete the branch. Repeat for the next feature.
+
+### Security constraints (always enforced)
+- GitHub MCP stays read-only (research only, never push)
+- Local git via `run_command` for branch/commit/push
+- No self-modification of `agent/loop.py` without explicit human approval
+- No cron jobs that schedule more cron jobs
+- Computer use requires `ALLOW_COMPUTER_USE=true`
+
+---
+
+## Hermes feature coverage tracker
+
+| Hermes feature | Synapse phase | Status |
+|---|---|---|
+| Multi-provider (Ollama/OpenAI/Anthropic) | Phase 0 | ✅ |
+| Native tools (file, web, shell, RAG) | Phase 0 | ✅ |
+| Thinking (native + fallback) + streaming | Phase 0 | ✅ |
+| 4-layer context management | Phase 0 | ✅ |
+| MCP client (stdio) | Phase 0 | ✅ |
+| GitHub MCP | Phase 0 | ✅ |
+| Playwright MCP | Phase 0 | ✅ |
+| Skills system | Phase 0 | ✅ |
+| MEMORY.md + USER.md persistent memory | Phase 2 | ⬜ |
+| Atomic writes + drift detection | Phase 2 | ⬜ |
+| Injection scanning | Phase 2 | ⬜ |
+| SQLite sessions + FTS5 search | Phase 2 | ⬜ |
+| Telegram gateway | Phase 3 | ⬜ |
+| Voice (Whisper + TTS) | Phase 4 | ⬜ |
+| Cron scheduler / heartbeat | Phase 5 | ⬜ |
+| Rich TUI (Textual) | Phase 6 | ⬜ |
+| Subagent spawning | Phase 7 | ⬜ |
+| Discord / Slack gateway | Phase 8 | ⬜ |
+| Computer use | Phase 9 | ⬜ |
+| Image / video generation | Phase 10 | ⬜ |
+| Docker packaging | Phase 11 | ⬜ |
+| More MCP servers (Context7, PostgreSQL…) | Phase 12 | ⬜ |
+| Supervised self-improvement loop | Phase 13 | ⬜ |
