@@ -1,3 +1,4 @@
+import asyncio
 import sys
 
 from dotenv import load_dotenv
@@ -5,27 +6,43 @@ from dotenv import load_dotenv
 from config import get_adapter, get_model_name
 from agent import chat_with_model
 from agent.mcp_client import setup_mcp
+from agent.runner import build_agent_state
 
 load_dotenv()
 
 
-def main() -> None:
-    # Optional CLI argument: --provider ollama|openai|anthropic
+def _parse_args() -> tuple[str | None, str]:
+    """Parse --provider and --mode from sys.argv. Returns (provider, mode)."""
     provider = None
+    mode = "cli"
+
     if "--provider" in sys.argv:
         idx = sys.argv.index("--provider")
         if idx + 1 < len(sys.argv):
             provider = sys.argv[idx + 1]
 
+    if "--mode" in sys.argv:
+        idx = sys.argv.index("--mode")
+        if idx + 1 < len(sys.argv):
+            mode = sys.argv[idx + 1]
+
+    return provider, mode
+
+
+def main() -> None:
+    provider, mode = _parse_args()
+
     adapter = get_adapter(provider)
     model_name = get_model_name(provider)
 
-    # Connect MCP servers (e.g. GitHub) before the loop loads tools. Their tools
-    # register into the same registry, so chat_with_model picks them up natively.
-    # Non-fatal: a failed server warns loudly and the agent runs without it.
     mcp_manager = setup_mcp()
     try:
-        chat_with_model(adapter, model_name)
+        if mode == "telegram":
+            from gateway.telegram import start_telegram_bot
+            state = build_agent_state(adapter, model_name)
+            asyncio.run(start_telegram_bot(state))
+        else:
+            chat_with_model(adapter, model_name)
     finally:
         if mcp_manager is not None:
             mcp_manager.shutdown()
