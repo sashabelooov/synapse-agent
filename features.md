@@ -323,3 +323,26 @@ Living reference of every capability in the agent. Updated with every new featur
 - **How to use:** "What did we discuss last week about the auth bug?" → `search_sessions(query="auth bug")`
 - **Config / env:** none (uses `SYNAPSE_HOME` via `agent/session.py`)
 - **Status:** ✅ working
+
+---
+
+## Shared agent runner (agent/runner.py)
+
+- **Added:** 2026-06-14
+- **What it does:** Extracts the core agent turn logic (context management, model call, tool execution loop, streaming callbacks) into a single function `run_agent_turn()` shared by CLI, Telegram, and all future gateways. `build_agent_state()` creates the one-time setup (tools, formatted tools, system prompt with memory and skills injected). No I/O — all display is decoupled through callbacks.
+- **Files:** `agent/runner.py`, `agent/loop.py` (refactored to use runner)
+- **How to use:** Internal — called by loop.py (CLI) and gateway/telegram.py (Telegram).
+- **Config / env:** none
+- **Status:** ✅ working — 13 tests passing
+
+---
+
+## Telegram gateway
+
+- **Added:** 2026-06-14
+- **What it does:** Exposes the full agent as a Telegram bot. The agent uses all tools (file ops, web search, shell, GitHub MCP, Playwright, memory, etc.) and replies via Telegram. Replies stream in real time (the message is edited as tokens arrive). Long replies are split at the 4096-char Telegram limit. One SQLite session per chat ID. Commands: /start, /reset, /save, /load, /sessions, /help.
+- **Files:** `gateway/__init__.py`, `gateway/telegram.py`
+- **How to use:** `uv run python3 main.py --mode telegram`
+- **Config / env:** `TELEGRAM_BOT_TOKEN` (from @BotFather), `TELEGRAM_ALLOWED_USER_ID` (your numeric ID from @userinfobot)
+- **Security:** ONLY the configured user ID can interact with the bot. Any other user gets "Not authorized." immediately. No exceptions.
+- **Status:** ✅ working — 20 tests passing
