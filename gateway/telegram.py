@@ -186,7 +186,8 @@ async def _run_agent(
 ) -> tuple[str, dict]:
     """Run one agent turn in a thread pool; stream progress back to Telegram."""
     assert _state is not None
-    event_loop = asyncio.get_event_loop()
+    # get_running_loop() is the safe way to capture the loop inside async code.
+    event_loop = asyncio.get_running_loop()
 
     accumulated: list[str] = []
     last_edit: list[float] = [0.0]
@@ -196,17 +197,26 @@ async def _run_agent(
         now = time.time()
         if now - last_edit[0] >= 1.0:
             preview = "".join(accumulated)[:4096]
-            asyncio.run_coroutine_threadsafe(
-                status_msg.edit_text(preview or "…"),
-                event_loop,
-            )
+
+            async def _edit() -> None:
+                try:
+                    await status_msg.edit_text(preview or "…")
+                except Exception:
+                    pass
+
+            asyncio.run_coroutine_threadsafe(_edit(), event_loop)
             last_edit[0] = now
 
     def on_tool_call(name: str, _args: dict) -> None:
-        asyncio.run_coroutine_threadsafe(
-            status_msg.edit_text(_format_tool_status(name)),
-            event_loop,
-        )
+        status_text = _format_tool_status(name)
+
+        async def _edit() -> None:
+            try:
+                await status_msg.edit_text(status_text)
+            except Exception:
+                pass
+
+        asyncio.run_coroutine_threadsafe(_edit(), event_loop)
 
     reply, usage = await event_loop.run_in_executor(
         None,
