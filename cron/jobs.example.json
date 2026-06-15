@@ -1,0 +1,26 @@
+{
+  "daily_summary": {
+    "schedule": "0 9 * * *",
+    "prompt": "Check my GitHub issues in sashabelooov/synapse-agent and summarize anything new since yesterday.",
+    "delivery": "telegram",
+    "enabled": false,
+    "sequential": false,
+    "timeout_s": 120
+  },
+  "ci_watchdog": {
+    "schedule": "*/30 * * * *",
+    "prompt": "Run: pytest tests/ -q --tb=no and report the result. If any tests fail, list which ones.",
+    "delivery": "telegram",
+    "enabled": false,
+    "sequential": true,
+    "timeout_s": 60
+  },
+  "weekly_progress": {
+    "schedule": "0 18 * * 5",
+    "prompt": "Search past sessions from this week and write a short progress summary of what we accomplished.",
+    "delivery": "telegram",
+    "enabled": false,
+    "sequential": false,
+    "timeout_s": 180
+  }
+}

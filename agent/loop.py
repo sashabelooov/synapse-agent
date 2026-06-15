@@ -104,9 +104,14 @@ def _handle_command(raw: str, messages: list[dict], system_prompt: str) -> bool:
     return True
 
 
-def chat_with_model(adapter: ModelAdapter, model_name: str) -> None:
+def chat_with_model(
+    adapter: ModelAdapter,
+    model_name: str,
+    state: AgentState | None = None,
+) -> None:
     """Run the interactive CLI chat loop."""
-    state = build_agent_state(adapter, model_name)
+    if state is None:
+        state = build_agent_state(adapter, model_name)
     messages: list[dict] = [{"role": "system", "content": state.system_prompt}]
 
     print(colored(f"[DEBUG] Tools loaded: {[t.name for t in state.tools]}", "magenta"))
