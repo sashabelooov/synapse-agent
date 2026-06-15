@@ -379,3 +379,26 @@ Living reference of every capability in the agent. Updated with every new featur
 - **How to use:** Send a voice message in Telegram — the bot handles it end-to-end.
 - **Config / env:** `VOICE_REPLY` (false/true), plus STT/TTS config above. Requires `WHISPER_BACKEND=openai` + `OPENAI_API_KEY` or `WHISPER_BACKEND=local`.
 - **Status:** ✅ working
+
+---
+
+## Cron scheduler
+
+- **Added:** 2026-06-15
+- **What it does:** Background daemon thread that runs agent jobs on a cron schedule. Ticks every 60 seconds. Jobs are stored in `~/.synapse/cron_jobs.json` (or `$CRON_JOBS_PATH`). Each job has a standard 5-field cron expression, a prompt the agent runs, a delivery target, and a hard timeout. File-based lock prevents overlapping ticks across processes. Two thread pools: parallel (independent jobs) and sequential (state-mutating jobs marked with `"sequential": true`). Jobs that exceed their timeout are hard-stopped. Scheduler starts automatically as a daemon thread alongside CLI and Telegram modes.
+- **Files:** `cron/__init__.py`, `cron/scheduler.py`, `cron/jobs.example.json`
+- **How to use:** Automatically starts when you run `uv run python3 main.py`. Manage jobs via the `cronjob` tool or by editing `~/.synapse/cron_jobs.json` directly.
+- **Config / env:** `CRON_JOBS_PATH` (default `~/.synapse/cron_jobs.json`), `SYNAPSE_HOME`
+- **Status:** ✅ working — 27 tests passing
+
+---
+
+## Native tool — cronjob
+
+- **Added:** 2026-06-15
+- **What it does:** Manages scheduled agent jobs. Six actions: `list` (show all jobs with status and next run), `add` (create a job with a cron schedule and prompt), `enable`/`disable` (toggle without deleting), `delete` (remove permanently), `run_now` (execute immediately outside the schedule). Security: `add` and `delete` are blocked inside a running cron job to prevent runaway scheduling loops.
+- **Files:** `tools/cronjob/__init__.py`, `tools/cronjob/cronjob.py`
+- **How to use:** "Schedule a daily summary at 9am" → `cronjob(action="add", name="daily_summary", schedule="0 9 * * *", prompt="Summarize new GitHub issues.", delivery="telegram")`. See `cron/jobs.example.json` for more examples.
+- **Config / env:** none (uses scheduler's config)
+- **Security:** `SYNAPSE_CRON_CONTEXT=1` flag is set during cron execution; `add`/`delete` are refused when it's set.
+- **Status:** ✅ working — 19 tests passing

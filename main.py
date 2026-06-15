@@ -37,12 +37,17 @@ def main() -> None:
 
     mcp_manager = setup_mcp()
     try:
+        state = build_agent_state(adapter, model_name)
+
+        # Start the cron scheduler as a daemon thread alongside any mode.
+        from cron.scheduler import start_scheduler
+        start_scheduler(state)
+
         if mode == "telegram":
             from gateway.telegram import start_telegram_bot
-            state = build_agent_state(adapter, model_name)
             asyncio.run(start_telegram_bot(state))
         else:
-            chat_with_model(adapter, model_name)
+            chat_with_model(adapter, model_name, state=state)
     finally:
         if mcp_manager is not None:
             mcp_manager.shutdown()
