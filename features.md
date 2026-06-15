@@ -346,3 +346,36 @@ Living reference of every capability in the agent. Updated with every new featur
 - **Config / env:** `TELEGRAM_BOT_TOKEN` (from @BotFather), `TELEGRAM_ALLOWED_USER_ID` (your numeric ID from @userinfobot)
 - **Security:** ONLY the configured user ID can interact with the bot. Any other user gets "Not authorized." immediately. No exceptions.
 - **Status:** ✅ working — 20 tests passing
+
+---
+
+## Native tool — transcribe_audio
+
+- **Added:** 2026-06-15
+- **What it does:** Transcribes any supported audio file (ogg, mp3, wav, m4a, webm, mp4, flac) to text. Backend is selectable: OpenAI Whisper API (cloud, default) or faster-whisper (local CPU, requires Python 3.12+). Language can be specified or auto-detected. Falls back to OpenAI API automatically if the local backend is unavailable.
+- **Files:** `tools/transcribe/__init__.py`, `tools/transcribe/transcribe.py`
+- **How to use:** `transcribe_audio(path="recording.ogg")` or `transcribe_audio(path="interview.mp3", language="en")`
+- **Config / env:** `WHISPER_BACKEND` (openai/local), `WHISPER_LOCAL_MODEL` (base/small/medium/large when local)
+- **Status:** ✅ working — 12 tests passing
+
+---
+
+## Native tool — text_to_speech
+
+- **Added:** 2026-06-15
+- **What it does:** Converts text to speech and saves the audio file (mp3 or wav). Three backends: edge-tts (Microsoft, 300+ neural voices, free, needs internet — default), OpenAI TTS API (cloud, 6 voices), pyttsx3 (fully offline system voice). Voice and backend can be overridden per-call.
+- **Files:** `tools/tts/__init__.py`, `tools/tts/tts.py`
+- **How to use:** `text_to_speech(text="Hello world")` or `text_to_speech(text="...", voice="ru-RU-SvetlanaNeural", backend="edge")`
+- **Config / env:** `TTS_BACKEND` (edge/openai/pyttsx3), `EDGE_TTS_VOICE`, `OPENAI_TTS_VOICE`, `TTS_OUTPUT_DIR`
+- **Status:** ✅ working — 16 tests passing
+
+---
+
+## Telegram voice message pipeline
+
+- **Added:** 2026-06-15
+- **What it does:** When a user sends a voice message or audio file to the Telegram bot, it is automatically downloaded, transcribed with Whisper, passed to the agent for a response, and replied to with text. If `VOICE_REPLY=true`, the agent's reply is also converted to speech with edge-tts and sent back as a voice message. The transcript is shown above the text reply so the user can verify it was understood correctly.
+- **Files:** `gateway/telegram.py` (`_handle_voice`, refactored `handle_message`)
+- **How to use:** Send a voice message in Telegram — the bot handles it end-to-end.
+- **Config / env:** `VOICE_REPLY` (false/true), plus STT/TTS config above. Requires `WHISPER_BACKEND=openai` + `OPENAI_API_KEY` or `WHISPER_BACKEND=local`.
+- **Status:** ✅ working
