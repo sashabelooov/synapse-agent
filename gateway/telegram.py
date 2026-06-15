@@ -15,14 +15,16 @@ from __future__ import annotations
 
 import asyncio
 import os
+import tempfile
 import time
+from pathlib import Path
 from typing import Any
 
 from aiogram import Bot, Dispatcher, Router
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import Command
-from aiogram.types import Message
+from aiogram.types import FSInputFile, Message
 
 from agent.runner import AgentState, run_agent_turn
 from agent.session import save_session, load_session, list_sessions
@@ -173,30 +175,24 @@ async def cmd_load(message: Message) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Main message handler
+# Shared agent runner helper
 # ---------------------------------------------------------------------------
 
-@router.message()
-async def handle_message(message: Message) -> None:
-    if not await _check_auth(message):
-        return
-    if not message.text:
-        await message.reply("Only text messages are supported for now.")
-        return
-
+async def _run_agent(
+    user_text: str,
+    message: Message,
+    session: list[dict],
+    status_msg: Message,
+) -> tuple[str, dict]:
+    """Run one agent turn in a thread pool; stream progress back to Telegram."""
     assert _state is not None
-    session = _get_session(message.chat.id, _state.system_prompt)
-
-    # Placeholder shown while the agent is thinking.
-    status_msg = await message.reply("⏳")
     event_loop = asyncio.get_event_loop()
 
     accumulated: list[str] = []
-    last_edit: list[float] = [0.0]  # list so the closure can mutate it
+    last_edit: list[float] = [0.0]
 
     def on_chunk(text: str) -> None:
         accumulated.append(text)
-        # Rate-limit edits to once per second to stay within Telegram limits.
         now = time.time()
         if now - last_edit[0] >= 1.0:
             preview = "".join(accumulated)[:4096]
@@ -212,20 +208,21 @@ async def handle_message(message: Message) -> None:
             event_loop,
         )
 
-    # Run the synchronous agent turn in a thread-pool executor so the
-    # asyncio event loop (and Telegram) stays responsive.
-    reply, usage = await asyncio.get_event_loop().run_in_executor(
+    reply, usage = await event_loop.run_in_executor(
         None,
         lambda: run_agent_turn(
-            message.text,
+            user_text,
             session,
             _state,
             on_chunk=on_chunk,
             on_tool_call=on_tool_call,
         ),
     )
+    return reply, usage
 
-    # Send the final reply, splitting if it exceeds Telegram's 4096-char limit.
+
+async def _send_reply(message: Message, status_msg: Message, reply: str, usage: dict) -> None:
+    """Send the final text reply (split if needed) and optional token count."""
     parts = _split_message(reply or "(no response)")
     try:
         await status_msg.edit_text(parts[0])
@@ -235,9 +232,88 @@ async def handle_message(message: Message) -> None:
         await message.reply(part)
 
     if usage["input"] or usage["output"]:
-        await message.reply(
-            f"[{usage['input']}→{usage['output']} tokens]",
+        await message.reply(f"[{usage['input']}→{usage['output']} tokens]")
+
+
+# ---------------------------------------------------------------------------
+# Main message handler (text)
+# ---------------------------------------------------------------------------
+
+@router.message()
+async def handle_message(message: Message) -> None:
+    if not await _check_auth(message):
+        return
+
+    assert _state is not None
+    session = _get_session(message.chat.id, _state.system_prompt)
+
+    # --- Voice message pipeline ---
+    if message.voice or message.audio:
+        await _handle_voice(message, session)
+        return
+
+    if not message.text:
+        await message.reply("Send text or a voice message.")
+        return
+
+    status_msg = await message.reply("⏳")
+    reply, usage = await _run_agent(message.text, message, session, status_msg)
+    await _send_reply(message, status_msg, reply, usage)
+
+
+# ---------------------------------------------------------------------------
+# Voice message handler
+# ---------------------------------------------------------------------------
+
+async def _handle_voice(message: Message, session: list[dict]) -> None:
+    """Download voice/audio, transcribe, run agent, optionally reply with TTS."""
+    assert _state is not None
+    bot: Bot = message.bot  # type: ignore[assignment]
+
+    status_msg = await message.reply("🎤 Transcribing…")
+
+    # Download the audio file from Telegram.
+    file_obj = message.voice or message.audio
+    tg_file = await bot.get_file(file_obj.file_id)
+    suffix = ".ogg" if message.voice else (Path(file_obj.file_name or "audio.mp3").suffix or ".mp3")
+    with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
+        tmp_path = tmp.name
+    await bot.download_file(tg_file.file_path, destination=tmp_path)
+
+    # Transcribe in a thread pool.
+    try:
+        from tools.transcribe.transcribe import _transcribe
+        transcript: str = await asyncio.get_event_loop().run_in_executor(
+            None, lambda: _transcribe(tmp_path)
         )
+    except Exception as exc:
+        await status_msg.edit_text(f"Transcription error: {exc}")
+        return
+    finally:
+        Path(tmp_path).unlink(missing_ok=True)
+
+    if transcript.startswith("Error:"):
+        await status_msg.edit_text(transcript)
+        return
+
+    await status_msg.edit_text(f'🎤 "{transcript}"\n\n⏳')
+
+    # Run the agent with the transcript.
+    reply, usage = await _run_agent(transcript, message, session, status_msg)
+    await _send_reply(message, status_msg, reply, usage)
+
+    # Optionally send a TTS voice reply if VOICE_REPLY=true is set.
+    if os.environ.get("VOICE_REPLY", "").lower() in {"1", "true", "yes"}:
+        try:
+            from tools.tts.tts import _speak
+            audio_path: str = await asyncio.get_event_loop().run_in_executor(
+                None, lambda: _speak(reply[:4096])
+            )
+            if not audio_path.startswith("Error:"):
+                await message.reply_voice(FSInputFile(audio_path))
+                Path(audio_path).unlink(missing_ok=True)
+        except Exception:
+            pass  # Voice reply is best-effort; don't fail the whole turn.
 
 
 # ---------------------------------------------------------------------------
