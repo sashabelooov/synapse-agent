@@ -402,3 +402,15 @@ Living reference of every capability in the agent. Updated with every new featur
 - **Config / env:** none (uses scheduler's config)
 - **Security:** `SYNAPSE_CRON_CONTEXT=1` flag is set during cron execution; `add`/`delete` are refused when it's set.
 - **Status:** ✅ working — 19 tests passing
+
+---
+
+## Rich TUI (Textual)
+
+- **Added:** 2026-06-15
+- **What it does:** Full-featured interactive terminal UI powered by Textual. 4fr chat panel on the left (conversation history in `RichLog`, live streaming line with cursor, collapsible thinking panel) + 24-char tool panel on the right (last 10 tool calls with real-time elapsed timer, ✓/⚙ done/active state). Status bar shows session name and cumulative token counts. Inline slash-command handler — `/save`, `/load`, `/sessions`, `/reset`, `/help` — processed without running the agent. Ctrl+T toggles the thinking panel; Ctrl+S saves; Ctrl+R resets; q or Ctrl+C quits.
+- **Files:** `tui/__init__.py`, `tui/app.py`
+- **How to use:** `uv run python3 main.py --mode tui` (Telegram also starts in background if credentials are set)
+- **Config / env:** none beyond the provider env vars. `TELEGRAM_BOT_TOKEN` + `TELEGRAM_ALLOWED_USER_ID` auto-start Telegram alongside the TUI.
+- **Architecture:** Agent runs in a Textual `@work(thread=True)` thread; all UI updates use `call_from_thread()` — no asyncio/sync bridging needed.
+- **Status:** ✅ working — 25 tests passing
