@@ -414,3 +414,16 @@ Living reference of every capability in the agent. Updated with every new featur
 - **Config / env:** none beyond the provider env vars. `TELEGRAM_BOT_TOKEN` + `TELEGRAM_ALLOWED_USER_ID` auto-start Telegram alongside the TUI.
 - **Architecture:** Agent runs in a Textual `@work(thread=True)` thread; all UI updates use `call_from_thread()` — no asyncio/sync bridging needed.
 - **Status:** ✅ working — 25 tests passing
+
+---
+
+## Native tool — computer_use
+
+- **Added:** 2026-06-16
+- **What it does:** Controls the mouse, keyboard, and screen for real desktop automation beyond the browser. Seven actions: `screenshot` (full screen or region → PNG path), `click` (left/right/double at x,y), `type_text` (keyboard events), `key` (combos like `ctrl+c`, `alt+tab`), `scroll` (up/down at x,y), `move` (reposition cursor), `drag` (click-and-drag between two points).
+- **Files:** `tools/computer_use/__init__.py`, `tools/computer_use/computer_use.py`
+- **Typical workflow:** `screenshot` → `describe_image` (see what's on screen) → `click`/`type_text`/`key` to interact → `screenshot` again to verify.
+- **How to use:** Set `ALLOW_COMPUTER_USE=true` in `.env`, then ask the agent: "Open terminal and run pytest" or "Click the Save button".
+- **Config / env:** `ALLOW_COMPUTER_USE` (required, default disabled). Backend: `pyautogui` with `FAILSAFE=True` (move mouse to top-left corner to abort).
+- **Safety:** Tool returns an error explaining how to enable it if `ALLOW_COMPUTER_USE` is not set. pyautogui failsafe is always enabled — move mouse to top-left corner to abort any runaway action.
+- **Status:** ✅ working — 32 tests passing

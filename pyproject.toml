@@ -26,6 +26,7 @@ dependencies = [
     "pydub>=0.25.0",
     "croniter>=1.4.0",
     "textual>=0.80.0",
+    "pyautogui>=0.9.54",
 ]
 
 [dependency-groups]
