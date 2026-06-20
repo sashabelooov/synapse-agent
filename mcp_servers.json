@@ -14,12 +14,43 @@
       "GITHUB_READ_ONLY": "1"
     }
   },
-    "playwright": {
+  "playwright": {
     "command": "npx",
     "args": ["-y", "@playwright/mcp@latest"],
     "env": {
       "DISPLAY": "${DISPLAY}",
       "XAUTHORITY": "${XAUTHORITY}"
+    }
+  },
+  "context7": {
+    "command": "npx",
+    "args": ["-y", "@upstash/context7-mcp@latest"],
+    "env": {}
+  },
+  "postgres": {
+    "command": "uvx",
+    "args": ["mcp-server-postgres", "${POSTGRES_CONNECTION_STRING}"],
+    "env": {
+      "POSTGRES_CONNECTION_STRING": "${POSTGRES_CONNECTION_STRING}"
+    }
+  },
+  "filesystem": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-filesystem",
+      "${FILESYSTEM_ALLOWED_DIRS}"
+    ],
+    "env": {
+      "FILESYSTEM_ALLOWED_DIRS": "${FILESYSTEM_ALLOWED_DIRS}"
+    }
+  },
+  "slack": {
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-slack"],
+    "env": {
+      "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+      "SLACK_TEAM_ID": "${SLACK_TEAM_ID}"
     }
   }
 }
