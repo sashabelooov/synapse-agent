@@ -449,3 +449,14 @@ Living reference of every capability in the agent. Updated with every new featur
 - **How to use:** Text-to-video: `generate_video(prompt="a cat walking through a meadow")`. Image-to-video: `generate_video(prompt="zoom in slowly", image_path="frame.png", backend="runway")`
 - **Config / env:** `VIDEO_BACKEND` (replicate/runway, default: replicate), `REPLICATE_API_TOKEN` (for replicate backend), `VIDEO_REPLICATE_MODEL` (default: minimax/video-01-live), `RUNWAY_API_KEY` (for runway backend), `VIDEO_OUTPUT_DIR` (default: /tmp)
 - **Status:** ✅ working — 24 tests passing
+
+---
+
+## Docker packaging
+
+- **Added:** 2026-06-20
+- **What it does:** Packages the full agent stack into a reproducible Docker image. Multi-stage build: `builder` stage installs Python deps with `uv`; `runtime` stage is a lean Python 3.12 image with Tesseract (OCR), Node.js (for npx MCP servers), and xvfb/xdotool (headless computer-use). Runs as a non-root user. Persistent state (memory, sessions, vector store, cron jobs) lives on a named Docker volume so it survives container restarts. `docker-compose.yml` includes an optional Ollama service behind a `--profile ollama` flag.
+- **Files:** `Dockerfile`, `docker-compose.yml`, `docs/docker.md`
+- **How to use:** `docker compose build && docker compose run --rm synapse`. With Ollama: `docker compose --profile ollama up`. See `docs/docker.md` for full setup guide.
+- **Config / env:** All variables loaded from `.env` (see `.env.example`). `SYNAPSE_HOME` auto-set to `/data/synapse` inside the container. `OLLAMA_HOST` auto-set to `http://ollama:11434` when using the ollama profile.
+- **Status:** ✅ working — 35 tests passing
