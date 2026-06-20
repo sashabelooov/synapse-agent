@@ -486,3 +486,16 @@ Living reference of every capability in the agent. Updated with every new featur
 - **How to use:** "Use the self_improve skill to add a new feature" — the agent loads the skill and walks through the loop, pausing at every human gate.
 - **Security constraints:** GitHub MCP read-only (research only); never modifies `agent/loop.py` without explicit approval; no cron-scheduling-cron; all credentials via env vars; max 3 test-fix retries; human must approve before code is written and before PR is merged.
 - **Status:** ✅ working — 42 tests passing
+
+---
+
+## Subagent spawning (spawn_agent tool)
+
+- **Added:** 2026-06-20
+- **What it does:** Lets the agent delegate independent subtasks to isolated child agents that run in parallel on a thread pool. Each child gets its own message history, a restricted read-only toolset, a token budget, and a wall-clock timeout. Results are collected and returned as a numbered list. Child agents cannot call `spawn_agent` themselves (no recursion). Use this to parallelize research, summarization, or analysis work.
+- **Files:** `agent/subagent.py`, `tools/spawn_agent/__init__.py`, `tools/spawn_agent/spawn_agent.py`
+- **How to use:** "Research Playwright MCP and Context7 MCP in parallel" → `spawn_agent(tasks=["research Playwright MCP API", "research Context7 MCP API"])`
+- **Config / env:** `SPAWN_AGENT_MAX_PARALLEL` (default: 5) — max concurrent child agents per call.
+- **Default child toolset (read-only):** `read_file`, `list_files`, `tree_view`, `grep_search`, `web_search`, `read_url`, `search_knowledge`, `describe_image`. Override per-call with `tools_override`.
+- **Safety:** `spawn_agent` is always excluded from child toolsets regardless of `tools_override`. `run_command` is not in the default set.
+- **Status:** ✅ working — 28 tests passing

@@ -364,7 +364,7 @@ Both tools configurable via env vars: `IMAGE_BACKEND`, `VIDEO_BACKEND`.
 ### Tests
 - `tests/test_image_generation.py` — mock backends, verify parameter routing
 
-### Exit criterion
+### 
 "Generate an image of X" → image file saved and path returned to the agent.
 
 ---
@@ -465,6 +465,110 @@ Agent opens a PR. You read the diff: correctness, security, no secrets. Approve 
 
 ---
 
+## Phase 14 — Subagent spawning ⬜
+
+**Goal:** the agent can delegate subtasks to isolated child agents running in parallel, then merge their results into a single reply.
+
+### Architecture
+
+```
+Main agent
+  ├── Subagent A: "research the Playwright MCP API"
+  ├── Subagent B: "search GitHub issues for this error"
+  └── Subagent C: "summarize this 50-page PDF"
+        → results merged back into main agent turn
+```
+
+Each subagent:
+- Gets its own isolated message history (no shared state with parent or siblings)
+- Has a restricted toolset (configurable — defaults to read-only: `read_file`, `web_search`, `read_url`, `grep_search`, `tree_view`, `search_knowledge`)
+- Has a token budget and wall-clock timeout — hard-stopped when either is exceeded
+- Returns a plain text result string to the parent
+
+### Deliverables
+
+**`agent/subagent.py`** — lightweight synchronous agent runner for child agents:
+- No streaming, no session persistence, no memory writes
+- Accepts: `task`, `tools` (allowed list), `budget_tokens`, `timeout_s`
+- Returns: result string (truncated to budget if needed)
+- Runs model turns in a loop until the model stops calling tools or budget is hit
+
+**`tools/spawn_agent/spawn_agent.py`** — `spawn_agent` tool exposed to the model:
+- Parameters: `tasks` (list of task strings), `tools` (optional override), `budget_tokens`, `timeout_s`
+- Runs each task as a child agent on a `ThreadPoolExecutor` (true parallel)
+- Returns results as a numbered list: `[Task 1]: <result>\n[Task 2]: <result>…`
+- Safety: subagents cannot call `spawn_agent` themselves (no recursion)
+
+### Tests
+- `tests/test_subagent.py` — child agent runs task, budget enforcement (truncates), timeout enforcement, tool isolation (only allowed tools available), no recursion (spawn_agent blocked inside subagent), results merged correctly
+
+### Exit criterion
+"Research X and Y in parallel" → two child agents run simultaneously → results merged in one reply.
+
+---
+
+## Phase 15 — Code execution sandbox ⬜
+
+**Goal:** let the agent write and run short code snippets safely, without full shell access.
+
+### Why not just `run_command`?
+
+`run_command` is unrestricted shell — it can delete files, make network calls, install packages. It's the right tool for git and pytest. `run_code` is for "evaluate this Python expression" or "test this function" — it needs isolation.
+
+### Deliverables
+
+**`tools/run_code/run_code.py`** — `run_code` tool:
+- Executes a Python snippet in a subprocess with:
+  - Hard wall-clock timeout (default 10s, max 30s)
+  - No network access (`PYTHONPATH` stripped of requests/httpx/etc — via `sys.modules` block in the sandbox preamble)
+  - No filesystem writes outside a temp directory
+  - Returns: `stdout`, `stderr`, `exit_code`, `truncated` flag
+- Language: Python only (v1). Future: JS, bash with similar sandboxing.
+- Implementation: `subprocess.run([sys.executable, "-c", code], timeout=timeout, cwd=tmp_dir, env=restricted_env)`
+
+**Safety gate**: `RUN_CODE_ENABLED=true` in `.env` required (disabled by default).
+
+### Tests
+- `tests/test_run_code.py` — basic execution, stdout capture, timeout enforcement, syntax error handling, safety gate, output truncation
+
+### Exit criterion
+"Write a function that sorts a list by second element and test it" → agent writes + runs code → returns output.
+
+---
+
+## Phase 16 — Structured knowledge graph ⬜
+
+**Goal:** let the agent accumulate and query structured facts (entity → relation → value) that persist across sessions — complementing the existing document-level RAG memory.
+
+### Why not just RAG?
+
+RAG is great for "find chunks of text similar to this query." It's poor for "what framework does project X use?" — a precise relational lookup. A knowledge graph answers that instantly without embedding similarity.
+
+### Deliverables
+
+**`agent/knowledge_graph.py`** — SQLite-backed triple store:
+- Schema: `triples(subject TEXT, relation TEXT, value TEXT, confidence REAL, updated_at TEXT)`
+- WAL mode, FTS5 index on subject+relation+value for keyword search
+- Operations: `add(subject, relation, value)`, `get(subject, relation)`, `search(query)`, `remove(subject, relation)`, `list(subject)`
+- Stored at `$SYNAPSE_HOME/knowledge.db`
+
+**`tools/knowledge/knowledge.py`** — `knowledge` tool exposed to the model:
+- Actions: `add`, `get`, `search`, `remove`, `list`
+- Examples:
+  - `knowledge(action="add", subject="synapse-agent", relation="framework", value="FastAPI")` 
+  - `knowledge(action="get", subject="synapse-agent", relation="framework")` → "FastAPI"
+  - `knowledge(action="search", query="deploy schedule")` → matching triples
+
+**`agent/runner.py`** — inject top-10 most-recently-updated triples into the system prompt (like persistent memory but structured).
+
+### Tests
+- `tests/test_knowledge_graph.py` — add/get/search/remove/list, WAL mode, FTS5 search, system-prompt injection
+
+### Exit criterion
+"Remember that we deploy on Fridays" → stored as triple. Next session: "when do we deploy?" → answered from knowledge graph without the user repeating it.
+
+---
+
 ## Hermes feature coverage tracker
 
 | Hermes feature | Synapse phase | Status |
@@ -492,3 +596,6 @@ Agent opens a PR. You read the diff: correctness, security, no secrets. Approve 
 | Docker packaging | Phase 11 | ⬜ |
 | More MCP servers (Context7, PostgreSQL…) | Phase 12 | ⬜ |
 | Supervised self-improvement loop | Phase 13 | ⬜ |
+| Subagent spawning (parallel tasks) | Phase 14 | ⬜ |
+| Code execution sandbox | Phase 15 | ⬜ |
+| Structured knowledge graph | Phase 16 | ⬜ |
