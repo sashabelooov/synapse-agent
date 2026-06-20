@@ -1,0 +1,74 @@
+services:
+
+  # ── Synapse Agent ──────────────────────────────────────────────────────────
+  synapse:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: synapse-agent:latest
+    container_name: synapse
+    restart: unless-stopped
+
+    # All secrets and config live in .env — never committed
+    env_file:
+      - .env
+
+    environment:
+      # Override SYNAPSE_HOME to the mounted volume path
+      SYNAPSE_HOME: /data/synapse
+      # Point Ollama at the companion service when using the ollama profile
+      OLLAMA_HOST: http://ollama:11434
+
+    volumes:
+      # Persistent state: memory files, sessions.db, vector_store/
+      - synapse_data:/data/synapse
+
+    # Attach to the ollama network only when that profile is active
+    networks:
+      - synapse_net
+
+    # Run in CLI mode by default; override for other modes:
+    #   docker compose run synapse --mode telegram
+    #   docker compose run synapse --mode tui
+    stdin_open: true
+    tty: true
+
+  # ── Ollama (local model server) ────────────────────────────────────────────
+  # Start with: docker compose --profile ollama up
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    profiles:
+      - ollama
+
+    volumes:
+      - ollama_data:/root/.ollama
+
+    networks:
+      - synapse_net
+
+    # Expose on host so you can also run `ollama pull` from outside the stack
+    ports:
+      - "11434:11434"
+
+    # GPU passthrough (uncomment if you have an NVIDIA GPU)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+# ── Named volumes ────────────────────────────────────────────────────────────
+volumes:
+  synapse_data:
+    driver: local
+  ollama_data:
+    driver: local
+
+# ── Networks ─────────────────────────────────────────────────────────────────
+networks:
+  synapse_net:
+    driver: bridge
