@@ -427,3 +427,25 @@ Living reference of every capability in the agent. Updated with every new featur
 - **Config / env:** `ALLOW_COMPUTER_USE` (required, default disabled). Backend: `pyautogui` with `FAILSAFE=True` (move mouse to top-left corner to abort).
 - **Safety:** Tool returns an error explaining how to enable it if `ALLOW_COMPUTER_USE` is not set. pyautogui failsafe is always enabled — move mouse to top-left corner to abort any runaway action.
 - **Status:** ✅ working — 32 tests passing
+
+---
+
+## Native tool — generate_image
+
+- **Added:** 2026-06-20
+- **What it does:** Generates an image from a text prompt using AI and saves it as a PNG file. Two backends: DALL-E 3 via OpenAI API (default — cloud, fast, high quality) and local Stable Diffusion via HuggingFace `diffusers` (no API key needed, requires GPU/CPU). Supports size, quality, negative prompt, and inference steps. Backend selectable per-call or via env var.
+- **Files:** `tools/generate_image/__init__.py`, `tools/generate_image/generate_image.py`
+- **How to use:** "Generate an image of a sunset over the ocean" → `generate_image(prompt="...")`
+- **Config / env:** `IMAGE_BACKEND` (openai/diffusers, default: openai), `OPENAI_API_KEY` (for openai backend), `IMAGE_MODEL` (default: dall-e-3), `IMAGE_OUTPUT_DIR` (default: /tmp), `IMAGE_DIFFUSERS_MODEL` (default: runwayml/stable-diffusion-v1-5), `IMAGE_DEVICE` (cuda/cpu, for diffusers backend)
+- **Status:** ✅ working — 21 tests passing
+
+---
+
+## Native tool — generate_video
+
+- **Added:** 2026-06-20
+- **What it does:** Generates a short video from a text prompt (and optionally a starting image) using AI, saving it as an MP4 file. Two backends: Replicate cloud API (default — supports many open-source video models like `minimax/video-01-live`) and RunwayML API (Gen-4 Turbo, image-to-video). Supports duration, aspect ratio, and model override. Polls until generation completes (30–120 seconds typical).
+- **Files:** `tools/generate_video/__init__.py`, `tools/generate_video/generate_video.py`
+- **How to use:** Text-to-video: `generate_video(prompt="a cat walking through a meadow")`. Image-to-video: `generate_video(prompt="zoom in slowly", image_path="frame.png", backend="runway")`
+- **Config / env:** `VIDEO_BACKEND` (replicate/runway, default: replicate), `REPLICATE_API_TOKEN` (for replicate backend), `VIDEO_REPLICATE_MODEL` (default: minimax/video-01-live), `RUNWAY_API_KEY` (for runway backend), `VIDEO_OUTPUT_DIR` (default: /tmp)
+- **Status:** ✅ working — 24 tests passing
