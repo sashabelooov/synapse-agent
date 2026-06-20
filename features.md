@@ -475,3 +475,14 @@ Living reference of every capability in the agent. Updated with every new featur
 - **How to use:** Set the relevant env vars in `.env` and restart the agent. The server connects and its tools become available automatically.
 - **Config / env:** `POSTGRES_CONNECTION_STRING`, `FILESYSTEM_ALLOWED_DIRS`, `SLACK_BOT_TOKEN`, `SLACK_TEAM_ID`
 - **Status:** ✅ working — 28 tests passing
+
+---
+
+## Skill — self_improve (supervised self-improvement loop)
+
+- **Added:** 2026-06-20
+- **What it does:** Guides the agent through a safe, human-supervised loop for researching and implementing new features on itself. Eight steps with three hard human gates: (1) Research — reads Hermes repo via GitHub MCP and web docs, writes `research/<feature>.md`; (2) Plan — drafts a scoped implementation plan in `plans/<feature>.md`; (3) **STOP: human approves** before any code is written; (4) Branch — `git checkout -b feature/<name>`; (5) Code — implements on branch following KISS/DRY/SSOT with type hints; (6) Test — runs full pytest suite, max 3 fix retries, stops and reports on failure; (7) PR — pushes branch and presents PR for human review; (8) **Human merges** — agent never merges itself.
+- **Files:** `skills/self_improve/SKILL.md`, `research/` (research summaries), `plans/` (implementation plans)
+- **How to use:** "Use the self_improve skill to add a new feature" — the agent loads the skill and walks through the loop, pausing at every human gate.
+- **Security constraints:** GitHub MCP read-only (research only); never modifies `agent/loop.py` without explicit approval; no cron-scheduling-cron; all credentials via env vars; max 3 test-fix retries; human must approve before code is written and before PR is merged.
+- **Status:** ✅ working — 42 tests passing
