@@ -460,3 +460,18 @@ Living reference of every capability in the agent. Updated with every new featur
 - **How to use:** `docker compose build && docker compose run --rm synapse`. With Ollama: `docker compose --profile ollama up`. See `docs/docker.md` for full setup guide.
 - **Config / env:** All variables loaded from `.env` (see `.env.example`). `SYNAPSE_HOME` auto-set to `/data/synapse` inside the container. `OLLAMA_HOST` auto-set to `http://ollama:11434` when using the ollama profile.
 - **Status:** ✅ working — 35 tests passing
+
+---
+
+## MCP servers — Context7, PostgreSQL, Filesystem, Slack
+
+- **Added:** 2026-06-20
+- **What it does:** Adds four optional MCP servers to `mcp_servers.json`. Each connects automatically at startup if its credentials are set; missing credentials expand to empty strings and the server is skipped with a warning (non-fatal). The agent treats their tools identically to native tools — no code changes needed.
+  - **Context7** — live library and framework documentation via `@upstash/context7-mcp` (no API key needed)
+  - **PostgreSQL** — read-only SQL queries on your own databases via `mcp-server-postgres` (needs `POSTGRES_CONNECTION_STRING`)
+  - **Filesystem** — controlled read/write access to specific local directories via `@modelcontextprotocol/server-filesystem` (needs `FILESYSTEM_ALLOWED_DIRS`)
+  - **Slack** — read Slack channels and messages via `@modelcontextprotocol/server-slack` (needs `SLACK_BOT_TOKEN` + `SLACK_TEAM_ID`)
+- **Files:** `mcp_servers.json`, `.env.example`
+- **How to use:** Set the relevant env vars in `.env` and restart the agent. The server connects and its tools become available automatically.
+- **Config / env:** `POSTGRES_CONNECTION_STRING`, `FILESYSTEM_ALLOWED_DIRS`, `SLACK_BOT_TOKEN`, `SLACK_TEAM_ID`
+- **Status:** ✅ working — 28 tests passing
