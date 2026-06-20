@@ -54,6 +54,9 @@ def _gui():
         return pyautogui
     except ImportError:
         return None
+    except Exception as e:
+        # Xlib / display connection errors on Linux — surface as a string sentinel
+        return str(e)
 
 
 def _pil_image():
@@ -68,13 +71,28 @@ def _pil_image():
 # Individual actions
 # ---------------------------------------------------------------------------
 
-def _screenshot(region: list[int] | None = None) -> str:
-    """Capture screen → save PNG → return path."""
+def _ready() -> "tuple[object, str | None]":
+    """Return (pyautogui_module, None) or (None, error_string)."""
     if not _allowed():
-        return _GATE_MSG
+        return None, _GATE_MSG
     gui = _gui()
     if gui is None:
-        return "Error: pyautogui is not installed. Run: uv add pyautogui"
+        return None, (
+            "Error: pyautogui is not installed. Run: uv add pyautogui"
+        )
+    if isinstance(gui, str):
+        return None, (
+            f"Error: cannot connect to display — {gui}\n"
+            "On Linux run the agent with: DISPLAY=:0 XAUTHORITY=$HOME/.Xauthority uv run python3 main.py"
+        )
+    return gui, None
+
+
+def _screenshot(region: list[int] | None = None) -> str:
+    """Capture screen → save PNG → return path."""
+    gui, err = _ready()
+    if err:
+        return err
     try:
         if region:
             x, y, w, h = region
@@ -89,11 +107,9 @@ def _screenshot(region: list[int] | None = None) -> str:
 
 
 def _click(x: int, y: int, button: str = "left", clicks: int = 1) -> str:
-    if not _allowed():
-        return _GATE_MSG
-    gui = _gui()
-    if gui is None:
-        return "Error: pyautogui is not installed."
+    gui, err = _ready()
+    if err:
+        return err
     try:
         gui.click(x, y, button=button, clicks=clicks, interval=0.1)
         return f"Clicked ({x}, {y}) with {button} button × {clicks}."
@@ -102,11 +118,9 @@ def _click(x: int, y: int, button: str = "left", clicks: int = 1) -> str:
 
 
 def _type_text(text: str, interval: float = 0.02) -> str:
-    if not _allowed():
-        return _GATE_MSG
-    gui = _gui()
-    if gui is None:
-        return "Error: pyautogui is not installed."
+    gui, err = _ready()
+    if err:
+        return err
     try:
         gui.write(text, interval=interval)
         return f"Typed {len(text)} characters."
@@ -116,11 +130,9 @@ def _type_text(text: str, interval: float = 0.02) -> str:
 
 def _key(combo: str) -> str:
     """Press a key or key combination. Examples: 'enter', 'ctrl+c', 'alt+tab'."""
-    if not _allowed():
-        return _GATE_MSG
-    gui = _gui()
-    if gui is None:
-        return "Error: pyautogui is not installed."
+    gui, err = _ready()
+    if err:
+        return err
     try:
         keys = [k.strip() for k in combo.lower().split("+")]
         if len(keys) == 1:
@@ -133,11 +145,9 @@ def _key(combo: str) -> str:
 
 
 def _scroll(x: int, y: int, direction: str = "down", amount: int = 3) -> str:
-    if not _allowed():
-        return _GATE_MSG
-    gui = _gui()
-    if gui is None:
-        return "Error: pyautogui is not installed."
+    gui, err = _ready()
+    if err:
+        return err
     try:
         clicks = -amount if direction == "down" else amount
         gui.scroll(clicks, x=x, y=y)
@@ -147,11 +157,9 @@ def _scroll(x: int, y: int, direction: str = "down", amount: int = 3) -> str:
 
 
 def _move(x: int, y: int) -> str:
-    if not _allowed():
-        return _GATE_MSG
-    gui = _gui()
-    if gui is None:
-        return "Error: pyautogui is not installed."
+    gui, err = _ready()
+    if err:
+        return err
     try:
         gui.moveTo(x, y, duration=0.2)
         return f"Moved mouse to ({x}, {y})."
@@ -160,11 +168,11 @@ def _move(x: int, y: int) -> str:
 
 
 def _drag(start_x: int, start_y: int, end_x: int, end_y: int) -> str:
-    if not _allowed():
-        return _GATE_MSG
-    gui = _gui()
+    gui, err = _ready()
+    if err:
+        return err
     if gui is None:
-        return "Error: pyautogui is not installed."
+        return err
     try:
         gui.moveTo(start_x, start_y, duration=0.2)
         gui.dragTo(end_x, end_y, duration=0.4, button="left")

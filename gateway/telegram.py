@@ -349,5 +349,7 @@ async def start_telegram_bot(state: AgentState) -> None:
     dp = Dispatcher()
     dp.include_router(router)
 
+    import threading
+    in_main = threading.current_thread() is threading.main_thread()
     print(f"Telegram bot starting (allowed user ID: {allowed_id}) …")
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, handle_signals=in_main)
